@@ -1,56 +1,283 @@
-<h1 class="entry-title">Research</h1>
 
-<p>SELF-ORGANIZATION, SPREADING DYNAMICS &amp; INFORMATION PROCESSING</p>
+<!-- Identity of page-->
+<div class="row identity bg-light text-dark">
+  <h1>Research topics</h1>
+  <p class="col col-10 col-8-md align-self-center">
+    Our reseach focuses on the theory of complex systems, from information processing in neural networks to disease spread in population networks. We combine the study of learning and self-organization principles in these two types of networks with approaches from statistical physics and information theory. We thereby aim to improve the working of biologically-inspired artificial neural networks on the one hand, and to face future pandemics and similar health crises on the other hand.
+  </p>
+</div>
 
-<p>The human brain proves amazing information processing capacities, which rely on the coordinated activity of 80 billion neurons; each neuron interacting with thousands of other neurons. I want to understand how these neurons jointly form a functional network for information processing. Given that trillions of neural connections (synapses) have to be coordinated to perform meaningful information processing, this &#8220;infogenesis&#8221; must be primarily driven by self-organizing principles. A key role is dedicated to the self-organization through local learning rules, thus principles that update the connection strength between neurons only based on locally available information. My aim is to derive from first principles how such local learning rules can optimize a network for information processing &#8211; ideally even before ever being exposed to specific stimuli of the external world. If identified, such a self-organization mechanism on the one hand can improve the initialization and effectiveness of artificial neural networks, and on the other hand shed light on the riddle of how our complex brains cope so seemingly effortless with the complex environment.</p>
-<p>PROJECT DETAILS</p>
-<p><strong>I. Subsampling. </strong>In order to understand living information processing, we need to sample neural activity from the brain. However, in the brain like in most large systems, it is impossible to sample the activity of all units in parallel. The human brain for example comprises 80 billion neurons, but current techniques allow sampling the activity from only a few thousand neurons at a time. How can we infer properties from the full system if only observing a tiny fraction? Unfortunately, inferences are at times not straight forward, but systematically biased. For example, subsampling in critical models can distort the expected power law relations, and thereby a critical system can be misinterpreted as sub- or super-critical. We are developing approaches to overcome subsampling effects by extending methods from finite size scaling theory, employing stochastic processes and harnessing the theory of non-equilibrium phase transitions. For example, we know know how to infer spreading dynamics even if only a tiny fraction of all neurons is sampled &#8212; under idealized condition sampling a single unit would be sufficient to estimate the spreading rate!</p>
-<p>Selected References:<br />
-VP et al., <em>Frontiers in Systems Neuroscience (</em>2014)<br />
-Levina &amp; VP, <em>Nature Communications</em> (2017)<br />
-Wilting &amp;VP, <em>Nature Communications</em> (2018)<br />
-Neto, Spitzner &amp; VP, arxiv</p>
-<figure id="attachment_113" style="width: 294px" class="wp-caption aligncenter"><img class="wp-image-113 " src="http://www.viola-priesemann.de/wp-content/uploads/2017/09/Subsampling1_cropped-300x226.jpg" alt="" width="294" height="221" srcset="https://www.viola-priesemann.de/wp-content/uploads/2017/09/Subsampling1_cropped-300x226.jpg 300w, https://www.viola-priesemann.de/wp-content/uploads/2017/09/Subsampling1_cropped-768x578.jpg 768w, https://www.viola-priesemann.de/wp-content/uploads/2017/09/Subsampling1_cropped.jpg 1021w" sizes="(max-width: 294px) 100vw, 294px" /><figcaption class="wp-caption-text">In experiments only a tiny fraction (right) of all neurons can be sampled in parallel (figure from Wilting &amp; VP, 2018, generated with <a href="http://www.treestoolbox.org" target="_blank" rel="noopener">TREES</a>).</figcaption></figure>
-<p>&nbsp;</p>
-<p><strong>II. Reverberating, Subcritical Dynamics in vivo.</strong> In neuroscience, a popular hypothesis states that the collective neural dynamics should self-organize to a critical state, because at criticality simple models maximize their information processing capacities. However, criticality may also come with the risk of spontaneous runaway activity (epilepsy). I obtained the first evidence that neural dynamics maintains a distance to criticality, and thereby keep a safety margin to runaway activity. This distance to criticality is consistent across different species, but changes from wakefulness to deep sleep. Most recently, I succeeded in taming the out-of-equilibrium effects imposed by ongoing external stimulation, and as a result developed a very effective methods to quantify the distance to criticality from very little data. This opens novel avenues to study how networks tune their distance to criticality &#8211; and hence their information processing &#8211; from one moment to the other, depending on task requirement and context.</p>
-<p>Selected References:<br />
-Cramer et int., VP, <em>Nature Communications</em> (2020)<br />
-VP et al., <em>Plos Comp. Biol.</em> (2013)<br />
-Wilting &amp; VP, <em>Cerebral Cortex</em> (2019)<br />
-Wilting &amp; VP, <em>Current Opinion Neurobiol.</em> (2019)<br />
-Zierenberg, Wilting &amp; VP, <em>Physical Review X</em> (2018)</p>
-<p><strong>III. Information Theory.</strong> Information theory is the natural language to quantify computation. I employ it in two complementary manners: <em>To infer the coding principles</em> of living neural networks, which were developed, tested and selected over million years of evolution, and as<em> guiding principle to design</em> <em>networks</em> for optimized processing.  Going a step further, we do not design the networks directly, but the <em>learning rules</em> that shape the network autonomously. In this realm, information theory provides the ideal language, because it is independent of semantics. Thereby it enables a comparison of coding principles across very diverse architectures, and implementations. This is useful when e.g. comparing coding across species and areas, and has been key for us to unravel a clear hierarchy of processing across cortex.  Our ongoing/future work goes into the role of phase transitions in information processing; local learning as a form of symmetry breaking; architectures to optimize Gibbs sampling despite strong correlations; and invariance of information flow under coarse-graining.</p>
-<p>Selected References:<br />
-Wibral, Lizier &amp; VP, <em>Frontiers in Robotics and AI</em> (2015)<br />
-Wibral, Finn, Wollstadt, Lizier, VP, <em>Entropy</em> (2018)<br />
-Wollstadt et al.,  <em>PLOS Computational Biology</em> (2017)</p>
-<p><img class="wp-image-117 aligncenter" src="http://www.viola-priesemann.de/wp-content/uploads/2017/09/PartialInfoDecompDiagrams-ModifiedVsNonModified.bmp" alt="" width="364" height="353" /></p>
-<p>&nbsp;</p>
-<p><strong>IV. Inference and forecast of Disease Spread. </strong>With the outbreak of COVID-19, it turned out that our work on spreading dynamics in the brain under subsampling is highly valuable to investigate the spread of SARS-CoV-2.  We investigated how the reproduction number R changes as a consequence of a certain intervention like e.g. closing schools or imposing a contact ban. We then continued to investigate the challenges when mitigating COVID-19 spread via test-trace-isolate strategies. These strategies are inherently imperfect, and their capacity is limited. Hence, we identified an important tipping point: If case numbers are too high, so that a local health authority cannot test and trace the contacts anymore, and thus are too slow to break the infection chains, we see increasingly more unaware carriers. These unaware carriers are the drivers of a self-accelerating spread. The conclusion is straight forward: If case numbers are low, a control of the spread is much easier. Beyond the tipping point, regaining control becomes increasingly more difficult.<br />
-In parallel, we are developing a hierarchical Bayesian model to investigate the impact of non-pharmaceutical interventions (NPIs) using European as well as federal data. And we critically revisit current case reports, and the effects of increased testing.<br />
-Importantly, with great colleagues we jointly published a number of statements about COVID-19 mitigation and control strategies. To of these statements were  <a href="https://www.mpg.de/14760439/28-04-2020_Stellungnahme_Teil_01.pdf">signed by all four presidents,</a> of the Fraunhofer, Helmholtz, Leibnitz and Max Planck Society, and contributed to the statements of the Leopoldina.<br />
-If you are interested in this line of research, feel welcome to join our team!</p>
-<p>References:</p>
-<p><a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)32153-X/fulltext">Alwan et al., <em>The Lancet</em>, 2020</a><br />
-<a href="https://arxiv.org/abs/2009.05732">Contreras et al., arxiv</a><br />
-<a href="https://arxiv.org/abs/2004.01105">Dehning et al., <em>Science</em>, 2020</a><a href="https://arxiv.org/abs/2004.01105">/ arxiv</a><br />
-<a href="https://www.medrxiv.org/content/10.1101/2020.09.16.20187484v1.abstract">Dehning et al., medrxiv</a><br />
-<a href="https://arxiv.org/pdf/2010.05850">Linden et al., arxiv, accepted at Deutsches Ärzteblatt, 2020</a></p>
-<p>Github: <a href="https://github.com/Priesemann-Group/covid19_inference_forecast">https://github.com/Priesemann-Group/covid19_inference_forecast</a></p>
-<p><a href="https://www.mpg.de/14759871/corona-stellungnahme">Meyer-Hermmann*, Pigeot*, Priesemann*, Schöbel*:</a> Adaptive Strategien zur Eindämmung der COVID-19 Epidemie<br />
-<a href="https://www.mpg.de/15426163/stellungnahme-ausseruniversitaere-forschungsorganisationen-covid-19-epidemie">Meyer-Hermmann*, Pigeot*, Priesemann*, Schöbel*:</a> Gemeinsam können wir es schaffen: Jeder einzelne Beitrag schützt Gesundheit, Gesellschaft und Wirtschaft</p>
-<p>&nbsp;</p>
-<p><strong>V. Music. </strong>Long-range correlations characterizes neural activity in the brain. Therefore music, which may be considered the mirror of the soul or the brain, should also reflect these correlations. In collaboration with Theo Geisel, we investigate how long range correlations and information-theoretic quantities change with genres, and whether long-range correlations play a central role in making Swing swing.<br />
-References:<br />
-Sogorski, Geisel &amp; VP, Plos ONE (2018)<br />
-Datseris et al., arxiv / in press (2019)</p>
-<figure id="attachment_115" style="width: 426px" class="wp-caption aligncenter"><a href="http://www.viola-priesemann.de/wp-content/uploads/2017/09/TS-Extraction-Paper.bmp"><img class="wp-image-115 size-full" src="http://www.viola-priesemann.de/wp-content/uploads/2017/09/TS-Extraction-Paper.bmp" alt="" width="426" height="276" /></a><figcaption class="wp-caption-text">To analyze long-range correlations in the tempo fluctuations of music performances, the beat of each piece must be extracted with millisecond precision [workflow from Sogorski, Geisel &amp; Priesemann, 2018].</figcaption></figure>
-<p><strong>RECENT HIGHLIGHTS (10/2018)<br />
-</strong></p>
-<p>* Operating in a reverberating regime enables rapid tuning of network states to task requirements: <a href="https://www.frontiersin.org/articles/10.3389/fnsys.2018.00055/full">Wilting et al., <em>Front. Syst. Neurosci</em>., (2018)</a></p>
-<p>* What makes in vitro and in vivo dynamics so different? &#8211; We derive the central role that the strength of external input plays in shaping collective dynamics: <a href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031018">Zierenberg et al., <em>PRX</em> (2018)</a></p>
-<p>* We developed two analytical solutions to overcome subsampling-induced bias,<br />
-one for time series: <a href="https://arxiv.org/abs/1608.07035" target="_blank" rel="noopener">Wilting &amp; Priesemann, arXiv / <em>Nature Comm</em>. (2018)</a>,<br />
-and one for spatial structures, such as degree distributions in a graph or avalanches: <a href="https://www.nature.com/articles/ncomms15140" target="_blank" rel="noopener">Levina &amp; Priesemann, <em>Nature Comm.</em> (2017)</a></p>
+<div class="content col-10 col-8-md align-self-center">
+  <!-- Subsampling Theory and Bayesian Inference -->
+  <div class="card bg-light text-dark">
+    <img
+      src="./assets/img/topic_01.png"
+      class="card-img-top"
+      alt="ST&amp;BI"
+    />
+    <div class="card-body">
+      <a
+        class="collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse-subsamp"
+        aria-expanded="true"
+        aria-controls="collapse-subsamp"
+      >
+        <h2 class="card-title">
+          Subsampling Theory and Bayesian Inference
+          <div class="collapse-icon bi bi-chevron-down"></div>
+        </h2>
+      </a>
+      <div class="card-text collapse" id="collapse-subsamp">
+        A classical problem when investigating complex systems is to infer
+        their properties from measurements. However, these measurements are
+        subject to uncertainties. For example, one can only sample a tiny
+        fraction of all neurons in a brain. We showed how such subsampling can
+        cause systematic biases and how to overcome them with
+        subsampling-invariant estimators. More generally, we employ tools from
+        Bayesian inference to include the uncertainty of data, e.g. from
+        disease case numbers, for reliable estimates of collective properties.
+        <div class="publications">
+          <hr />
+          <h3>Selected publications:</h3>
+          <ul>
+            <!-- Papers are automatically filled in see utils.js -->
+            <li
+              id="dehning2020"
+              class="publication-container"
+              data-id="0293665f59a5df43272ce185c470a7a1b5e16140"
+              data-abstract="From February to April 2020, many countries introduced variations on social distancing measures to slow the ravages of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Publicly available data show that Germany has been particularly successful in minimizing death rates. Dehning et al. quantified three governmental interventions introduced to control the outbreak. The authors predicted that the third governmental intervention—a strict contact ban since 22 March—switched incidence from growth to decay. They emphasize that relaxation of controls must be done carefully, not only because there is a 2-week lag between a measure being enacted and the effect on case reports but also because the three measures used in Germany only just kept virus spread below the growth threshold."
+            >
+            </li>
+            <li
+              id="neto2019"
+              class="publication-container"
+              data-id="8539f8eba92836bf6f8ad6c8a5e6aae6fb5357e7"
+            >
+            </li>
+            <li
+              id="wilting2018"
+              class="publication-container"
+              data-id="a0f4fd1eff0529bef0ff11d4c75bdcfddfe0caea"
+            >
+            </li>
+            <li
+              id="levina2017"
+              class="publication-container"
+              data-id="61486dfe42cc62a6c3dbd43d9402212aa5257838"
+            >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Collective Cortical Dynamics, phase transitions and critical phenomena -->
+  <div class="card bg-light text-dark">
+    <img
+      src="./assets/img/topic_02.png"
+      class="card-img-top"
+      alt="ST&amp;BI"
+    />
+    <div class="card-body">
+      <a
+        class="collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse-cordyn"
+        aria-expanded="false"
+        aria-controls="collapse-cordyn"
+      >
+        <h2 class="card-title">
+          Collective Cortical Dynamics, phase transitions and critical
+          phenomena
+          <div class="collapse-icon bi bi-chevron-down"></div>
+        </h2>
+      </a>
+      <div class="card-text collapse" id="collapse-cordyn">
+        We want to understand how living neural networks process information.
+        Does this require emergent correlations of their collective dynamics,
+        as prevalent in so-called critical states, or does it require minimal
+        redundancy and fast responses, as observed for so-called balanced
+        states? We revisited these opposing hypotheses by analyzing spiking
+        activity using subsampling-invariant approaches (see above) to find
+        that many species operate in a novel regime, where they could flexibly
+        tune computational properties in between critical and balanced state.
+        We study mechanism of how neural networks self-organize towards either
+        the critical or the balanced state depending on task requirements - a
+        property that we call “dynamic, adaptive computation”.
+        <div class="publications">
+          <hr />
+          <h3>Selected publications:</h3>
+          <ul>
+            <!-- Papers are automatically filled in see utils.js -->
+            <li
+              id="cramer2019"
+              class="publication-container"
+              data-id="2940a596a9c068e2e86ff0cf75d65de8708bd453"
+            >
+            </li>
+            <li
+              id="neto2019"
+              class="publication-container"
+              data-id="8539f8eba92836bf6f8ad6c8a5e6aae6fb5357e7"
+            >
+            </li>
+            <li
+              id="wilting2019"
+              class="publication-container"
+              data-id="1f802996a959a591bf8feaf52321fdff46ab4c57"
+            >
+            </li>
+            <li
+              id="shriki2018"
+              class="publication-container"
+              data-id="f5ead88e9968ca52af6cf0e6d5fd25bfa3fcd3ae"
+            >
+            </li>
+            <li
+              id="zierenberg2018"
+              class="publication-container"
+              data-id="3674fb15babe5791ac0cfd8104d9f761a7868d81"
+            >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Information theory, synaptic dynamics and learning in artificial neural networks -->
+  <div class="card bg-light text-dark">
+    <img
+      src="./assets/img/placeholder_726x180.png"
+      class="card-img-top"
+      alt="ST&amp;BI"
+    />
+    <div class="card-body">
+      <a
+        class="collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse-infth"
+        aria-expanded="false"
+        aria-controls="collapse-infth"
+      >
+        <h2 class="card-title">
+          Information theory, synaptic dynamics and learning in artificial
+          neural networks
+          <div class="collapse-icon bi bi-chevron-down"></div>
+        </h2>
+      </a>
+      <div class="card-text collapse" id="collapse-infth">
+        Information theory provides a natural language to quantify information
+        processing independently of the imposed semantics. Hence, it enables
+        us on the one hand to quantify the computational capacity of living
+        and artificial neural networks. On the other hand, it provides the
+        formal framework to derive learning rules systematically. Learning,
+        from the synapse to the network level, tunes the performance of living
+        systems, and unlocks the power of artificial ones. However, current
+        approaches are mainly heuristic. With our systematic approach, we can
+        directly related the information-theoretic fingerprint to learning and
+        to performance on specific tasks. This enabled not only to
+        characterize how the collective dynamics (see II.) relates to
+        performance, but systematically derive the learning rules that enable
+        optimal encoding of input. This combined study of information theory,
+        learning and performance in living and artificial networks promises to
+        unravel the role of biological learning rules in shaping human
+        information processing.
+        <div class="publications">
+          <hr />
+          <h3>Selected publications:</h3>
+          <ul>
+            <!-- Papers are automatically filled in see utils.js -->
+            <li
+              class="publication-container"
+              data-id="59fee41df90fc9a405d3a4a3d765d81b6f4c866d"
+            >
+            </li>
+            <li
+              class="publication-container"
+              data-id="5799cfec6cf1e0e45a5bfd097e4f4e79e9c5e3c4"
+            >
+            </li>
+            <li
+              class="publication-container"
+              data-id="c00dff07d0df2e234e06a1fea4960aabf4a4254a"
+            >
+            </li>
+            <li
+              class="publication-container"
+              data-id="75aeba0f8a1c1b749c4e386935ef9ddb361b1b63"
+            >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Infectious disease dynamics -->
+  <div class="card bg-light text-dark">
+    <img
+      src="./assets/img/placeholder_726x180.png"
+      class="card-img-top"
+      alt="ST&amp;BI"
+    />
+    <div class="card-body">
+      <a
+        class="collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapse-infdis"
+        aria-expanded="false"
+        aria-controls="collapse-infdis"
+      >
+        <h2 class="card-title">
+          Infectious disease dynamics
+          <div class="collapse-icon bi bi-chevron-down"></div>
+        </h2>
+      </a>
+      <div class="card-text collapse" id="collapse-infdis">
+        With the outbreak of COVID-19, we were confronted with the challenge
+        to contain a disease that was widely unknown. Identifying efficient
+        strategies for disease containment was urgently needed. With our
+        expertise on inferring spreading dynamics in the brain even under
+        subsampling, we could quickly act and quantify the impact of
+        non-pharmaceutical interventions on the reproduction number R in
+        Germany. Since then, we have investigated, e.g., the
+        “test-trace-and-isolate” strategy to break infection chains, the
+        amount of measures necessary during vaccination roll-out, and the
+        relationship between contact patterns and disease spread. Given the
+        complex interactions between infectious disease dynamics and social
+        dynamics, we increasingly focus on the impacts of risk awareness and
+        the infodemic on the COVID-19 pandemic and other infectious disease
+        outbreaks.
+        <div class="publications">
+          <hr />
+          <h3>Selected publications:</h3>
+          <ul>
+            <!-- Papers are automatically filled in see utils.js -->
+            <li
+              class="publication-container"
+              data-id="2bd545cae842c5a0607e5857ce835afcb3248f36"
+            >
+            </li>
+            <li
+              class="publication-container"
+              data-id="39369144ef2d874bbd58da409202a1287ecbc8f7"
+            ></li>
+            <li
+              class="publication-container"
+              data-id="2997f02035c2f46a4a52f62f555cc04c554cba42"
+              data-abstract="The traditional long-term solutions for epidemic control involve eradication or population immunity. Here, we analytically derive the existence of a third viable solution: a stable equilibrium at low case numbers, where test-trace-and-isolate policies partially compensate for local spreading events and only moderate restrictions remain necessary. In this equilibrium, daily cases stabilize around ten or fewer new infections per million people. However, stability is endangered if restrictions are relaxed or case numbers grow too high. The latter destabilization marks a tipping point beyond which the spread self-accelerates. We show that a lockdown can reestablish control and that recurring lockdowns are not necessary given sustained, moderate contact reduction. We illustrate how this strategy profits from vaccination and helps mitigate variants of concern. This strategy reduces cumulative cases (and fatalities) four times more than strategies that only avoid hospital collapse. In the long term, immunization, large-scale testing, and international coordination will further facilitate control."
+            ></li>
+            <li
+              class="publication-container"
+              data-id="0293665f59a5df43272ce185c470a7a1b5e16140"
+              data-abstract="From February to April 2020, many countries introduced variations on social distancing measures to slow the ravages of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). Publicly available data show that Germany has been particularly successful in minimizing death rates. Dehning et al. quantified three governmental interventions introduced to control the outbreak. The authors predicted that the third governmental intervention—a strict contact ban since 22 March—switched incidence from growth to decay. They emphasize that relaxation of controls must be done carefully, not only because there is a 2-week lag between a measure being enacted and the effect on case reports but also because the three measures used in Germany only just kept virus spread below the growth threshold."
+            ></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
