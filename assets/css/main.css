@@ -10,7 +10,7 @@ a.icon-link {
 
 i {
   color:  var(--bs-light);
-  font-size: 1.5rem;
+  font-size: 15.5rem;
 }
 
 i:hover {
@@ -23,23 +23,33 @@ i:hover {
 }
 
 #sidebar{
-  overflow-y: scroll;
+  overflow-y: visible;
   position: sticky;
   height: 100vh;
 	display: flex;
 	flex-direction: column;
   padding: 12px;
-  min-width: 275px;
+  padding-right: 16px;
+  min-width: 300px;
   max-width: 300px;
 }
 #sidebar > img {
-  margin: 12px;
-  max-width: 100%;
-  border: ivory solid 2px;
+  margin: 0px;
+  max-width: 90%;
+  border: ivory solid 0px;
+  margin-left: 5%;
+  margin-bottom: 10%;
 }
 
 #sidebar > h1,h2,h3,h4,h5,h6{
-  text-align: center;
+  text-align: left;
+  margin-left: 0%;
+
+}
+
+#sidebar > h4{
+  margin-left: 5%;
+  font-size: 27px;
 }
 
 #sidebar > .links {
@@ -74,7 +84,7 @@ footer{
 }
 
 #content-container{
-  overflow-y: scroll;
+  overflow-y: visible;
 }
 
 #navbar {
@@ -82,7 +92,7 @@ footer{
   margin-top: 10%;
   display: flex;
   width: 100%;
-  margin-left: 10%;
+  margin-left: 0%;
 }
 
 .nav-item{
@@ -118,10 +128,9 @@ footer{
 
 .identity > h1 {
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   margin: 0;
   margin-bottom: 16px;
-
 }
 
 .identity > .content{
@@ -138,7 +147,7 @@ footer{
 }
 
 .identity > p {
-  text-align: center;
+  text-align: left;
   margin: 0;
 }
 
@@ -341,3 +350,13 @@ footer{
 .publication-abstract > p > em:after{
   content: "";
 }
+
+.col-10 {
+  width: 70%
+}
+
+.title {
+  width: 90%;
+  margin-left: 5%;
+}
+
