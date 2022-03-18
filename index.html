@@ -36,6 +36,7 @@
 </head>
 
 <body>
+<button type="button" class="mobile-navigator-toggle d-xl-none"><i class="bi bi-list"></i></button>
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar with picture, general links and navigation -->
@@ -138,6 +139,10 @@
         linkElement.classList.remove("active");
       }
     });
+
+    // Disable mobile active
+    sidebar = document.getElementById("sidebar");
+    sidebar.classList.remove("mobile-navigator-active");
   });
 
   // Initial load
@@ -146,6 +151,22 @@
   current_active = getCurrentPage();
   var event = new Event('hashchange');
   window.dispatchEvent(event);
+
+  // Responsive sidebar mobile
+  // See semohr.github.io
+
+    var navbar_btn =  document.getElementsByClassName("mobile-navigator-toggle")
+
+    navbar_btn[0].onclick = function(e){
+        //Toggle header class
+        sidebar = document.getElementById("sidebar")
+        sidebar.classList.toggle("mobile-navigator-active");
+        //Repalce icon with cross (x)
+        navbar_btn[0].children[0].classList.toggle("bi-list");
+        navbar_btn[0].children[0].classList.toggle("bi-x");
+        //Toggle overflow i.e scrolling
+        document.body.classList.toggle("prevent-scrolling");
+    };
 
 </script>
 </html>

@@ -1,13 +1,13 @@
 
 <!-- Identity of page-->
 <div class="row identity bg-light text-dark">
-  <h1 class="col col-10 col-8-md align-self-center"> Research topics </h1>
-  <p class="col col-10 col-8-md align-self-center">
+  <h1 class="col col-xl-10 col-md-12 align-self-center"> Research topics </h1>
+  <p class="col col-xl-10 col-md-12 align-self-center">
   <strong>Attention! This website is still under construction, you might look <a href="https://www.viola-priesemann.de/">at the old website</a> for more information.</strong><br> Our reseach focuses on the theory of complex systems, from information processing in neural networks to disease spread in population networks. We combine the study of learning and self-organization principles in these two types of networks with approaches from statistical physics and information theory. We thereby aim to improve the working of biologically-inspired artificial neural networks on the one hand, and to face future pandemics and similar health crises on the other hand.
   </p>
 </div>
 
-<div class="content col-10 col-8-md align-self-center">
+<div class="content col col-xl-10 col-md-12 align-self-center">
   <!-- Subsampling Theory and Bayesian Inference -->
   <div class="card bg-light text-dark">
     <!--img
@@ -27,16 +27,18 @@
           Subsampling Theory and Bayesian Inference
           <div class="collapse-icon bi bi-chevron-down"></div>
         </h2>
+        <p class="card-text text-dark">
+            A classical problem when investigating complex systems is to infer
+            their properties from measurements. However, these measurements are
+            subject to uncertainties. For example, one can only sample a tiny
+            fraction of all neurons in a brain. We showed how such subsampling can
+            cause systematic biases and how to overcome them with
+            subsampling-invariant estimators. More generally, we employ tools from
+            Bayesian inference to include the uncertainty of data, e.g. from
+            disease case numbers, for reliable estimates of collective properties.
+        </p>
       </a>
       <div class="card-text collapse" id="collapse-subsamp">
-        A classical problem when investigating complex systems is to infer
-        their properties from measurements. However, these measurements are
-        subject to uncertainties. For example, one can only sample a tiny
-        fraction of all neurons in a brain. We showed how such subsampling can
-        cause systematic biases and how to overcome them with
-        subsampling-invariant estimators. More generally, we employ tools from
-        Bayesian inference to include the uncertainty of data, e.g. from
-        disease case numbers, for reliable estimates of collective properties.
         <div class="publications">
           <hr />
           <h3>Selected publications:</h3>
@@ -93,19 +95,21 @@
           phenomena
           <div class="collapse-icon bi bi-chevron-down"></div>
         </h2>
+        <p class="card-text text-dark">
+            We want to understand how living neural networks process information.
+            Does this require emergent correlations of their collective dynamics,
+            as prevalent in so-called critical states, or does it require minimal
+            redundancy and fast responses, as observed for so-called balanced
+            states? We revisited these opposing hypotheses by analyzing spiking
+            activity using subsampling-invariant approaches (see above) to find
+            that many species operate in a novel regime, where they could flexibly
+            tune computational properties in between critical and balanced state.
+            We study mechanism of how neural networks self-organize towards either
+            the critical or the balanced state depending on task requirements - a
+            property that we call “dynamic, adaptive computation”.
+        </p>
       </a>
       <div class="card-text collapse" id="collapse-cordyn">
-        We want to understand how living neural networks process information.
-        Does this require emergent correlations of their collective dynamics,
-        as prevalent in so-called critical states, or does it require minimal
-        redundancy and fast responses, as observed for so-called balanced
-        states? We revisited these opposing hypotheses by analyzing spiking
-        activity using subsampling-invariant approaches (see above) to find
-        that many species operate in a novel regime, where they could flexibly
-        tune computational properties in between critical and balanced state.
-        We study mechanism of how neural networks self-organize towards either
-        the critical or the balanced state depending on task requirements - a
-        property that we call “dynamic, adaptive computation”.
         <div class="publications">
           <hr />
           <h3>Selected publications:</h3>
@@ -167,24 +171,26 @@
           neural networks
           <div class="collapse-icon bi bi-chevron-down"></div>
         </h2>
+        <p class="card-text text-dark">
+            Information theory provides a natural language to quantify information
+            processing independently of the imposed semantics. Hence, it enables
+            us on the one hand to quantify the computational capacity of living
+            and artificial neural networks. On the other hand, it provides the
+            formal framework to derive learning rules systematically. Learning,
+            from the synapse to the network level, tunes the performance of living
+            systems, and unlocks the power of artificial ones. However, current
+            approaches are mainly heuristic. With our systematic approach, we can
+            directly related the information-theoretic fingerprint to learning and
+            to performance on specific tasks. This enabled not only to
+            characterize how the collective dynamics (see II.) relates to
+            performance, but systematically derive the learning rules that enable
+            optimal encoding of input. This combined study of information theory,
+            learning and performance in living and artificial networks promises to
+            unravel the role of biological learning rules in shaping human
+            information processing.
+        </p>
       </a>
       <div class="card-text collapse" id="collapse-infth">
-        Information theory provides a natural language to quantify information
-        processing independently of the imposed semantics. Hence, it enables
-        us on the one hand to quantify the computational capacity of living
-        and artificial neural networks. On the other hand, it provides the
-        formal framework to derive learning rules systematically. Learning,
-        from the synapse to the network level, tunes the performance of living
-        systems, and unlocks the power of artificial ones. However, current
-        approaches are mainly heuristic. With our systematic approach, we can
-        directly related the information-theoretic fingerprint to learning and
-        to performance on specific tasks. This enabled not only to
-        characterize how the collective dynamics (see II.) relates to
-        performance, but systematically derive the learning rules that enable
-        optimal encoding of input. This combined study of information theory,
-        learning and performance in living and artificial networks promises to
-        unravel the role of biological learning rules in shaping human
-        information processing.
         <div class="publications">
           <hr />
           <h3>Selected publications:</h3>
@@ -235,22 +241,25 @@
           Infectious disease dynamics
           <div class="collapse-icon bi bi-chevron-down"></div>
         </h2>
+        <p class="card-text text-dark"> 
+            With the outbreak of COVID-19, we were confronted with the challenge
+            to contain a disease that was widely unknown. Identifying efficient
+            strategies for disease containment was urgently needed. With our
+            expertise on inferring spreading dynamics in the brain even under
+            subsampling, we could quickly act and quantify the impact of
+            non-pharmaceutical interventions on the reproduction number R in
+            Germany. Since then, we have investigated, e.g., the
+            “test-trace-and-isolate” strategy to break infection chains, the
+            amount of measures necessary during vaccination roll-out, and the
+            relationship between contact patterns and disease spread. Given the
+            complex interactions between infectious disease dynamics and social
+            dynamics, we increasingly focus on the impacts of risk awareness and
+            the infodemic on the COVID-19 pandemic and other infectious disease
+            outbreaks.
+        </p>
       </a>
       <div class="card-text collapse" id="collapse-infdis">
-        With the outbreak of COVID-19, we were confronted with the challenge
-        to contain a disease that was widely unknown. Identifying efficient
-        strategies for disease containment was urgently needed. With our
-        expertise on inferring spreading dynamics in the brain even under
-        subsampling, we could quickly act and quantify the impact of
-        non-pharmaceutical interventions on the reproduction number R in
-        Germany. Since then, we have investigated, e.g., the
-        “test-trace-and-isolate” strategy to break infection chains, the
-        amount of measures necessary during vaccination roll-out, and the
-        relationship between contact patterns and disease spread. Given the
-        complex interactions between infectious disease dynamics and social
-        dynamics, we increasingly focus on the impacts of risk awareness and
-        the infodemic on the COVID-19 pandemic and other infectious disease
-        outbreaks.
+
         <div class="publications">
           <hr />
           <h3>Selected publications:</h3>

@@ -104,7 +104,7 @@ function detailsToDom(details, overwrite){
     details.authors.forEach(function(author){
         let li = document.createElement("li");
         let a = document.createElement("a");
-        a.href = "https://www.semanticscholar.org/author/"+author.authorId;
+        //a.href = "https://www.semanticscholar.org/author/"+author.authorId;
         a.innerText = author.name;
         li.appendChild(a);
         ul.appendChild(li);

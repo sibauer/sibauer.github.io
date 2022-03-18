@@ -83,6 +83,10 @@ footer{
   overflow-x: hidden;
 }
 
+.content {
+    padding: 5px;
+}
+
 #content-container{
   overflow-y: visible;
 }
@@ -359,3 +363,47 @@ footer{
   width: 90%;
   margin-left: 5%;
 }
+
+/*Mobile Navigator toggle*/
+.mobile-navigator-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  .mobile-navigator-toggle i {
+    color: #04444b;
+    font-size: 2.5em;
+  }
+  
+  .mobile-navigator-active {
+    display: flex !important;
+    z-index: 1000;
+    position: absolute !important;
+  }
+  
+  #header.mobile-navigator-active{
+    left: 0px;
+  }
+  
+  .mobile-navigator-active .mobile-navigator-toggle i {
+    color: #fff;
+  }
+  
+  .prevent-scrolling{
+    overflow-y: hidden;
+  }
+  
+  #header hr {
+    color: white;
+  }
+  
