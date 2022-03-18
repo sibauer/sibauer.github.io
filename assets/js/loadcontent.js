@@ -98,18 +98,13 @@ function detailsToDom(details, overwrite){
     let authors = document.createElement("div");
     authors.classList.add("publication-authors");
     let text = document.createElement("p");
-    text.innerText = "Authors:";
-    authors.appendChild(text);
-    let ul = document.createElement("ul");
+    var author_text = "<em>Authors:</em>";
     details.authors.forEach(function(author){
-        let li = document.createElement("li");
-        let a = document.createElement("a");
-        //a.href = "https://www.semanticscholar.org/author/"+author.authorId;
-        a.innerText = author.name;
-        li.appendChild(a);
-        ul.appendChild(li);
+        author_text += " ";
+        author_text += author.name;
     });
-    authors.appendChild(ul);
+    text.innerHTML = author_text;
+    authors.appendChild(text);
     div.appendChild(authors);
 
     /** --------------------------------
