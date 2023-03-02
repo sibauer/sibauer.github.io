@@ -102,6 +102,7 @@ function detailsToDom(details, overwrite){
     details.authors.forEach(function(author){
         author_text += " ";
         author_text += author.name;
+        author_text += ",";
     });
     text.innerHTML = author_text;
     authors.appendChild(text);
@@ -114,21 +115,22 @@ function detailsToDom(details, overwrite){
     if (overwrite.abstract != null){
         abstract_text = overwrite.abstract;
     }
+    if (abstract_text != null){
+        //Container
+        let abstract = document.createElement("div");
+        abstract.classList.add("publication-abstract");
+        
+        //Header
+        let text_prefix= document.createElement("p");
+        text_prefix.innerHTML = "<em>Abstract:</em> ";
+        
+        //Text from semantic
+        text_prefix.innerHTML += abstract_text;
+        abstract.appendChild(text_prefix);
 
-    //Container
-    let abstract = document.createElement("div");
-    abstract.classList.add("publication-abstract");
-    
-    //Header
-    let text_prefix= document.createElement("p");
-    text_prefix.innerHTML = "<em>Abstract:</em> ";
-    
-    //Text from semantic
-    text_prefix.innerHTML += abstract_text;
-    abstract.appendChild(text_prefix);
 
-
-    div.appendChild(abstract);
+        div.appendChild(abstract);
+    }
     
     return div;
 }
