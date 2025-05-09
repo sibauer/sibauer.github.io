@@ -289,9 +289,21 @@
         let thirdPartData = data_mitigation.filter(d => d.t >= t2_shifted);
         let line4 = plotTimeseries(svg, x, y, thirdPartData, mitigation_color, opacity = 0);
 
+        //// Combined
+        // Load seasonality data from CSV file
+        const combined_color = "#84D3CB";
+        const data_combined = await d3.csv("files/combined.csv");
+
+        x_domain3 = d3.extent(data_combined, d => d.t);
+        y_domain3 = d3.extent(data_combined, d => d.I);
+
+        y.domain(y_domain3)
+        // Plot
+        console.log("test")
+        let line5 = plotTimeseries(svg, x, y, data_combined, combined_color, opacity = 0);
+
 
         //// Eventlistener
-        let state = 0;
         output = document.querySelector("p#output");
         element = document.getElementById("content");
 
@@ -304,6 +316,7 @@
             const marker_mitigation1 = document.getElementById('marker_mitigation1').getBoundingClientRect().top;
             const marker_mitigation2 = document.getElementById('marker_mitigation2').getBoundingClientRect().top;
             const marker_mitigation3 = document.getElementById('marker_mitigation3').getBoundingClientRect().top;
+            const marker_combined = document.getElementById('marker_combined').getBoundingClientRect().top;
             // console.log("Marker positions:", reference, marker_seasonality, marker_mitigation1, marker_mitigation2);
 
             if (reference <= marker_mitigation1) {// reset to state 0
@@ -327,6 +340,9 @@
                 line4.transition()
                     .duration(transition_time)
                     .attr("opacity", 0);
+                line5.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
             } else if (reference < marker_mitigation2) {
                 console.log("state 1")
                 // Update domain
@@ -346,6 +362,9 @@
                     .duration(transition_time)
                     .attr("opacity", 0);
                 line4.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+                line5.transition()
                     .duration(transition_time)
                     .attr("opacity", 0);
             } else if (reference < marker_mitigation3) {
@@ -369,7 +388,10 @@
                 line4.transition()
                     .duration(transition_time)
                     .attr("opacity", 0);
-            } else {
+                line5.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+            } else if (reference < marker_combined) {
                 console.log("state 3")
                 // Update domain
                 y.domain(y_domain2)
@@ -388,6 +410,33 @@
                     .duration(transition_time)
                     .attr("opacity", 1);
                 line4.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 1);
+                line5.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+            } else {
+                console.log("state 4")
+                // Update domain
+                y.domain(y_domain3)
+                svg.selectAll(".myYaxis")
+                    .transition()
+                    .duration(transition_time)
+                    .call(y_axis);
+                // Update lines
+                line1.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+                line2.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+                line3.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+                line4.transition()
+                    .duration(transition_time)
+                    .attr("opacity", 0);
+                line5.transition()
                     .duration(transition_time)
                     .attr("opacity", 1);
             }
