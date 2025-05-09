@@ -240,6 +240,26 @@
                         measures. To create a visible structure of the corresponding dynamics, each spot can be
                         assigned a colour according to their exhibited <em>number of infection waves</em> (<b>W</b>) per
                         year.
+
+                        <!-- Part 2: Arnold tongues -->
+                        <dl>
+                            <top id="marker_placeholder">
+                                </dd>
+                                <dt>
+                                    <div id="plot2"></div>
+                                </dt>
+
+                                <dd>
+                                    <p style="margin-bottom: 20em;"></p>
+
+                                    <top id="marker_arnold1">For less intense mitigation measures with a great
+                                        delay, the influence of seasonality dominates – as the yellow colour indicates,
+                                        we witness one wave per year. Though mitigation does change the peaks’ heights,
+                                        it is not strong enough to induce waves of its own.
+                                    </top>
+                                    <p style="margin-bottom: 20em;"></p>
+                                </dd>
+                        </dl>
                     </blog>
                 </div>
 
@@ -261,7 +281,9 @@
         y_domain1 = d3.extent(data_seasonality, d => d.I);
 
         // Plot
-        const [svg, x, x_axis, y, y_axis] = createsvg(selector, x_domain1, y_domain1);
+        const margin = { top: 10, right: 30, bottom: 30, left: 60 };
+        const full_width = 380, full_height = 150;
+        const [svg, x, x_axis, y, y_axis] = createsvg(selector, x_domain1, y_domain1, margin, full_width, full_height);
         console.log("test")
         let line1 = plotTimeseries(svg, x, y, data_seasonality, seasonality_color, opacity = 1);
 
@@ -444,48 +466,50 @@
         });
     }
     createScrollableTimeseries("#plot1");
+    // Create timeseries plot// Load data from CSV file and plot a timeseries
+    async function createScrollableArnold(selector) {
+        console.log("Creating Arnold...")
+        x_domain = [0, 50];
+        y_domain = [0.7, 1.0];
 
-    // loadAndPlotTimeseries("files/seasonality.csv", "#plot1", "#5EBB78");
-    // loadAndPlotScrollableTimeseries("files/mitigation.csv", "#plot2", "#658EC1", t1 = 0.39, t2 = 4.);
+        // Plot
+        const margin = { top: 30, right: 30, bottom: 30, left: 30 };
+        const full_width = 300, full_height = 300;
+        const [svg, x, x_axis, y, y_axis] = createsvg(selector, x_domain, y_domain, margin, full_width, full_height);
 
-    // loadAndPlotTimeseries("files/mitigation1.csv", "#plot2", "#658EC1", x_domain = [0, 4], y_domain = [0, 0.5]).then(({ svg, x, y }) => {
-    // output = document.querySelector("p#output");
-    // element = document.getElementById("content");
+        const image = svg.append("image")
+            .attr("xlink:href", "img/chaos_blog_arnold.png")
+            .attr("width", full_width - margin.left - margin.right)
+            .attr("height", full_height - margin.top - margin.bottom)
+            .attr("x", 0)
+            .attr("y", 0);
+        // //// Eventlistener
+        // output = document.querySelector("p#output");
+        // element = document.getElementById("content");
 
-    // element.addEventListener("scroll", (event) => {
-    //     const pos = element.scrollTop / (element.scrollHeight - element.clientHeight);
-    //     if (pos > 0.8) {
-    //         addToPlot(svg, x, y, "files/mitigation2.csv", "#658EC1")
-    //     }
-    //     output.textContent = pos;
-    //     setTimeout(() => {
-    //         output.textContent = "Waiting on scroll events...";
-    //     }, 1000);
-    //     console.log("scroll!")
-    // });
+        // element.addEventListener("scroll", (event) => {
+        //     transition_time = 1000
+        //     const pos = element.scrollTop / (element.scrollHeight - element.clientHeight);
 
-    // });
-    //
-    // function handlefct() {
-    //     console.log("content scrolled")
-    //     console.log(document.getElementById('content').scrollTop);
-    // };
-    // document.getElementById("content").onscroll = (event) => {
-    //     console.log("scrolled!")
-    // }
-    // console.log(document.getElementById("content"))
-    // document.getElementById("content").addEventListener("scroll", () => console.log("Div was scrolled"));
-    // document.getElementById('content').addEventListener('scroll', handlefct);
+        //     const reference = document.getElementById('plot2').getBoundingClientRect().top;
+        //     // console.log("Marker positions:", reference, marker_seasonality, marker_mitigation1, marker_mitigation2);
 
-    // // Define the function to call when the user scrolls
-    // function handlekeydown() {
-    //     console.log("mouse scrolled")
-    //     // Get the current scroll position
-    //     const scrollPosition = window.scrollY;
-    // };
+        //     if (reference <= marker_mitigation1) {// reset to state 0
+        //         console.log("state 0")
+        //     } else if (reference < marker_mitigation2) {
+        //         console.log("state 1")
+        //     } else if (reference < marker_mitigation3) {
+        //         console.log("state 2")
+        //     } else if (reference < marker_combined) {
+        //         console.log("state 3")
+        //     } else {
+        //         console.log("state 4")
+        //     }
 
-    // // Add an event listener to the window's scroll event
-    // window.addEventListener('DOMMouseScroll', handlekeydown);
+        // });
+    }
+    createScrollableArnold("#plot2");
+
 </script>
 
 <script>

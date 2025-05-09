@@ -73,11 +73,10 @@ console.log('Started plotting.js:')
 // }
 // Function to plot timeseries data
 
-function createsvg(selector, x_domain, y_domain) {
+function createsvg(selector, x_domain, y_domain, margin, full_width, full_height) {
   console.log("created svg")
-  const margin = { top: 10, right: 30, bottom: 30, left: 60 },
-    width = 380 - margin.left - margin.right,
-    height = 150 - margin.top - margin.bottom;
+  const width = full_width - margin.left - margin.right,
+    height = full_height - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   const svg = d3.select(selector)
