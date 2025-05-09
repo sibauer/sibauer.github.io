@@ -1,8 +1,8 @@
 blog {
-  /* font-size: 14px;
-  color: #538b01;
-  font-weight: bold;
-  font-style: italic; */
+  font-size: 14px;
+  /* color: #538b01; */
+  /* font-weight: bold; */
+  /* font-style: italic; */
 }
 
 .seasonality {
@@ -13,24 +13,18 @@ blog {
   color: #658EC1;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 dl>div {
-  /* background: #fff; */
   padding: 24px 0 0 0;
 }
 
 dt {
-  /* background: #ffffff; */
-  border-bottom: 1px solid #989ea4;
-  border-top: 1px solid #717d85;
-  /* color: #fff; */
-  /* font:
-    bold 18px/21px Helvetica,
-    Arial,
-    sans-serif; */
+  font-weight: normal;
+  /* border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85; */
   margin: 0;
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
@@ -39,22 +33,20 @@ dt {
   z-index: 1;
 }
 
-top {
-  position: relative;
-  background: #c14343;
-  z-index: 100;
-}
-
 dd {
-  /* font:
-    bold 20px/45px Helvetica,
-    Arial,
-    sans-serif; */
   margin: 0;
   padding: 0 0 0 12px;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 dd+dd {
   border-top: 1px solid #ccc;
+}
+
+top {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
 }

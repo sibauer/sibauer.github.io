@@ -22,22 +22,30 @@ function createsvg(selector, data, x_domain, y_domain) {
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x));
+
+  // Add X axis label
+  svg.append("text")
+    .attr("x", width / 2.5)
+    .attr("y", height + margin.top * 2.8)
+    .attr("font-size", "12px")
+    .attr("font-weight", "normal")
+    .text("years");
+
   // Add Y axis
   const y = d3.scaleLinear()
     .domain(y_domain)
     .range([height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
-  // // Add the line
-  // svg.append("path")
-  // .datum(data)
-  // .attr("fill", "none")
-  // .attr("stroke", "#69b3a2")
-  // .attr("stroke-width", 1.5)
-  // .attr("d", d3.line()
-  //   .x(d => x(d.t))
-  //   .y(d => y(d.I))
-  // )
+
+  // Add Y axis label
+  svg.append("text")
+    .attr("x", -height / 0.8)
+    .attr("y", -margin.left / 1.6)
+    .attr("font-size", "12px")
+    .attr("font-weight", "normal")
+    .attr("transform", "rotate(-90)")
+    .text("% of the population infected");
   return [svg, x, y];
 }
 
