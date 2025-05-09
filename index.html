@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -20,7 +22,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+    rel="stylesheet">
   <title>Prof. Dr. Viola Priesemann</title>
 
   <!--
@@ -32,13 +35,12 @@
   <script src="./assets/js/plotting.js"></script>
   <!-- Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous">
-  </script>
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
-<button type="button" class="mobile-navigator-toggle d-xl-none"><i class="bi bi-list"></i></button>
+  <button type="button" class="mobile-navigator-toggle d-xl-none"><i class="bi bi-list"></i></button>
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar with picture, general links and navigation -->
@@ -68,7 +70,7 @@
           <hr>
           <h5>Physics, Complex Systems &amp; Neural Networks</h5>
         </div>
-    
+
         <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
           <ul class="nav flex-column">
             <li class="nav-item">
@@ -78,7 +80,7 @@
               <a id="navlink_group" class="nav-link" href="#group">Group members</a>
             </li>
             <li class="nav-item">
-              <a id="navlink_blog" class="nav-link" href="#blog">Blog</a>
+              <a id="navlink_blogs" class="nav-link" href="#blogs">Blogs</a>
             </li>
             <li class="nav-item">
               <a id="navlink_cv" class="nav-link" href="#cv">CV</a>
@@ -94,15 +96,15 @@
             </li>-->
           </ul>
         </nav>
-        
+
         <footer>
           <hr>
           <div class="footer">
             <div class="address">
-            MPI for Dynamics and<br>
-            Self-Organization<br>
-            Am Fassberg 17<br>
-            D &#8211; 37077 Göttingen
+              MPI for Dynamics and<br>
+              Self-Organization<br>
+              Am Fassberg 17<br>
+              D &#8211; 37077 Göttingen
             </div>
             <div class="address">
               &#169; PriesemannLab<br>
@@ -117,7 +119,7 @@
       </div>
     </div>
   </div>
-  
+
 </body>
 
 <script>
@@ -125,19 +127,19 @@
   const allLinks = Array.from(document.querySelectorAll(".nav-link")).map(link => link.id.replace("navlink_", ""));
 
   // get the current page via has
-  
+
   function getCurrentPage() {
     const queryString = window.location.hash;
     if (queryString.length > 0 && allLinks.includes(queryString.substring(1))) {
       return queryString.substring(1);
     }
-    else{
+    else {
       return current_active;
     }
   }
 
   // load new content
-  window.addEventListener("hashchange",()=>{
+  window.addEventListener("hashchange", () => {
     current_active = getCurrentPage();
     loadcontent(current_active);
 
@@ -166,109 +168,19 @@
   // Responsive sidebar mobile
   // See semohr.github.io
 
-    var navbar_btn =  document.getElementsByClassName("mobile-navigator-toggle")
+  var navbar_btn = document.getElementsByClassName("mobile-navigator-toggle")
 
-    navbar_btn[0].onclick = function(e){
-        //Toggle header class
-        sidebar = document.getElementById("sidebar")
-        sidebar.classList.toggle("mobile-navigator-active");
-        //Repalce icon with cross (x)
-        navbar_btn[0].children[0].classList.toggle("bi-list");
-        navbar_btn[0].children[0].classList.toggle("bi-x");
-        //Toggle overflow i.e scrolling
-        document.body.classList.toggle("prevent-scrolling");
-    };
+  navbar_btn[0].onclick = function (e) {
+    //Toggle header class
+    sidebar = document.getElementById("sidebar")
+    sidebar.classList.toggle("mobile-navigator-active");
+    //Repalce icon with cross (x)
+    navbar_btn[0].children[0].classList.toggle("bi-list");
+    navbar_btn[0].children[0].classList.toggle("bi-x");
+    //Toggle overflow i.e scrolling
+    document.body.classList.toggle("prevent-scrolling");
+  };
 
 </script>
 
-<script>
-  // set the dimensions and margins of the graph
-  const margin = {top: 10, right: 100, bottom: 30, left: 30},
-      width = 460 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
-  
-  // append the svg object to the body of the page
-  const svg = d3.select("#my_dataviz")
-    .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`);
-  
-  //Read the data
-  d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_connectedscatter.csv").then( function(data) {
-  
-      // List of groups (here I have one group per column)
-      const allGroup = ["valueA", "valueB", "valueC"]
-  
-      // add the options to the button
-      d3.select("#selectButton")
-        .selectAll('myOptions')
-         .data(allGroup)
-        .enter()
-        .append('option')
-        .text(function (d) { return d; }) // text showed in the menu
-        .attr("value", function (d) { return d; }) // corresponding value returned by the button
-  
-      // A color scale: one color for each group
-      const myColor = d3.scaleOrdinal()
-        .domain(allGroup)
-        .range(d3.schemeSet2);
-  
-      // Add X axis --> it is a date format
-      const x = d3.scaleLinear()
-        .domain([0,10])
-        .range([ 0, width ]);
-      svg.append("g")
-        .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(x));
-  
-      // Add Y axis
-      const y = d3.scaleLinear()
-        .domain( [0,20])
-        .range([ height, 0 ]);
-      svg.append("g")
-        .call(d3.axisLeft(y));
-  
-      // Initialize line with group a
-      const line = svg
-        .append('g')
-        .append("path")
-          .datum(data)
-          .attr("d", d3.line()
-            .x(function(d) { return x(+d.time) })
-            .y(function(d) { return y(+d.valueA) })
-          )
-          .attr("stroke", function(d){ return myColor("valueA") })
-          .style("stroke-width", 4)
-          .style("fill", "none")
-  
-      // A function that update the chart
-      function update(selectedGroup) {
-  
-        // Create new data with the selection?
-        const dataFilter = data.map(function(d){return {time: d.time, value:d[selectedGroup]} })
-  
-        // Give these new data to update line
-        line
-            .datum(dataFilter)
-            .transition()
-            .duration(1000)
-            .attr("d", d3.line()
-              .x(function(d) { return x(+d.time) })
-              .y(function(d) { return y(+d.value) })
-            )
-            .attr("stroke", function(d){ return myColor(selectedGroup) })
-      }
-  
-      // When the button is changed, run the updateChart function
-      d3.select("#selectButton").on("change", function(event,d) {
-          // recover the option that has been chosen
-          const selectedOption = d3.select(this).property("value")
-          // run the updateChart function with this selected option
-          update(selectedOption)
-      })
-  
-  })
-  </script>
 </html>

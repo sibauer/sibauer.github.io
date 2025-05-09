@@ -1,80 +1,218 @@
 console.log('Started plotting.js:')
-// const d3 = require('d3');
-// 
+
 // Function to plot timeseries data
-function plotTimeseries(data, selector, delay) {
-  const margin = { top: 20, right: 20, bottom: 30, left: 40 };
-  const width = 500 - margin.left - margin.right;
-  const height = 300 - margin.top - margin.bottom;
 
-  const xScale = d3.scaleLinear()
-    .domain(d3.extent(data, function(d) { return d.time; }))
-    .range([0, width]);
+function createsvg(selector, data, x_domain, y_domain) {
+  const margin = { top: 10, right: 30, bottom: 30, left: 60 },
+    width = 380 - margin.left - margin.right,
+    height = 150 - margin.top - margin.bottom;
 
-  const yScale = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return Math.max(d.p1, d.p2, d.p3); })])
-    .range([height, 0]);
-
-  const line = d3.line()
-    .x(function(d) { return xScale(d.time); })
-    .y(function(d) { return yScale(d.p1); });
-
+  // append the svg object to the body of the page
   const svg = d3.select(selector)
-    .append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-  svg.append('path')
-    .datum(data)
-    .attr('fill', 'none')
-    .attr('stroke', 'steelblue')
-    .attr('stroke-width', 1.5)
-    .attr('d', line);
-
-  // Animate the plot
-  svg.transition()
-    .duration(3000)
-    .ease(d3.easeLinear)
-    .delay(delay)
-    .attr('transform', 'translate(' + margin.left + ',' + (margin.top + height) + ')');
-
-  // Update the line to plot p2
-  line.y(function(d) { return yScale(d.p2); });
-  svg.select('path')
-    .transition()
-    .duration(3000)
-    .ease(d3.easeLinear)
-    .delay(delay + 3000)
-    .attr('d', line);
-
-  // Update the line to plot p3
-  line.y(function(d) { return yScale(d.p3); });
-  svg.select('path')
-    .transition()
-    .duration(3000)
-    .ease(d3.easeLinear)
-    .delay(delay + 6000)
-    .attr('d', line);
+  // Add X axis
+  const x = d3.scaleLinear()
+    .domain(x_domain)
+    .range([0, width]);
+  svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x));
+  // Add Y axis
+  const y = d3.scaleLinear()
+    .domain(y_domain)
+    .range([height, 0]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+  // // Add the line
+  // svg.append("path")
+  // .datum(data)
+  // .attr("fill", "none")
+  // .attr("stroke", "#69b3a2")
+  // .attr("stroke-width", 1.5)
+  // .attr("d", d3.line()
+  //   .x(d => x(d.t))
+  //   .y(d => y(d.I))
+  // )
+  return [svg, x, y];
 }
 
- 
-// Load data from CSV file
-function loadAndPlot(dataFile) {
- // Load data from CSV file
-  d3.csv(dataFile).then(function(data) {
-    // Convert time to numbers and p1, p2, p3 to numbers
-    data.forEach(function(d) {
-      d.time = +d.time;
-      d.p1 = +d.p1;
-      d.p2 = +d.p2;
-      d.p3 = +d.p3;
-    });
+function plotTimeseries(svg, x, y, data, color, opacity = 1) {
+  console.log("log")
+  // Add the line
+  const line = svg.append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", color)
+    .attr("stroke-width", 1.5)
+    .attr("opacity", opacity) // Set the initial opacity to 0
+    .attr("d", d3.line()
+      .x(d => x(d.t))
+      .y(d => y(d.I))
+    )
+  return line;
+}
 
-    // Plot p1
-    plotTimeseries(data, '#plot', 0);
-  }).catch(function(error) {
-    console.error(error);
+// Load data from CSV file and plot a timeseries
+async function loadAndPlotScrollableTimeseries(dataFile, selector, color, t1 = null, t2 = null, x_domain = "auto", y_domain = "auto") {
+  // Load data from CSV file
+  const data = await d3.csv(dataFile);
+  // Convert t and I to numbers
+  data.forEach(function (d) {
+    d.t = +d.t;
+    d.I = +d.I;
+  });
+
+  if (x_domain == "auto") {
+    x_domain = d3.extent(data, d => d.t)
+  }
+  if (y_domain == "auto") {
+    y_domain = d3.extent(data, d => d.I)
+  }
+
+  // Plot
+  const [svg, x, y] = createsvg(selector, data, x_domain, y_domain);
+
+  // Plot the first part of the data up to t1
+  const firstPartData = data.filter(d => d.t <= t1);
+  plotTimeseries(svg, x, y, firstPartData, color);
+
+  // Add a scroll event listener to the html element
+  // const htmlElement = document.querySelector(selector);
+  const maxT = d3.max(firstPartData, d => d.t);
+  let secondPartData = data.filter(d => d.t >= maxT && d.t <= t2);
+  let secondline = plotTimeseries(svg, x, y, secondPartData, color, opacity = 0);
+  let secondPartPlotted = false;
+  output = document.querySelector("p#output");
+  element = document.getElementById("content");
+
+  element.addEventListener("scroll", (event) => {
+    const pos = element.scrollTop / (element.scrollHeight - element.clientHeight);
+    if (!secondPartPlotted && pos >= 0.8) {
+      secondPartPlotted = true;
+      console.log("added!")
+      secondline.transition()
+        .duration(1000)
+        .attr("opacity", 1);
+    }
+    else if (secondPartPlotted && pos < 0.8) {
+      console.log("removed!")
+      // Remove the second part of the data from the plot
+      secondPartPlotted = false;
+      secondline.transition()
+        .duration(1000)
+        .attr("opacity", 0);
+    }
+    console.log("scroll!", pos)
   });
 }
+
+
+// Load data from CSV file and plot a timeseries
+async function loadAndPlotTimeseries(dataFile, selector, color, x_domain = "auto", y_domain = "auto") {
+  // Load data from CSV file
+  try {
+    const data = await d3.csv(dataFile);
+    // Convert t and I to numbers
+    data.forEach(function (d) {
+      d.t = +d.t;
+      d.I = +d.I;
+    });
+
+    if (x_domain == "auto") {
+      x_domain = d3.extent(data, d => d.t)
+    }
+    if (y_domain == "auto") {
+      y_domain = d3.extent(data, d => d.I)
+    }
+
+    // Plot
+    const [svg, x, y] = createsvg(selector, data, x_domain, y_domain);
+    plotTimeseries(svg, x, y, data, color);
+    return { svg, x, y };
+  } catch (error) {
+    console.error(error);
+    throw error; // Re-throw the error
+  }
+}
+
+// function addToPlot(svg, x, y, dataFile, color) {
+//   console.log("test")
+//   // Load data from CSV file
+//   d3.csv(dataFile).then(function (data) {
+//     // Convert t and I to numbers
+//     data.forEach(function (d) {
+//       d.t = +d.t;
+//       d.I = +d.I;
+//     });
+
+//     // Plot
+//     plotTimeseries(svg, x, y, data, color);
+//     return [svg, x, y];
+//   }).catch(function (error) {
+//     console.error(error);
+//   });
+// }
+
+// // Function to plot timeseries data
+// function plotTimeseries(data, selector) {
+//   // set the dimensions and margins of the graph
+// const margin = { top: 10, right: 30, bottom: 30, left: 60 },
+//   width = 380 - margin.left - margin.right,
+//   height = 150 - margin.top - margin.bottom;
+
+// // append the svg object to the body of the page
+// const svg = d3.select(selector)
+//   .append("svg")
+//   .attr("width", width + margin.left + margin.right)
+//   .attr("height", height + margin.top + margin.bottom)
+//   .append("g")
+//   .attr("transform", `translate(${margin.left},${margin.top})`);
+
+// // Add X axis
+// const x = d3.scaleLinear()
+//   .domain(d3.extent(data, d => d.t))
+//   .range([0, width]);
+// svg.append("g")
+//   .attr("transform", "translate(0," + height + ")")
+//   .call(d3.axisBottom(x));
+// // Add Y axis
+// const y = d3.scaleLinear()
+//   .domain(d3.extent(data, d => d.I))
+//   .range([height, 0]);
+// svg.append("g")
+//   .call(d3.axisLeft(y));
+// // Add the line
+// svg.append("path")
+//   .datum(data)
+//   .attr("fill", "none")
+//   .attr("stroke", "#69b3a2")
+//   .attr("stroke-width", 1.5)
+//   .attr("d", d3.line()
+//     .x(d => x(d.t))
+//     .y(d => y(d.I))
+//   )
+// }
+
+
+// // Load data from CSV file and plot a timeseries
+// function loadAndPlotTimeseries(dataFile, selector, color) {
+//   // Load data from CSV file
+//   d3.csv(dataFile).then(function (data) {
+//     // Convert t and I to numbers
+//     data.forEach(function (d) {
+//       d.t = +d.t;
+//       d.I = +d.I;
+//     });
+
+//     // Plot
+//     plotTimeseries(data, selector, color);
+//   }).catch(function (error) {
+//     console.error(error);
+//   });
+// }
+

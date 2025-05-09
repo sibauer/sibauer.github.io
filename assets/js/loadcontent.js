@@ -1,6 +1,6 @@
-function loadcontent(name){
+function loadcontent(name) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("content").innerHTML = this.responseText;
 
@@ -9,40 +9,40 @@ function loadcontent(name){
                 var navlink = navlinks[i];
                 navlink.classList.remove("active");
             };
-            document.getElementById('navlink_'+name).classList.add("active");
+            document.getElementById('navlink_' + name).classList.add("active");
         };
         publications();
     };
-    xhttp.open("GET", "./content/"+name+".html", true);
+    xhttp.open("GET", "./content/" + name + ".html", true);
     xhttp.send();
 };
 
 
 // Get paper from semantic via id
-function getPublicationDetails(id){
-    url="https://api.semanticscholar.org/graph/v1/paper";
+function getPublicationDetails(id) {
+    url = "https://api.semanticscholar.org/graph/v1/paper";
     fields = "title,authors,citationCount,year,abstract,url,externalIds,venue"
 
-    var r = new Request(url+"/"+id+"?fields="+fields);
-    return fetch(r).then(function(response) {
+    var r = new Request(url + "/" + id + "?fields=" + fields);
+    return fetch(r).then(function (response) {
         return response.json();
-    }).then(function(details) {
+    }).then(function (details) {
 
-            // Format venue
-            // Nature communications
-            if(details.venue.toLowerCase().includes("nature communications")){
-                details.venue = "Nat. Com.";
-            }
-            // Proceedings of the National Academy of Sciences
-            if(details.venue.toLowerCase().includes("proceedings of the national academy of sciences")){
-                details.venue = "PNAS";
-            }
-            // Plos comp biol
-            if(details.venue.toLowerCase().includes("plos") && details.venue.toLowerCase().includes("bio")){
-                details.venue = "PLoS Comp. Biol.";
-            }
-            
-            return details;
+        // Format venue
+        // Nature communications
+        if (details.venue.toLowerCase().includes("nature communications")) {
+            details.venue = "Nat. Com.";
+        }
+        // Proceedings of the National Academy of Sciences
+        if (details.venue.toLowerCase().includes("proceedings of the national academy of sciences")) {
+            details.venue = "PNAS";
+        }
+        // Plos comp biol
+        if (details.venue.toLowerCase().includes("plos") && details.venue.toLowerCase().includes("bio")) {
+            details.venue = "PLoS Comp. Biol.";
+        }
+
+        return details;
     });
 }
 
@@ -58,7 +58,7 @@ function getPublicationDetails(id){
  *  - citationCount
  *  - paperId  
  */
-function detailsToDom(details, overwrite){
+function detailsToDom(details, overwrite) {
     let div = document.createElement("div");
     div.classList.add("publication");
 
@@ -76,11 +76,11 @@ function detailsToDom(details, overwrite){
 
     // Link to journal
     let journal = document.createElement("a");
-    journal.href = "https://doi.org/"+details.externalIds.DOI;
+    journal.href = "https://doi.org/" + details.externalIds.DOI;
 
     let text_j = document.createElement("div");
     text_j.classList.add("publication-journal");
-    if (details.venue){
+    if (details.venue) {
         text_j.innerHTML = details.venue + "<br>" + details.year;
     } else {
         text_j.innerHTML = "ArXiv<br>" + details.year;
@@ -99,7 +99,7 @@ function detailsToDom(details, overwrite){
     authors.classList.add("publication-authors");
     let text = document.createElement("p");
     var author_text = "<em>Authors:</em>";
-    details.authors.forEach(function(author){
+    details.authors.forEach(function (author) {
         author_text += " ";
         author_text += author.name;
         author_text += ",";
@@ -112,18 +112,18 @@ function detailsToDom(details, overwrite){
      * Abstract
      * --------------------------------- */
     let abstract_text = details.abstract;
-    if (overwrite.abstract != null){
+    if (overwrite.abstract != null) {
         abstract_text = overwrite.abstract;
     }
-    if (abstract_text != null){
+    if (abstract_text != null) {
         //Container
         let abstract = document.createElement("div");
         abstract.classList.add("publication-abstract");
-        
+
         //Header
-        let text_prefix= document.createElement("p");
+        let text_prefix = document.createElement("p");
         text_prefix.innerHTML = "<em>Abstract:</em> ";
-        
+
         //Text from semantic
         text_prefix.innerHTML += abstract_text;
         abstract.appendChild(text_prefix);
@@ -131,20 +131,20 @@ function detailsToDom(details, overwrite){
 
         div.appendChild(abstract);
     }
-    
+
     return div;
 }
 
 
 
-function publications(){
+function publications() {
     // Get all publications
     var pub_container = document.getElementsByClassName("publication-container");
 
     // For each publication retrieve details, than
     Array.from(pub_container).forEach(element => {
         getPublicationDetails(element.dataset.id)
-            .then(function(details){
+            .then(function (details) {
                 element.appendChild(detailsToDom(details, element.dataset));
             });
     });
