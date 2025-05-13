@@ -31,6 +31,7 @@ dt {
   position: sticky;
   top: 200px;
   z-index: 1;
+  background-color: #f5f4f4;
 }
 
 dd {
@@ -53,4 +54,34 @@ top {
 
 break {
   line-height: 1000%;
+}
+
+/* .container {
+  margin-left: -30px;
+  display: inline-grid;
+  align-items: flex-end;
+}
+
+.column {
+  width: auto;
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+} */
+.container {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  /* background-color: dodgerblue; */
+  padding: 0px;
+  grid-gap: 0;
+  align-items: flex-end;
+}
+
+.container>div {
+  /* background-color: #983eff; */
+  /* border: 1px solid black; */
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
 }

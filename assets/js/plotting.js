@@ -73,10 +73,8 @@ console.log('Started plotting.js:')
 // }
 // Function to plot timeseries data
 
-function createsvg(selector, x_domain, y_domain, margin, full_width, full_height) {
+function createsvg(selector, x_domain, y_domain, margin, width, height, xlabel = 'x', ylabel = 'y') {
   console.log("created svg")
-  const width = full_width - margin.left - margin.right,
-    height = full_height - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   const svg = d3.select(selector)
@@ -95,14 +93,6 @@ function createsvg(selector, x_domain, y_domain, margin, full_width, full_height
     .call(d3.axisBottom(x))
     .attr("class", "x_axis");
 
-  // Add X axis label
-  svg.append("text")
-    .attr("x", width / 2.5)
-    .attr("y", height + margin.top * 2.8)
-    .attr("font-size", "12px")
-    .attr("font-weight", "normal")
-    .text("years");
-
   // Add Y axis
 
   const y = d3.scaleLinear().range([height, 0]).domain(y_domain);
@@ -111,14 +101,6 @@ function createsvg(selector, x_domain, y_domain, margin, full_width, full_height
     .attr("class", "myYaxis")
     .call(y_axis)
 
-  // Add Y axis label
-  svg.append("text")
-    .attr("x", -height / 0.8)
-    .attr("y", -margin.left / 1.6)
-    .attr("font-size", "12px")
-    .attr("font-weight", "normal")
-    .attr("transform", "rotate(-90)")
-    .text("% of the population infected");
   return [svg, x, x_axis, y, y_axis];
 }
 
