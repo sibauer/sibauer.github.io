@@ -73,7 +73,7 @@ console.log('Started plotting.js:')
 // }
 // Function to plot timeseries data
 
-function createsvg(selector, x_domain, y_domain, margin, width, height, xlabel = 'x', ylabel = 'y') {
+function createsvg(selector, x_domain, y_domain, margin, width, height, log_Y = false) {
   console.log("created svg")
 
   // append the svg object to the body of the page
@@ -90,32 +90,39 @@ function createsvg(selector, x_domain, y_domain, margin, width, height, xlabel =
     .range([0, width]);
   const x_axis = svg.append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
-    .attr("class", "x_axis");
+    .call(d3.axisBottom(x).ticks(5))
+    .attr("class", "x-axis");
 
   // Add Y axis
-
-  const y = d3.scaleLinear().range([height, 0]).domain(y_domain);
-  const y_axis = d3.axisLeft().scale(y);
-  svg.append("g")
-    .attr("class", "myYaxis")
-    .call(y_axis)
-
-  return [svg, x, x_axis, y, y_axis];
+  let y, y_axis = (null, null);
+  if (log_Y) {
+    y = d3.scaleLog().range([height, 0]).domain(y_domain);
+    y_axis = d3.axisLeft(y).scale(y).ticks(5); // set the number of ticks and the format of the tick labels
+    svg.append("g")
+      .attr("class", "y-axis")
+      .call(y_axis);
+  } else {
+    y = d3.scaleLinear().range([height, 0]).domain(y_domain);
+    y_axis = d3.axisLeft().scale(y).ticks(5);
+    svg.append("g")
+      .attr("class", "y-axis")
+      .call(y_axis)
+  }
+  return { svg: svg, x: x, x_axis: x_axis, y: y, y_axis: y_axis };
 }
 
-function plotTimeseries(svg, x, y, data, color, opacity = 1) {
+function lineplot(plot, data, x_field, y_field, color, opacity = 1) {
   console.log("log")
   // Add the line
-  const line = svg.append("path")
+  const line = plot.svg.append("path")
     .datum(data)
     .attr("fill", "none")
     .attr("stroke", color)
     .attr("stroke-width", 1.5)
     .attr("opacity", opacity) // Set the initial opacity to 0
     .attr("d", d3.line()
-      .x(d => x(d.t))
-      .y(d => y(d.I))
+      .x(d => plot.x(d[x_field]))
+      .y(d => plot.y(d[y_field]))
     )
   return line;
 }
