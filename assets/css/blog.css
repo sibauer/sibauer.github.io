@@ -13,6 +13,14 @@ blog {
   color: #658EC1;
 }
 
+.mitigation-costs {
+  color: #A3D773;
+}
+
+.infection-costs {
+  color: #c18af9;
+}
+
 /* * {
   box-sizing: border-box;
 } */
@@ -20,6 +28,8 @@ blog {
 dl>div {
   padding: 24px 0 0 0;
 }
+
+
 
 dt {
   font-weight: normal;
@@ -29,9 +39,10 @@ dt {
   padding: 2px 0 0 12px;
   position: -webkit-sticky;
   position: sticky;
-  top: 200px;
+  top: 30vh;
+  /* transform: translateY(-50%); */
   z-index: 1;
-  background-color: #f5f4f4;
+  background-color: #F8F9FA;
 }
 
 dd {
@@ -84,4 +95,8 @@ break {
   margin: 0;
   font-size: 30px;
   text-align: center;
+}
+
+.legend-text {
+  font-size: 14px;
 }

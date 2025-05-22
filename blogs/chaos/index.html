@@ -124,9 +124,9 @@
             <div id="content" class="col no-padding ">
                 <div class="row identity bg-light text-dark">
                     <h1 class="col col-xl-10 col-md-12 align-self-center"> About complex infection dynamics - and how
-                        we
-                        are
-                        the ones creating them </h1>
+                        we are the ones creating them </h1>
+                    <br>
+                    <h6 class="col col-xl-10 col-md-12 align-self-center">by Marija Docenko and Simon Bauer</h6>
                     </p>
                 </div>
 
@@ -140,9 +140,26 @@
                         numbers looked so random, even unpredictable? And although unpredictability is quite big of a
                         word, we can agree that in contrast to Influenza (of which we expect one peak every year around
                         late winter), COVID-19 showed no comparable stability or structure – so why is that?
-                        <div class="content col col-xl-5 col-md-12 align-self-center">
-                            <img src="img/chaos-blog_1-data.svg" />
+                        <br>
+                        <div class="bg-light">
+                            <div class="container" style="width:5vw;">
+                                <div class="column">
+                                    <div>
+                                        <div id="plot_influenza1"></div>
+                                    </div>
+                                    <div>
+                                        <div id="plot_influenza2"></div>
+                                    </div>
+                                    <div id="plot_influenza3"></div>
+                                </div>
+                                <div class="column">
+                                    <div id="plot_covid1"></div>
+                                    <div id="plot_covid2"></div>
+                                    <div id="plot_covid3"></div>
+                                </div>
+                            </div>
                         </div>
+                        <br>
 
                         Researchers from the Max Planck Institute for Dynamics and Self-Organisation took a deeper look
                         at what drives such infection dynamics, including how societal reactions can influence the
@@ -151,10 +168,9 @@
                         complexity can even be <em>optimal</em> when considering expected costs.
 
                         <br><br>
-                        So let's dive into what they found and come back to the real-life data later - then with new
-                        knowledge at hand.
+                        So let's dive into what they found.
                         <br><br>
-                        <h5>So let's say there's a virus - but what drives infection waves?</h5>
+                        <h5>If there's a virus, what drives infection waves?</h5>
                         <dl>
                             <top id="marker_seasonality">As we know from Influenza, <span
                                     class="seasonality">seasonality</span> is one aspect that creates oscillation. We
@@ -188,11 +204,15 @@
                                     loop" would result in dynamics such as shown by the blue graph.</top>
                                 <p style="margin-bottom: 20em;"></p><br>
                                 <top id="marker_combined">
-                                    <h5 style="background-color: rgba(255, 255, 255, 0.9);">Two driving forces
-                                        interacting can create complexity</h5>
-                                    However, if seasonality and mitigation have comparable influences and affect each
-                                    other similarly, a combination of both factors can result in complex infection
-                                    dynamics. These give rise to completely different graphs, as shown by this example.
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Two driving forces
+                                            interacting can create complexity</h5>
+                                        However, if seasonality and mitigation have comparable influences and affect
+                                        each
+                                        other similarly, a combination of both factors can result in complex infection
+                                        dynamics. These give rise to completely different graphs, as shown by this
+                                        example.
+                                    </div>
                                 </top>
                                 <p style="margin-bottom: 20em;"></p><br>
                             </dd>
@@ -223,7 +243,7 @@
                         to this dependency on behaviour, we can order the dynamics in a coordinate system, in which
                         every spot represents a combination of how quickly and intensely society implements
                         measures. To create a visible structure of the corresponding dynamics, each spot can be
-                        assigned a colour according to their exhibited <em>number of infection waves</em> (<b>W</b>) per
+                        assigned a colour according to their exhibited <b>number of infection waves</b> per
                         year.
 
                         <!-- ----------------------- -->
@@ -244,7 +264,7 @@
                                                 <g transform="matrix(4.16667,0,0,4.16667,-424.58,-228.168)">
                                                     <text x="106.668px" y="62.952px"
                                                         style="font-size:8px;">infection</text><text x="110.893px"
-                                                        y="70.952px" style="font-size:8px;">peaks</text>
+                                                        y="70.952px" style="font-size:8px;">waves</text>
                                                     <g transform="matrix(8,0,0,8,136.24,78.952)"></g><text x="106.893px"
                                                         style="font-size:8px;" y="78.952px">per year</text>
                                                 </g>
@@ -361,31 +381,23 @@
                                             can vastly alter infection dynamics
                                         </h5>
                                         Real life is not as set in stone as a simplified model – <em>society’s reactions
-                                            to
-                                            infections will always slightly differ</em>, both in intensity and delay.
-                                        These
-                                        variations can be imagined as a spot slightly “moving” within our figure. The
-                                        effects of this can vary: If located in the broad yellow area, you are likely to
-                                        remain there, even if movement is involved. In the "dense phase space" areas,
-                                        however, where different colours are located close to each other, small
-                                        variations
-                                        can easily move us into a different "category". In these areas, <em>minor
-                                            changes in
-                                            mitigation behaviour can lead to big changes in the dynamic</em>. That
-                                        further
-                                        “complicates” the witnessed infection course, as these jumps between colours can
-                                        constantly change the [“rules” of how/way] dynamics behave for particular
-                                        infection
-                                        numbers.
+                                            to infections will always slightly differ</em>, both in intensity and delay.
+                                        These variations can be imagined as a spot slightly “moving” within our figure.
+                                        The effects of this can vary: If located in the broad yellow area, you are
+                                        likely to remain there, even if movement is involved. In the "dense phase space"
+                                        areas, however, where different colours are located close to each other, small
+                                        variations can easily move us into a different "category". In these areas,
+                                        <em>minor changes in mitigation behaviour can lead to big changes in the
+                                            dynamic</em>. That further “complicates” the witnessed infection course, as
+                                        these jumps between colours can constantly change the infection dynamics.
                                     </div>
                                 </top>
                                 <p style="margin-bottom: 25em;"></p>
                                 <top id="marker_complex1">This spot is located in an area of the figure where shapes and
-                                    colours appear to overlap – [within] this [ambiguous] concentration of different
-                                    [colours/characteristics] close to one another, mitigation is at a level that
-                                    <em>lets complex dynamics arise</em>. Consequently, if a disease [emerges] and
-                                    society mitigates it in ways that correspond with this area, <em>we know it is
-                                        possible to [end up with] complex infection dynamics</em>.
+                                    colours appear to overlap. Here, slight changes in maximal mitigation or in
+                                    mitigation delay can strongly alter the infection dynamics. Consequently, if society
+                                    mitigates a disease in ways that correspond with this area, it is
+                                    possible to end up with <em>complex infection dynamics</em>.
                                 </top>
 
                                 <p style="margin-bottom: 25em;"></p>
@@ -400,22 +412,15 @@
                                             about the current state impedes prediction
                                         </h5>
                                         Besides seasonality and mitigation measures, the initial number of infections
-                                        also
-                                        influences dynamics by serving as the starting point for future waves and
-                                        societal
-                                        reactions. That number matters to such an extent that for complex areas of the
-                                        figure, a change in initial conditions is enough to cause different dynamics –
-                                        even
-                                        if the mitigation behaviour remains the same! As seen in the two graphs below,
-                                        such
-                                        a change can also alter the number of exhibited waves/peaks. (Remembering the
-                                        figure
-                                        above, this change of course would be reflected in a different colour
-                                        distribution.)
-                                        For complex regions, such sensitivity to initial conditions can be
-                                        characteristic
-                                        and even exceed the precision of data, making long-term predictions rather
-                                        difficult.
+                                        also influences dynamics by serving as the starting point for future waves and
+                                        societal reactions. That number matters to such an extent that for complex areas
+                                        of the figure, a change in initial conditions is enough to cause different
+                                        dynamics – even if the mitigation behaviour remains the same! As seen in the two
+                                        graphs below, such a change can also alter the number of exhibited waves/peaks.
+                                        (Remembering the figure above, this change of course would be reflected in a
+                                        different colour distribution.) For complex regions, such sensitivity to initial
+                                        conditions can be characteristic and even exceed the precision of data, making
+                                        long-term predictions rather difficult.
                                     </div>
                                 </top>
                                 <p style="margin-bottom: 25em;"></p>
@@ -501,13 +506,15 @@
                         <!-- Part III: Costs -->
                         <!-- --------------- -->
                         <h5>What areas are we likely to enter?</h5>
-                        Infection spread is costly for a society – coming along with mitigation costs (economic costs of
-                        limiting workforce, psychological costs of limiting contacts, etc.) and infection costs (people
-                        suffering, hospitals being overloaded, etc.). Rationally, society will strive to act and
-                        mitigate in the most cost-optimal way. For this cost-optimal mitigation behaviour, total costs
-                        are minimal. Finding out how intensely and with what delay society would need to react in order
-                        to reach this point would also allow us to calculate what cost-optimal infection dynamics look
-                        like.
+                        Infection spread is costly for a society – coming along with <span
+                            class="mitigation-costs">mitigation costs</span> (economic
+                        costs of limiting workforce, psychological costs of limiting contacts, etc.) and <span
+                            class="infection-costs">infection costs</span> (people suffering, hospitals being
+                        overloaded, etc.). Rationally, <em>society will
+                            strive to act and mitigate in the most cost-optimal way</em>. For this cost-optimal
+                        mitigation behaviour, total costs are minimal. Finding out how intensely and with what delay
+                        society would need to react in order to reach this point would also allow us to calculate what
+                        cost-optimal infection dynamics look like.
                         <dl>
                             <dt>
                                 <div id="costs" class="container" style="width:5vw;">
@@ -515,15 +522,180 @@
                                         <div id="plot_costs"></div>
                                     </div>
                                     <div class="column">
+                                        <div style="width:100%;align-items: right;">
+                                            <svg width="60%" height="40%" viewBox="0 0 433 123" version="1.1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                                                xmlns:serif="http://www.serif.com/"
+                                                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:10;margin-bottom: -40px;">
+                                                <rect id="chaos_blog_arnold_legend" x="0" y="0" width="432.532"
+                                                    height="122.574" style="fill:none;" />
+                                                <g transform="matrix(4.16667,0,0,4.16667,-424.58,-228.168)">
+                                                    <text x="106.668px" y="62.952px"
+                                                        style="font-size:8px;">infection</text><text x="110.893px"
+                                                        y="70.952px" style="font-size:8px;">waves</text>
+                                                    <g transform="matrix(8,0,0,8,136.24,78.952)"></g><text x="106.893px"
+                                                        style="font-size:8px;" y="78.952px">per year</text>
+                                                </g>
+                                                <rect x="155.817" y="77.624" width="256.766" height="26.24"
+                                                    style="fill:#fff;" />
+                                                <path d="M155.817,103.864l-0,-26.24l28.529,0l0,26.24l-28.529,0"
+                                                    style="fill:#ffffd9;fill-rule:nonzero;" />
+                                                <path d="M184.346,103.864l0,-26.24l28.53,0l-0,26.24l-28.53,0"
+                                                    style="fill:#edf8b1;fill-rule:nonzero;" />
+                                                <path d="M212.876,103.864l-0,-26.24l28.529,0l0,26.24l-28.529,0"
+                                                    style="fill:#c7e9b4;fill-rule:nonzero;" />
+                                                <path d="M241.405,103.864l0,-26.24l28.53,0l0,26.24l-28.53,0"
+                                                    style="fill:#7fcdbb;fill-rule:nonzero;" />
+                                                <path d="M269.935,103.864l0,-26.24l28.53,0l-0,26.24l-28.53,0"
+                                                    style="fill:#41b6c4;fill-rule:nonzero;" />
+                                                <path d="M298.465,103.864l-0,-26.24l28.529,0l0,26.24l-28.529,0"
+                                                    style="fill:#1d91c0;fill-rule:nonzero;" />
+                                                <path d="M326.994,103.864l0,-26.24l28.53,0l-0,26.24l-28.53,0"
+                                                    style="fill:#225ea8;fill-rule:nonzero;" />
+                                                <path d="M355.524,103.864l-0,-26.24l28.529,0l0,26.24l-28.529,0"
+                                                    style="fill:#253494;fill-rule:nonzero;" />
+                                                <path d="M384.053,103.864l0,-26.24l28.53,0l-0,26.24l-28.53,0"
+                                                    style="fill-rule:nonzero;" />
+                                                <path d="M170.082,77.624l-0,-14.583"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M198.611,77.624l0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M227.141,77.624l-0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M255.67,77.624l0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M284.2,77.624l-0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M312.729,77.624l0,-14.583"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M341.259,77.624l-0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M369.788,77.624l0,-14.583"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <path d="M398.318,77.624l-0,-7.887"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;" />
+                                                <rect x="155.817" y="77.624" width="256.766" height="26.24"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:3.33px;stroke-linecap:square;stroke-linejoin:miter;" />
+                                                <g transform="matrix(33.3333,0,0,33.3333,178.778,55.3933)"></g>
+                                                <text x="160.239px" y="55.393px" style="font-size:33.333px;">1</text>
+                                                <g transform="matrix(33.3333,0,0,33.3333,321.865,56.4845)"></g>
+                                                <text x="303.326px" y="56.484px" style="font-size:33.333px;">2</text>
+                                                <g transform="matrix(33.3333,0,0,33.3333,377.977,54.7698)"></g>
+                                                <text x="359.439px" y="54.77px" style="font-size:33.333px;">3</text>
+                                                <g transform="matrix(4.16667,0,0,4.16667,-119.245,-322.78)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:5.6px;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="91.282px" style="font-size:5.6px;">4</text>
+                                                </g>
+                                                <g transform="matrix(4.16667,0,0,4.16667,-132.047,-322.78)">
+                                                    <text x="84.685px" y="84.622px" style="font-size:5.6px;">4</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,87.7995,91.282)"></g><text
+                                                        x="84.685px" y="91.282px" style="font-size:5.6px;">3</text>
+                                                </g>
+                                                <g transform="matrix(4.16667,0,0,4.16667,-147.176,-323.362)">
+                                                    <text x="95.181px" y="84.699px" style="font-size:5.6px;">3</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,98.2956,91.4286)"></g><text
+                                                        x="95.181px" y="91.429px" style="font-size:5.6px;">2</text>
+                                                </g>
+                                                <rect x="189.876" y="36.381" width="14.845" height="2.083" />
+                                                <rect x="219.644" y="35.48" width="14.845" height="2.083" />
+                                                <rect x="248.83" y="34.954" width="14.845" height="2.083" />
+                                                <g transform="matrix(4.16667,0,0,4.16667,-163.901,-323.91)">
+                                                    <text x="105.677px" y="84.622px" style="font-size:5.6px;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,108.792,91.3549)"></g><text
+                                                        x="105.677px" y="91.355px" style="font-size:5.6px;">3</text>
+                                                </g>
+                                                <g transform="matrix(4.16667,0,0,4.16667,-104.294,-323.328)">
+                                                    <text x="105.677px" y="84.622px" style="font-size:5.6px;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,108.792,91.3549)"></g><text
+                                                        x="105.677px" y="91.355px" style="font-size:5.6px;">2</text>
+                                                </g>
+                                                <rect x="276.42" y="35.251" width="14.845" height="2.083" />
+                                                <rect x="333.884" y="34.109" width="14.845" height="2.083" />
+                                                <g transform="matrix(6.12323e-17,-1,1,6.12323e-17,-2715.79,-1487.12)">
+                                                    <g transform="matrix(25,0,0,25,-1491.55,3121.12)"></g><text
+                                                        x="-1548.53px" y="3121.12px"
+                                                        style="font-size:25px;">other</text>
+                                                </g>
+                                            </svg>
+                                        </div>
                                         <div id="plot_costs_arnold"></div>
                                     </div>
                                 </div>
                             </dt>
                             <dd>
+                                <!-- <p style="margin-bottom: 20em;"></p> -->
 
+                                <top id="marker_costs1">The relation of infection costs and mitigation costs
+                                    resemble an inverse
+                                    proportion: With rising mitigation measures, infection costs fall due to fewer
+                                    people
+                                    getting
+                                    infected, whilst mitigation costs start to increase steeply as very high mitigation
+                                    measures
+                                    become harder to implement. It follows that the cost-optimal region will be found
+                                    somewhere
+                                    in the middle – where mitigation is strong enough to flatten
+                                    infections
+                                    but
+                                    not yet immensely costly.
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_costs2">
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Complexity is
+                                            Cost-Optimal</h5>
+                                        Knowing cost-optimal mitigation behaviour allows us to find the corresponding
+                                        cost-optimal
+                                        dynamic. For that, the optimal spot identified above can be transferred into our
+                                        first
+                                        figure,
+                                        which shows the number of infection waves for different mitigation behaviours.
+                                    </div>
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_costs3">
+                                    Similar cost calculations can be done for the rest of the figure, revealing a new
+                                    finding: The
+                                    cost-optimal spots appear to almost perfectly align with “border areas” of the
+                                    figure, as well
+                                    as with the complex region identified before. To quote the paper: <em>“[The]
+                                        cost-optimal region
+                                        may coincide with the region of complex […] infection dynamics.”</em>
+                                </top>
+                                <p style="margin-bottom: 20em;"></p><br>
                             </dd>
                         </dl>
-
+                        This relation shows that not only is it possible for a society to end up with
+                        complex infection
+                        dynamics, but it is rational too. This can lead to us actually encountering these
+                        dynamics in
+                        real life. [Statistically, the model with which these results were [attained] can
+                        also align with
+                        the dynamics of COVID-19. [ask.]] Such [accordance] of calculations and data plays
+                        an
+                        important role when it comes to the support of [scientific [suggestions/results]].
+                        <br><br>
+                        This connection between societal behaviour, complexity, and cost-optimality is what you
+                        should take away from this article: That <em>if an infectious disease is severe enough to be
+                            societally
+                            mitigated, complex infection dynamics become possible – and if mitigating cost-optimally,
+                            this
+                            possibility becomes reality.</em>
+                        <br><br><br>
+                        See the paper for the full
+                        research:<br>
+                        <a href="https://doi.org/10.1103/PhysRevResearch.7.013308"><em>Societal self-regulation induces
+                                complex infection dynamics and chaos</em>, <b></b>Phys. Rev. Research (2025)</a>
+                        <br><br>
+                        <h4>Involved Scientists</h4>
+                        Joel Wagner<br>
+                        Simon Bauer<br>
+                        Seba Contreras<br>
+                        Luk Fleddermann<br>
+                        Ulrich Parlitz<br>
+                        Viola Priesemann<br><br><br>
                     </blog>
                 </div>
             </div>
@@ -531,66 +703,155 @@
 </body>
 
 <script>
-    // ----------------- //
-    // Utility functions //
-    // ----------------- //
-    async function add_scrollable_lineplot_from_path(filepath, color, plot, x_field, y_field, x_range = 'all', y_domain = 'auto', initial_opacity = 0) {
-        const data = await d3.csv(filepath);
-        return add_scrollable_lineplot(data, color, plot, x_field, y_field, x_range, y_domain, initial_opacity);
-    }
-    function add_scrollable_lineplot(data, color, plot, x_field, y_field, x_range = 'all', y_domain = 'auto', initial_opacity = 0) {
-
-        if (x_range != 'all') {
-            data = data.filter(d => (d[x_field] >= x_range[0]) && (d[x_field] <= x_range[1]));
-        }
-        x_domain = d3.extent(data, d => d[x_field]);
-        if (y_domain == 'auto') {
-            y_domain = d3.extent(data, d => d[y_field]);
-        }
-
-        plot.y.domain(y_domain)
-        // Plot
-        let line = lineplot(plot, data, x_field, y_field, color, opacity = initial_opacity);
-
-        return {
-            line: line,
-            x_domain: x_domain,
-            y_domain: y_domain
-        };
-    }
-    function transition_opacity(line, opacity, transition_time) {
-        line.transition()
-            .duration(transition_time)
-            .attr("opacity", opacity);
-    }
-    function transition_domain(plot, new_domain, transition_time) {
-        plot.y.domain(new_domain)
-        plot.svg.selectAll(".y-axis")
-            .transition()
-            .duration(transition_time)
-            .call(plot.y_axis);
-    }
-    function move(marker, plot, new_x, new_y, transition_time) {
-        marker.transition()
-            .duration(transition_time) // duration of the transition in milliseconds
-            .attr("cx", plot.x(new_x)) // new x-coordinate
-            .attr("cy", plot.y(new_y)); // new y-coordinate
-    }
-    function convertFieldsToNumber(data) {
-        data.forEach(function (d) {
-            const fields = Object.keys(d);
-            fields.forEach(function (field) {
-                d[field] = +d[field];
-            });
+    // ------------ //
+    // Part 0: Data //
+    // ------------ //
+    async function createDataPlots(influenza_selectors, covid_selectors) {
+        console.log("Creating Data Plots...")
+        //// Influenza
+        // Load seasonality data from CSV file
+        let color = "#2F4F4F";
+        const data_influenza = await d3.csv("files/data-influenza.csv");
+        const dateParse = d3.timeParse("%Y-%m-%d");
+        data_influenza.forEach(d => {
+            d.date = dateParse(d.date);
+            d.Spain = +d.Spain;
+            d.Netherlands = +d.Netherlands;
+            d.France = +d.France;
         });
-        return data;
-    }
 
+        let x_domain = d3.extent(data_influenza, d => d.date);
+        let y_domain_sp = d3.extent(data_influenza, d => d.Spain);
+        let y_domain_nl = d3.extent(data_influenza, d => d.Netherlands);
+        let y_domain_fr = d3.extent(data_influenza, d => d.France);
+        // Plot
+        let margin = { top: 50, right: 30, bottom: 5, left: 60 };
+        let width = 150, height = 30;
+        let plot_sp = createsvg(influenza_selectors[0], x_domain, y_domain_sp, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_influenza, color, plot_sp, 'date', 'Spain', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_sp.svg.select(".x-axis path.domain").remove();
+        plot_sp.svg.selectAll(".x-axis .tick line").remove();
+        plot_sp.svg.selectAll(".x-axis .tick text").remove();
+        plot_sp.svg.selectAll(".y-axis .tick line").remove();
+        plot_sp.svg.selectAll(".y-axis .tick text").remove();
+        plot_sp.svg.append("text")
+            .attr("x", -height / 1.0)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('Spain');
+        plot_sp.svg.append("text")
+            .attr("x", width / 10)
+            .attr("y", -10)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .text("incidence of influenza");
+        margin = { top: 5, right: 30, bottom: 5, left: 60 };
+        width = 150, height = 30;
+        let plot_nl = createsvg(influenza_selectors[1], x_domain, y_domain_nl, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_influenza, color, plot_nl, 'date', 'Netherlands', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_nl.svg.select(".x-axis path.domain").remove();
+        plot_nl.svg.selectAll(".x-axis .tick line").remove();
+        plot_nl.svg.selectAll(".x-axis .tick text").remove();
+        plot_nl.svg.selectAll(".y-axis .tick line").remove();
+        plot_nl.svg.selectAll(".y-axis .tick text").remove();
+        plot_nl.svg.append("text")
+            .attr("x", -height / 1.3)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('NL');
+        margin = { top: 5, right: 30, bottom: 30, left: 60 };
+        width = 150, height = 30;
+        let plot_fr = createsvg(influenza_selectors[2], x_domain, y_domain_fr, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_influenza, color, plot_fr, 'date', 'France', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_fr.svg.selectAll(".y-axis .tick line").remove();
+        plot_fr.svg.selectAll(".y-axis .tick text").remove();
+        plot_fr.svg.append("text")
+            .attr("x", -height / 0.9)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('France');
+
+        //// COVID-19
+        // Load seasonality data from CSV file
+        color = "#2F4F4F";
+        const data_covid = await d3.csv("files/data-covid19.csv");
+        data_covid.forEach(d => {
+            d.date = dateParse(d.date);
+            d.Spain = +d.Spain;
+            d.Netherlands = +d.Netherlands;
+            d.France = +d.France;
+        });
+
+        x_domain = d3.extent(data_covid, d => d.date);
+        y_domain_sp = d3.extent(data_covid, d => d.Spain);
+        y_domain_nl = d3.extent(data_covid, d => d.Netherlands);
+        y_domain_fr = d3.extent(data_covid, d => d.France);
+        // Plot
+        margin = { top: 20, right: 30, bottom: 5, left: 60 };
+        width = 150, height = 30;
+        plot_sp = createsvg(covid_selectors[0], x_domain, y_domain_sp, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_covid, color, plot_sp, 'date', 'Spain', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_sp.svg.select(".x-axis path.domain").remove();
+        plot_sp.svg.selectAll(".x-axis .tick line").remove();
+        plot_sp.svg.selectAll(".x-axis .tick text").remove();
+        plot_sp.svg.selectAll(".y-axis .tick line").remove();
+        plot_sp.svg.selectAll(".y-axis .tick text").remove();
+        plot_sp.svg.append("text")
+            .attr("x", -height / 1.0)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('Spain');
+        plot_sp.svg.append("text")
+            .attr("x", width / 10)
+            .attr("y", -10)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .text("incidence of COVID-19");
+        margin = { top: 5, right: 30, bottom: 5, left: 60 };
+        width = 150, height = 30;
+        plot_nl = createsvg(covid_selectors[1], x_domain, y_domain_nl, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_covid, color, plot_nl, 'date', 'Netherlands', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_nl.svg.select(".x-axis path.domain").remove();
+        plot_nl.svg.selectAll(".x-axis .tick line").remove();
+        plot_nl.svg.selectAll(".x-axis .tick text").remove();
+        plot_nl.svg.selectAll(".y-axis .tick line").remove();
+        plot_nl.svg.selectAll(".y-axis .tick text").remove();
+        plot_nl.svg.append("text")
+            .attr("x", -height / 1.3)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('NL');
+        margin = { top: 5, right: 30, bottom: 30, left: 60 };
+        width = 150, height = 30;
+        plot_fr = createsvg(covid_selectors[2], x_domain, y_domain_fr, margin, width, height, x_scale = "time");
+        add_scrollable_lineplot(data_covid, color, plot_fr, 'date', 'France', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
+        plot_fr.svg.selectAll(".y-axis .tick line").remove();
+        plot_fr.svg.selectAll(".y-axis .tick text").remove();
+        plot_fr.svg.append("text")
+            .attr("x", -height / 0.9)
+            .attr("y", -margin.left / 5.)
+            .attr("font-size", "12px")
+            .attr("font-weight", "normal")
+            .attr("transform", "rotate(-90)")
+            .text('France');
+    }
+    createDataPlots(["#plot_influenza1", "#plot_influenza2", "#plot_influenza3"], ["#plot_covid1", "#plot_covid2", "#plot_covid3"]);
 
     // ----------------------------- //
     // Part I: Scrollable timeseries //
     // ----------------------------- //
     async function createScrollableTimeseries(selector) {
+        console.log("Creating Timeseries...")
         //// Seasonality
         // Load seasonality data from CSV file
         const seasonality_color = "#5EBB78";
@@ -657,10 +918,8 @@
             const marker_mitigation2 = document.getElementById('marker_mitigation2').getBoundingClientRect().top;
             const marker_mitigation3 = document.getElementById('marker_mitigation3').getBoundingClientRect().top;
             const marker_combined = document.getElementById('marker_combined').getBoundingClientRect().top;
-            // console.log("Marker positions:", reference, marker_seasonality, marker_mitigation1, marker_mitigation2);
 
             if (reference <= marker_mitigation1) {// reset to state 0
-                // console.log("state 0")
                 // Update domain
                 transition_domain(plot, seasonality.y_domain, transition_time);
                 // Update lines
@@ -670,7 +929,6 @@
                 transition_opacity(mitigation3.line, 0, transition_time);
                 transition_opacity(combined.line, 0, transition_time);
             } else if (reference < marker_mitigation2) {
-                // console.log("state 1")
                 // Update domain
                 transition_domain(plot, mitigation1.y_domain, transition_time);
                 // Update lines
@@ -680,7 +938,6 @@
                 transition_opacity(mitigation3.line, 0, transition_time);
                 transition_opacity(combined.line, 0, transition_time);
             } else if (reference < marker_mitigation3) {
-                // console.log("state 2")
                 // Update domain
                 transition_domain(plot, mitigation1.y_domain, transition_time);
                 // Update lines
@@ -690,7 +947,6 @@
                 transition_opacity(mitigation3.line, 0, transition_time);
                 transition_opacity(combined.line, 0, transition_time);
             } else if (reference < marker_combined) {
-                // console.log("state 3")
                 // Update domain
                 transition_domain(plot, mitigation1.y_domain, transition_time);
                 // Update lines
@@ -700,7 +956,6 @@
                 transition_opacity(mitigation3.line, 1, transition_time);
                 transition_opacity(combined.line, 0, transition_time);
             } else {
-                // console.log("state 4")
                 // Update domain
                 transition_domain(plot, combined.y_domain, transition_time);
                 // Update lines
@@ -710,7 +965,6 @@
                 transition_opacity(mitigation3.line, 0, transition_time);
                 transition_opacity(combined.line, 1, transition_time);
             }
-            // return { svg, x_axis, y_axis };
         });
     }
     createScrollableTimeseries("#plot1");
@@ -808,9 +1062,7 @@
             const marker_complex1 = document.getElementById('marker_complex1').getBoundingClientRect().top;
             const marker_complex2 = document.getElementById('marker_complex2').getBoundingClientRect().top;
             const marker_complex3 = document.getElementById('marker_complex3').getBoundingClientRect().top;
-            // console.log(reference, marker_seasonal)
             if (reference <= marker_seasonal) {// reset to state 0
-                // console.log("state 0")
                 // Update domain
                 transition_domain(plot_ts, seasonal.y_domain, transition_time);
                 // Update lines
@@ -823,7 +1075,6 @@
                 // transition_opacity(circle, 0, transition_time);
                 move(circle, plot_ad, 45, 0.78, transition_time)
             } else if (reference <= marker_diseasonal) {// reset to state 0
-                // console.log("state 0")
                 // Update domain
                 transition_domain(plot_ts, seasonal.y_domain, transition_time);
                 // Update lines
@@ -835,7 +1086,6 @@
                 // Move circle
                 move(circle, plot_ad, 45, 0.78, transition_time)
             } else if (reference < marker_complex1) {
-                // console.log("state 1")
                 // Update domain
                 transition_domain(plot_ts, diseasonal.y_domain, transition_time);
                 // Update lines
@@ -847,7 +1097,6 @@
                 // Move circle
                 move(circle, plot_ad, 26, 0.85, transition_time)
             } else if (reference < marker_complex2) {
-                // console.log("state 2")
                 // Update domain
                 transition_domain(plot_ts, complex1.y_domain, transition_time);
                 // Update lines
@@ -859,7 +1108,6 @@
                 // Move circle
                 move(circle, plot_ad, 33, 0.85, transition_time)
             } else if (reference < marker_complex3) {
-                // console.log("state 3")
                 // Update domain
                 transition_domain(plot_ts, complex2.y_domain, transition_time);
                 // Update lines
@@ -871,7 +1119,6 @@
                 // Move circle
                 move(circle, plot_ad, 33, 0.84, transition_time)
             } else {
-                // console.log("state 4")
                 // Update domain
                 transition_domain(plot_ts, complex3.y_domain, transition_time);
                 // Update lines
@@ -893,8 +1140,8 @@
     async function createScrollableCosts(selector_costs, selector_costs_arnold) {
         console.log("Creating Costs...")
         //// Costs
-        const C_I_color = "#de0baa";
-        const C_m_color = "#4fbc06";
+        const C_I_color = "#c18af9";
+        const C_m_color = "#A3D773";
         // Load data from CSV file
         let data_costs = await d3.csv("files/costs.csv");
         data_costs = convertFieldsToNumber(data_costs);
@@ -906,7 +1153,7 @@
         // Plot
         const margin_cs = { top: 10, right: 30, bottom: 40, left: 60 };
         const width_cs = 200, height_cs = 160;
-        const plot_cs = createsvg(selector_costs, x_domain_cs, y_domain_cs, margin_cs, width_cs, height_cs, log_Y = true);
+        const plot_cs = createsvg(selector_costs, x_domain_cs, y_domain_cs, margin_cs, width_cs, height_cs, x_scale = "linear", y_scale = "log");
         // Add X axis label
         plot_cs.svg.append("text")
             .attr("x", width_cs / 2.5)
@@ -916,7 +1163,7 @@
             .text("maximal mitigation");
         // Add Y axis label
         plot_cs.svg.append("text")
-            .attr("x", -height_cs / 1.0)
+            .attr("x", -height_cs / 1.5)
             .attr("y", -margin_cs.left / 1.6)
             .attr("font-size", "12px")
             .attr("font-weight", "normal")
@@ -927,7 +1174,41 @@
         const C_I = add_scrollable_lineplot(data_costs, C_I_color, plot_cs, 'Mmax', 'C_I', x_min = 'all', y_domain = y_domain_cs, initial_opacity = 1)
         const C_m = add_scrollable_lineplot(data_costs, C_m_color, plot_cs, 'Mmax', 'C_m', x_min = 'all', y_domain = y_domain_cs, initial_opacity = 1)
         // _cs, y_cs, 'Mmax', 'C_m', x_min = 'all', y_domain = y_domain_cs, initial_opacity = 1)
+        const legend = plot_cs.svg.append("g")
+            .attr("transform", "translate(10, 10)");
 
+        const legendTexts = legend.selectAll("text")
+            .data([
+                { name: "infection costs", color: C_I_color },
+                { name: "mitigation costs", color: C_m_color }
+            ])
+            .enter()
+            .append("text")
+            .attr("x", 20)
+            .attr("y", (d, i) => i * 20 + 00)
+            .attr("fill", d => d.color)
+            .attr("class", "legend-text")
+            .text(d => d.name);
+        // Plot minimum
+        let minimum_color = "#CD5C5C";
+        const minimum_marker_top = 4;
+        let minimum_line = plot_cs.svg.append("line")
+            .attr("x1", plot_cs.x(0.871)) // set the x-coordinate of the start point
+            .attr("y1", plot_cs.y(y_domain_cs[0])) // set the y-coordinate of the start point
+            .attr("x2", plot_cs.x(0.871)) // set the x-coordinate of the end point
+            .attr("y2", plot_cs.y(minimum_marker_top)) // set the y-coordinate of the end point
+            .attr("stroke", minimum_color) // set the color of the line
+            .attr("stroke-width", 1) // set the width of the line
+            .attr("opacity", 0); // set initial opacity to 0
+
+        const minimum_circle = plot_cs.svg.append("circle")
+            .attr("cx", plot_cs.x(.871)) // x-coordinate
+            .attr("cy", plot_cs.y(minimum_marker_top)) // y-coordinate
+            .attr("r", 4) // radius
+            .attr("fill", minimum_color)
+            .attr("stroke", "#FFFFFF")
+            .attr("stroke-width", 1.33)
+            .attr("opacity", 0);
         //// Plot arnold
         x_domain_ad = [0, 50];
         y_domain_ad = [0.75, 1.0];
@@ -958,20 +1239,83 @@
             .attr("y", 0);
 
         // Markers
-        // const marker_color = "#CD5C5C";
-        // const circle = plot_ad.svg.append("circle")
-        //     .attr("cx", plot_ad.x(10)) // x-coordinate
-        //     .attr("cy", plot_ad.y(0.8)) // y-coordinate
-        //     .attr("r", 5) // radius
-        //     .attr("fill", marker_color)
-        //     .attr("stroke", "#FFFFFF")
-        //     .attr("stroke-width", 2)
-
+        let data_optimal_costs = await d3.csv("files/optimal_costs.csv");
+        data_optimal_costs = convertFieldsToNumber(data_optimal_costs);
+        const markers = plot_ad.svg.selectAll("circle.new-marker")
+            .data(data_optimal_costs, (d, i) => i)
+            .enter()
+            .append("circle")
+            .attr("cx", d => plot_ad.x(d.tau))
+            .attr("cy", d => plot_ad.y(d.Mmax))
+            .attr("r", 3)
+            .attr("fill", minimum_color)
+            .attr("stroke", "#FFFFFF")
+            .attr("stroke-width", 1)
+            .attr("opacity", 0);
         //// Eventlistener
+        output = document.querySelector("p#output");
+        element = document.getElementById("content");
+
+        element.addEventListener("scroll", (event) => {
+            transition_time = 500;
+            transition_delay = 100;
+            const pos = element.scrollTop / (element.scrollHeight - element.clientHeight);
+
+            const reference = document.getElementById('plot_costs').getBoundingClientRect().top;
+            const marker_costs1 = document.getElementById('marker_costs1').getBoundingClientRect().top;
+            const marker_costs2 = document.getElementById('marker_costs2').getBoundingClientRect().top;
+            const marker_costs3 = document.getElementById('marker_costs3').getBoundingClientRect().top;
+            if (reference <= marker_costs1) {// reset to state 0
+                // Update lines
+                transition_opacity(minimum_line, 0, transition_time);
+                transition_opacity(markers, 0, transition_time);
+                transition_opacity(minimum_circle, 0, transition_time);
+                // Move circle
+            } else if (reference <= marker_costs2) {
+                // Update lines
+                transition_opacity(minimum_line, 1, transition_time);
+                transition_opacity(markers, 0, transition_time);
+                transition_opacity(minimum_circle, 1, transition_time);
+            } else if (reference <= marker_costs3) {
+                // Update lines
+                transition_opacity(minimum_line, 1, transition_time);
+                transition_opacity(markers, 0, transition_time);
+                transition_opacity(minimum_circle, 1, transition_time);
+                markers.filter((d, index) => index === 3)
+                    .transition()
+                    .duration(transition_time)
+                    .attr("opacity", 1);
+            } else {
+                // Update lines
+                transition_opacity(minimum_line, 1, transition_time);
+                transition_opacity(minimum_circle, 1, transition_time);
+                fadeInMarkers(markers, transition_time, transition_delay);
+            }
+        });
 
     }
     createScrollableCosts("#plot_costs", "#plot_costs_arnold");
 
+</script>
+
+<script>
+    // Make sure that stickied elements are centered vertically on the window 
+    const dtElements = document.querySelectorAll('dt');
+    element = document.getElementById("content");
+
+    element.addEventListener('scroll', () => {
+        console.log("test")
+        const scrollTop = window.scrollY;
+        const viewportHeight = window.innerHeight;
+
+        dtElements.forEach(dt => {
+            if (scrollTop + viewportHeight / 2 >= dt.offsetTop && scrollTop + viewportHeight / 2 <= dt.offsetTop + dt.offsetHeight) {
+                dt.classList.add('sticky');
+            } else {
+                dt.classList.remove('sticky');
+            }
+        });
+    });
 </script>
 
 <script>
