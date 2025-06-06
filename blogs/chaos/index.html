@@ -42,233 +42,235 @@
 </head>
 
 <body>
-    <div id="main-content">
-        <button type="button" class="mobile-navigator-toggle d-xl-none"><i class="bi bi-list"></i></button>
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Sidebar with picture, general links and navigation -->
-                <div id="sidebar" class="d-none d-md-flex col-md-3 col-xl-2 text-light bg-dark">
-                    <img src="../../assets/img/viola_400x400.jpg" class="rounded-circle">
-                    <h4>Prof. Dr. Viola Priesemann</h4>
+    <!-- Sidebar toggle button (ALWAYS visible) -->
+    <button type="button" class="sidebar-toggle" aria-label="Toggle sidebar">
+        <i class="bi bi-arrow-right-circle"></i>
+    </button>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar with picture, general links and navigation -->
+            <div id="sidebar" class="sidebar-dynamic text-light bg-dark">
+                <img src="../../assets/img/viola_400x400.jpg" class="rounded-circle">
+                <h4>Prof. Dr. Viola Priesemann</h4>
 
-                    <!--div class="links">
-                <a class="icon-link" href="https://scholar.google.de/citations?user=5oK8Ek4AAAAJ&hl=de">
-                  <i class="ai ai-google-scholar"></i>
-                </a>
-                <a class="icon-link" href="https://arxiv.org/a/0000-0001-8905-5873.html">
-                  <i class="ai ai-arxiv"></i>
-                </a>
-                <a class="icon-link" href="https://orcid.org/0000-0001-8905-5873">
-                  <i class="ai ai-orcid"></i>
-                </a>
-                <a class="icon-link" href="https://twitter.com/violapriesemann">
-                  <i class="bi bi-twitter"></i>
-                </a>
-                <a class="icon-link" href="https://github.com/Priesemann-Group/">
-                  <i class="bi bi-github"></i>
-                </a>
-              </div-->
+                <!--div class="links">
+          <a class="icon-link" href="https://scholar.google.de/citations?user=5oK8Ek4AAAAJ&hl=de">
+            <i class="ai ai-google-scholar"></i>
+          </a>
+          <a class="icon-link" href="https://arxiv.org/a/0000-0001-8905-5873.html">
+            <i class="ai ai-arxiv"></i>
+          </a>
+          <a class="icon-link" href="https://orcid.org/0000-0001-8905-5873">
+            <i class="ai ai-orcid"></i>
+          </a>
+          <a class="icon-link" href="https://twitter.com/violapriesemann">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a class="icon-link" href="https://github.com/Priesemann-Group/">
+            <i class="bi bi-github"></i>
+          </a>
+        </div-->
 
-                    <div class="title">
-                        <hr>
-                        <h5>Physics, Complex Systems &amp; Neural Networks</h5>
-                    </div>
-
-                    <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a id="navlink_research" class="nav-link" href="../../index.html#research">Research
-                                    Topics</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="navlink_group" class="nav-link" href="../../index.html#group">Group members</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="navlink_blogs" class="nav-link" href="../../index.html#blogs">Blogs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="navlink_cv" class="nav-link" href="../../index.html#cv">CV</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="navlink_collaborations" class="nav-link"
-                                    href="../../index.html#collaborations">Collaborations</a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="navlink_contact" class="nav-link" href="../../index.html#contact">Contacts</a>
-                            </li>
-                            <!--<li class="nav-item">
-                    <a id="navlink_talksntravel" class="nav-link" href="#talksntravel">Talks &amp; Travel</a>
-                  </li>-->
-                        </ul>
-                    </nav>
-
-                    <footer>
-                        <hr>
-                        <div class="footer">
-                            <div class="address">
-                                MPI for Dynamics and<br>
-                                Self-Organization<br>
-                                Am Fassberg 17<br>
-                                D &#8211; 37077 Göttingen
-                            </div>
-                            <div class="address">
-                                &#169; PriesemannLab<br>
-                                <a id="navlink_impressum" class="nav-link" style="padding: 0;"
-                                    href="#impressum">Impressum</a>
-                                <a id="navlink_datenschutz" class="nav-link" style="padding: 0;"
-                                    href="#datenschutz">Datenschutz</a>
-                            </div>
-                        </div>
-                    </footer>
+                <div class="title">
+                    <hr>
+                    <h5>Physics, Complex Systems &amp; Neural Networks</h5>
                 </div>
-                <!-- Content is loaded dynamically into here-->
-                <div id="content" class="col no-padding ">
-                    <div class="row identity bg-light text-dark">
-                        <h1 class="col col-xl-10 col-md-12 align-self-center"> About complex infection dynamics - and
-                            how
-                            we are the ones creating them </h1>
-                        <br>
-                        <h6 class="col col-xl-10 col-md-12 align-self-center">by Marija Docenko and Simon Bauer</h6>
-                        </p>
+
+                <nav id="navbar" class="navbar navbar-dark bg-dark text-light">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a id="navlink_research" class="nav-link" href="../../index.html#research">Research
+                                Topics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink_group" class="nav-link" href="../../index.html#group">Group members</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink_blogs" class="nav-link" href="../../index.html#blogs">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink_cv" class="nav-link" href="../../index.html#cv">CV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink_collaborations" class="nav-link"
+                                href="../../index.html#collaborations">Collaborations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink_contact" class="nav-link" href="../../index.html#contact">Contacts</a>
+                        </li>
+                        <!--<li class="nav-item">
+              <a id="navlink_talksntravel" class="nav-link" href="#talksntravel">Talks &amp; Travel</a>
+            </li>-->
+                    </ul>
+                </nav>
+
+                <footer>
+                    <hr>
+                    <div class="footer">
+                        <div class="address">
+                            MPI for Dynamics and<br>
+                            Self-Organization<br>
+                            Am Fassberg 17<br>
+                            D &#8211; 37077 Göttingen
+                        </div>
+                        <div class="address">
+                            &#169; PriesemannLab<br>
+                            <a id="navlink_impressum" class="nav-link" style="padding: 0;"
+                                href="#impressum">Impressum</a>
+                            <a id="navlink_datenschutz" class="nav-link" style="padding: 0;"
+                                href="#datenschutz">Datenschutz</a>
+                        </div>
                     </div>
+                </footer>
+            </div>
+            <!-- Content is loaded dynamically into here-->
+            <div id="content" class="col no-padding ">
+                <div class="row identity bg-light text-dark">
+                    <h1 class="col col-xl-10 col-md-12 align-self-center"> About complex infection dynamics - and
+                        how
+                        we are the ones creating them </h1>
+                    <br>
+                    <h6 class="col col-xl-10 col-md-12 align-self-center">by Marija Docenko and Simon Bauer</h6>
+                    </p>
+                </div>
 
-                    <!-- -------------------- -->
-                    <!-- Part I: Introduction -->
-                    <!-- -------------------- -->
-                    <div class="content col col-xl-10 col-md-12 align-self-center">
-                        <blog>
+                <!-- -------------------- -->
+                <!-- Part I: Introduction -->
+                <!-- -------------------- -->
+                <div class="content col col-xl-10 col-md-12 align-self-center">
+                    <blog>
 
-                            Remember looking at the infection statistics during the COVID-19 pandemic and the way the
-                            numbers looked so random, even unpredictable? And although unpredictability is quite big of
-                            a
-                            word, we can agree that in contrast to Influenza (of which we expect one peak every year
-                            around
-                            late winter), COVID-19 showed no comparable stability or structure – so why is that?
-                            <br>
-                            <div class="bg-light">
-                                <div class="container">
-                                    <div class="column">
-                                        <div id="plot_influenza1"></div>
-                                        <div id="plot_influenza2"></div>
-                                        <div id="plot_influenza3"></div>
-                                    </div>
-                                    <div class="column">
-                                        <div id="plot_covid1"></div>
-                                        <div id="plot_covid2"></div>
-                                        <div id="plot_covid3"></div>
-                                    </div>
+                        Remember looking at the infection statistics during the COVID-19 pandemic and the way the
+                        numbers looked so random, even unpredictable? And although unpredictability is quite big of
+                        a
+                        word, we can agree that in contrast to Influenza (of which we expect one peak every year
+                        around
+                        late winter), COVID-19 showed no comparable stability or structure – so why is that?
+                        <br>
+                        <div class="bg-light">
+                            <div class="container">
+                                <div class="column">
+                                    <div id="plot_influenza1"></div>
+                                    <div id="plot_influenza2"></div>
+                                    <div id="plot_influenza3"></div>
+                                </div>
+                                <div class="column">
+                                    <div id="plot_covid1"></div>
+                                    <div id="plot_covid2"></div>
+                                    <div id="plot_covid3"></div>
                                 </div>
                             </div>
-                            <br>
+                        </div>
+                        <br>
 
-                            Researchers from the Max Planck Institute for Dynamics and Self-Organisation took a deeper
-                            look
-                            at what drives such infection dynamics, including how societal reactions can influence the
-                            spread of the infection itself. More specifically, they showed with the help of a model that
-                            <em>society’s behaviour can actually induce complex dynamics</em>. Not only that: Such
-                            complexity can even be <em>optimal</em> when considering expected costs.
+                        Researchers from the Max Planck Institute for Dynamics and Self-Organisation took a deeper
+                        look
+                        at what drives such infection dynamics, including how societal reactions can influence the
+                        spread of the infection itself. More specifically, they showed with the help of a model that
+                        <em>society’s behaviour can actually induce complex dynamics</em>. Not only that: Such
+                        complexity can even be <em>optimal</em> when considering expected costs.
 
-                            <br><br>
-                            So let's dive into what they found.
-                            <br><br>
-                            <h5>If there's a virus, what drives infection waves?</h5>
-                            <dl>
-                                <top id="marker_seasonality">As we know from Influenza, <span
-                                        class="seasonality">seasonality</span> is one aspect that creates oscillation.
-                                    We
-                                    observe infection numbers decreasing in the summer and rising in the winter, as
-                                    people
-                                    stay indoors more and it's easier to get infected etc. The green graph visualizes
-                                    this
-                                    yearly peak.</top>
-                                </dd>
-                                <dt>
-                                    <div id="plot_timeseries" style="text-align: center"></div>
-                                </dt>
+                        <br><br>
+                        So let's dive into what they found.
+                        <br><br>
+                        <h5>If there's a virus, what drives infection waves?</h5>
+                        <dl>
+                            <top id="marker_seasonality">As we know from Influenza, <span
+                                    class="seasonality">seasonality</span> is one aspect that creates oscillation.
+                                We
+                                observe infection numbers decreasing in the summer and rising in the winter, as
+                                people
+                                stay indoors more and it's easier to get infected etc. The green graph visualizes
+                                this
+                                yearly peak.</top>
+                            </dd>
+                            <dt>
+                                <div id="plot_timeseries" style="text-align: center"></div>
+                            </dt>
 
-                                <dd>
-                                    <p style="margin-bottom: 20em;"></p>
+                            <dd>
+                                <p style="margin-bottom: 20em;"></p>
 
-                                    <top id="marker_mitigation1">Yet the factor that gained importance during COVID-19
-                                        is
-                                        society's preventative disease <span class="mitigation">mitigation</span>,
-                                        meaning
-                                        different measures to fight infections, such as the introduction of masks or the
-                                        reduction of social interactions.
-                                    </top>
-                                    <p style="margin-bottom: 20em;"></p>
-                                    <top id="marker_mitigation2">The intensity of these mitigation measures depends on
-                                        the
-                                        severity of the disease spread, i.e., how many people are infected – so as
+                                <top id="marker_mitigation1">Yet the factor that gained importance during COVID-19
+                                    is
+                                    society's preventative disease <span class="mitigation">mitigation</span>,
+                                    meaning
+                                    different measures to fight infections, such as the introduction of masks or the
+                                    reduction of social interactions.
+                                </top>
+                                <p style="margin-bottom: 20em;"></p>
+                                <top id="marker_mitigation2">The intensity of these mitigation measures depends on
+                                    the
+                                    severity of the disease spread, i.e., how many people are infected – so as
+                                    infection
+                                    numbers rise, society's mitigation does too, until that eventually leads to the
+                                    wave
+                                    getting broken and infections going down again.
+                                </top>
+                                <p style="margin-bottom: 20em;"></p>
+                                <top id="marker_mitigation3">When infection numbers are low, mitigation is
+                                    accordingly
+                                    lowered – which then leads to recurring infection waves. Generally speaking, as
+                                    we
+                                    adapt to the infection numbers, we correspondingly proceed to change them –
+                                    resulting in yet another adaptation and change. As a sole factor, this "feedback
+                                    loop" would result in dynamics such as shown by the blue graph.</top>
+                                <p style="margin-bottom: 20em;"></p><br>
+                                <top id="marker_combined">
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Two driving forces
+                                            interacting can create complexity</h5>
+                                        However, if seasonality and mitigation have comparable influences and affect
+                                        each
+                                        other similarly, a combination of both factors can result in complex
                                         infection
-                                        numbers rise, society's mitigation does too, until that eventually leads to the
-                                        wave
-                                        getting broken and infections going down again.
-                                    </top>
-                                    <p style="margin-bottom: 20em;"></p>
-                                    <top id="marker_mitigation3">When infection numbers are low, mitigation is
-                                        accordingly
-                                        lowered – which then leads to recurring infection waves. Generally speaking, as
-                                        we
-                                        adapt to the infection numbers, we correspondingly proceed to change them –
-                                        resulting in yet another adaptation and change. As a sole factor, this "feedback
-                                        loop" would result in dynamics such as shown by the blue graph.</top>
-                                    <p style="margin-bottom: 20em;"></p><br>
-                                    <top id="marker_combined">
-                                        <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
-                                            <h5 style="background-color: rgba(255, 255, 255, 0.9);">Two driving forces
-                                                interacting can create complexity</h5>
-                                            However, if seasonality and mitigation have comparable influences and affect
-                                            each
-                                            other similarly, a combination of both factors can result in complex
-                                            infection
-                                            dynamics. These give rise to completely different graphs, as shown by this
-                                            example.
-                                        </div>
-                                    </top>
-                                    <p style="margin-bottom: 20em;"></p><br>
-                                </dd>
+                                        dynamics. These give rise to completely different graphs, as shown by this
+                                        example.
+                                    </div>
+                                </top>
+                                <p style="margin-bottom: 20em;"></p><br>
+                            </dd>
 
-                            </dl>
-                            <top>What's clear: The spreading shows no visible structure comparable to the ones we
-                                saw when considering the forces individually. (Coming back to COVID-19, we remember
-                                that mitigation was strongly present during the pandemic; Influenza, on the other
-                                hand, society does not mitigate to an extent anywhere close. Accordingly, we
-                                witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza.)
-                                <br><br>
-                                In contrast to seasonality, which we cannot actually control, society’s mitigation
-                                is variable. But what effects would different mitigation behaviours have on
-                                infection dynamics?
-                            </top>
-                            <br>
-                            <br>
-
-                            <h5>How are infection dynamics influenced by society?</h5>
-                            To break it down, society’s influence on infections largely depends on <em>how intensely and
-                                how
-                                fast </em> it reacts to them. More specifically, we measure it using the <em>maximal
-                                amount
-                                of mitigation that society is willing to adopt</em> (<b>maximal mitigation</b>), and the
-                            <em>time it lets pass before it reacts</em> (<b>mitigation delay</b>).
+                        </dl>
+                        <top>What's clear: The spreading shows no visible structure comparable to the ones we
+                            saw when considering the forces individually. (Coming back to COVID-19, we remember
+                            that mitigation was strongly present during the pandemic; Influenza, on the other
+                            hand, society does not mitigate to an extent anywhere close. Accordingly, we
+                            witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza.)
                             <br><br>
-                            The scientist’s model can show us how specific mitigation behaviours (consisting of these
-                            two characteristics) would shape infection dynamics by calculating the corresponding course
-                            of infection. <em>These infection dynamics differ for different mitigation behaviours</em>.
-                            Due
-                            to this dependency on behaviour, we can order the dynamics in a coordinate system, in which
-                            every spot represents a combination of how quickly and intensely society implements
-                            measures. To create a visible structure of the corresponding dynamics, each spot can be
-                            assigned a colour according to their exhibited <b>number of infection waves</b> per
-                            year.
+                            In contrast to seasonality, which we cannot actually control, society’s mitigation
+                            is variable. But what effects would different mitigation behaviours have on
+                            infection dynamics?
+                        </top>
+                        <br>
+                        <br>
 
-                            <!-- ----------------------- -->
-                            <!-- Part II: Arnold tongues -->
-                            <!-- ----------------------- -->
-                            <dl>
-                                <dt>
-                                    <div id="arnold" class="container">
-                                        <div class="column">
-                                            <!-- <svg version="1.1" style="margin-bottom: -110px;">
+                        <h5>How are infection dynamics influenced by society?</h5>
+                        To break it down, society’s influence on infections largely depends on <em>how intensely and
+                            how
+                            fast </em> it reacts to them. More specifically, we measure it using the <em>maximal
+                            amount
+                            of mitigation that society is willing to adopt</em> (<b>maximal mitigation</b>), and the
+                        <em>time it lets pass before it reacts</em> (<b>mitigation delay</b>).
+                        <br><br>
+                        The scientist’s model can show us how specific mitigation behaviours (consisting of these
+                        two characteristics) would shape infection dynamics by calculating the corresponding course
+                        of infection. <em>These infection dynamics differ for different mitigation behaviours</em>.
+                        Due
+                        to this dependency on behaviour, we can order the dynamics in a coordinate system, in which
+                        every spot represents a combination of how quickly and intensely society implements
+                        measures. To create a visible structure of the corresponding dynamics, each spot can be
+                        assigned a colour according to their exhibited <b>number of infection waves</b> per
+                        year.
+
+                        <!-- ----------------------- -->
+                        <!-- Part II: Arnold tongues -->
+                        <!-- ----------------------- -->
+                        <dl>
+                            <dt>
+                                <div id="arnold" class="container">
+                                    <div class="column">
+                                        <!-- <svg version="1.1" style="margin-bottom: -110px;">
                                                 <g transform="matrix(1.0,0,0,1.0,-50,-44)">
                                                     <text x="98.668px" y="62.952px">infection</text><text x="110.893px"
                                                         y="72.952px">peaks</text>
@@ -361,390 +363,384 @@
                                                     </g>
                                                 </g>
                                             </svg> -->
-                                            <div id="plot_arnold"></div>
-                                        </div>
-                                        <div class="column">
-                                            <div id="plot_arnold_timeseries"></div>
-                                        </div>
+                                        <div id="plot_arnold"></div>
                                     </div>
-                                </dt>
+                                    <div class="column">
+                                        <div id="plot_arnold_timeseries"></div>
+                                    </div>
+                                </div>
+                            </dt>
 
-                                <dd>
-                                    <p style="margin-bottom: 25em;"></p>
+                            <dd>
+                                <p style="margin-bottom: 25em;"></p>
 
-                                    <top id="marker_seasonal">For less intense mitigation measures with a great
-                                        delay, the influence of seasonality dominates – as the yellow colour indicates,
-                                        we witness one wave per year. Though mitigation does change the peaks’ heights,
-                                        it is not strong enough to induce waves of its own.
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_diseasonal">Strong mitigation measures will strongly influence
-                                        infection
-                                        dynamics, letting multiple infection waves per year emerge. Somewhat of a
-                                        recurring
-                                        pattern can however still be made out.
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <br>
-                                    <top>
-                                        <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
-                                            <h5 style="background-color: rgba(255, 255, 255, 0.9);">Slight changes in
-                                                societies reactions
-                                                can vastly alter infection dynamics
-                                            </h5>
-                                            Real life is not as set in stone as a simplified model – <em>society’s
-                                                reactions
-                                                to infections will always slightly differ</em>, both in intensity and
-                                            delay.
-                                            These variations can be imagined as a spot slightly “moving” within our
-                                            figure.
-                                            The effects of this can vary: If located in the broad yellow area, you are
-                                            likely to remain there, even if movement is involved. In the "dense phase
-                                            space"
-                                            areas, however, where different colours are located close to each other,
-                                            small
-                                            variations can easily move us into a different "category". In these areas,
-                                            <em>minor changes in mitigation behaviour can lead to big changes in the
-                                                dynamic</em>. That further “complicates” the witnessed infection course,
-                                            as
-                                            these jumps between colours can constantly change the infection dynamics.
-                                        </div>
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_complex1">This spot is located in an area of the figure where shapes
+                                <top id="marker_seasonal">For less intense mitigation measures with a great
+                                    delay, the influence of seasonality dominates – as the yellow colour indicates,
+                                    we witness one wave per year. Though mitigation does change the peaks’ heights,
+                                    it is not strong enough to induce waves of its own.
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_diseasonal">Strong mitigation measures will strongly influence
+                                    infection
+                                    dynamics, letting multiple infection waves per year emerge. Somewhat of a
+                                    recurring
+                                    pattern can however still be made out.
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <br>
+                                <top>
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Slight changes in
+                                            societies reactions
+                                            can vastly alter infection dynamics
+                                        </h5>
+                                        Real life is not as set in stone as a simplified model – <em>society’s
+                                            reactions
+                                            to infections will always slightly differ</em>, both in intensity and
+                                        delay.
+                                        These variations can be imagined as a spot slightly “moving” within our
+                                        figure.
+                                        The effects of this can vary: If located in the broad yellow area, you are
+                                        likely to remain there, even if movement is involved. In the "dense phase
+                                        space"
+                                        areas, however, where different colours are located close to each other,
+                                        small
+                                        variations can easily move us into a different "category". In these areas,
+                                        <em>minor changes in mitigation behaviour can lead to big changes in the
+                                            dynamic</em>. That further “complicates” the witnessed infection course,
+                                        as
+                                        these jumps between colours can constantly change the infection dynamics.
+                                    </div>
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_complex1">This spot is located in an area of the figure where shapes
+                                    and
+                                    colours appear to overlap. Here, slight changes in maximal mitigation or in
+                                    mitigation delay can strongly alter the infection dynamics. Consequently, if
+                                    society
+                                    mitigates a disease in ways that correspond with this area, it is
+                                    possible to end up with <em>complex infection dynamics</em>.
+                                </top>
+
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_complex2">The graph remains complex, yet the slight change in spots
+                                    was enough to alter its course. As we can see, infection dynamics can vastly
+                                    differ
+                                    for different societal reactions.
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top>
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Incomplete knowledge
+                                            about the current state impedes prediction
+                                        </h5>
+                                        Besides seasonality and mitigation measures, the initial number of
+                                        infections
+                                        also influences dynamics by serving as the starting point for future waves
                                         and
-                                        colours appear to overlap. Here, slight changes in maximal mitigation or in
-                                        mitigation delay can strongly alter the infection dynamics. Consequently, if
-                                        society
-                                        mitigates a disease in ways that correspond with this area, it is
-                                        possible to end up with <em>complex infection dynamics</em>.
-                                    </top>
-
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_complex2">The graph remains complex, yet the slight change in spots
-                                        was enough to alter its course. As we can see, infection dynamics can vastly
-                                        differ
-                                        for different societal reactions.
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top>
-                                        <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
-                                            <h5 style="background-color: rgba(255, 255, 255, 0.9);">Incomplete knowledge
-                                                about the current state impedes prediction
-                                            </h5>
-                                            Besides seasonality and mitigation measures, the initial number of
-                                            infections
-                                            also influences dynamics by serving as the starting point for future waves
-                                            and
-                                            societal reactions. That number matters to such an extent that for complex
-                                            areas
-                                            of the figure, a change in initial conditions is enough to cause different
-                                            dynamics – even if the mitigation behaviour remains the same! As seen in the
-                                            two
-                                            graphs below, such a change can also alter the number of exhibited
-                                            waves/peaks.
-                                            (Remembering the figure above, this change of course would be reflected in a
-                                            different colour distribution.) For complex regions, such sensitivity to
-                                            initial
-                                            conditions can be characteristic and even exceed the precision of data,
-                                            making
-                                            long-term predictions rather difficult.
+                                        societal reactions. That number matters to such an extent that for complex
+                                        areas
+                                        of the figure, a change in initial conditions is enough to cause different
+                                        dynamics – even if the mitigation behaviour remains the same! As seen in the
+                                        two
+                                        graphs below, such a change can also alter the number of exhibited
+                                        waves/peaks.
+                                        (Remembering the figure above, this change of course would be reflected in a
+                                        different colour distribution.) For complex regions, such sensitivity to
+                                        initial
+                                        conditions can be characteristic and even exceed the precision of data,
+                                        making
+                                        long-term predictions rather difficult.
+                                    </div>
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_complex3">A different initial number on the same parameter spot can
+                                    mean
+                                    vastly different infection dynamics. The largest infection wave is about double
+                                    the
+                                    size as before!
+                                </top>
+                                <p style="margin-bottom: 20em;"></p><br>
+                            </dd>
+                        </dl>
+                        [Closing sentence missing! Link initial number of infections to incomplete knowledge of the
+                        state bc of hidden infections. Also maybe introduce the boxes...]
+                        <!-- Boxes: Kinds of complexity -->
+                        <div class="content col col-xl-10 col-md-12 align-self-center">
+                            <!--  Box 0: Dense phase space -->
+                            <div class="card bg-light text-dark">
+                                <div class="card-body">
+                                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-dense"
+                                        aria-expanded="true" aria-controls="collapse-dense">
+                                        <h5 class="card-title text-dark">
+                                            Kinds of complexity: Dense phase space / Phase transitions
+                                            <div class="collapse-icon bi bi-chevron-down"></div>
+                                        </h5>
+                                        <div class="card-text collapse text-dark" id="collapse-dense">
+                                            Needs to be written. Or can it be cut?
                                         </div>
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_complex3">A different initial number on the same parameter spot can
-                                        mean
-                                        vastly different infection dynamics. The largest infection wave is about double
-                                        the
-                                        size as before!
-                                    </top>
-                                    <p style="margin-bottom: 20em;"></p><br>
-                                </dd>
-                            </dl>
-                            [Closing sentence missing! Link initial number of infections to incomplete knowledge of the
-                            state bc of hidden infections. Also maybe introduce the boxes...]
-                            <!-- Boxes: Kinds of complexity -->
-                            <div class="content col col-xl-10 col-md-12 align-self-center">
-                                <!--  Box 0: Dense phase space -->
-                                <div class="card bg-light text-dark">
-                                    <div class="card-body">
-                                        <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-dense"
-                                            aria-expanded="true" aria-controls="collapse-dense">
-                                            <h5 class="card-title text-dark">
-                                                Kinds of complexity: Dense phase space / Phase transitions
-                                                <div class="collapse-icon bi bi-chevron-down"></div>
-                                            </h5>
-                                            <div class="card-text collapse text-dark" id="collapse-dense">
-                                                Needs to be written. Or can it be cut?
-                                            </div>
-                                        </a>
+                                    </a>
 
-                                    </div>
-                                </div>
-                                <!--  Box 1: Chaos -->
-                                <div class="card bg-light text-dark">
-                                    <div class="card-body">
-                                        <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-chaos"
-                                            aria-expanded="true" aria-controls="collapse-chaos">
-                                            <h5 class="card-title text-dark">
-                                                Kinds of complexity: Chaos
-                                                <div class="collapse-icon bi bi-chevron-down"></div>
-                                            </h5>
-                                            <div class="card-text collapse text-dark" id="collapse-chaos">
-                                                The <b>chaos</b> concept we talk about here means that even slight
-                                                changes in initial conditions will result in large changes in the
-                                                overall
-                                                dynamic. For infection dynamics located in chaotic regions, initial
-                                                conditions therefore matter to an extent of exact precision. That also
-                                                impedes the long-term predictability of infection spread for these
-                                                areas, as
-                                                it is impossible to collect data with such accuracy.
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                </div>
-                                <!--  Box 2: Coexisting Attractors -->
-                                <div class="card bg-light text-dark">
-                                    <div class="card-body">
-                                        <a class="collapsed" data-bs-toggle="collapse"
-                                            data-bs-target="#collapse-coexisting" aria-expanded="true"
-                                            aria-controls="collapse-coexisting">
-                                            <h5 class="card-title text-dark">
-                                                Kinds of Complexity: Coexisting Attractors
-                                                <div class="collapse-icon bi bi-chevron-down"></div>
-                                            </h5>
-                                            <div class="card-text collapse text-dark" id="collapse-coexisting">
-                                                <b>Coexisting attractors</b> are similar to chaos in their dependency on
-                                                initial conditions, yet differ when it comes to extent and outcome:
-                                                Chaos
-                                                can be seen as somewhat more sensitive, with dynamics changing into
-                                                different kinds when initial conditions differ ever so slightly. For
-                                                coexisting attractors, we can imagine a set of different dynamics, one
-                                                of
-                                                which will be strived towards in every run. They thus serve as
-                                                "attractors",
-                                                with the initial conditions determining under which dynamic's "sphere of
-                                                influence" the run will fall. Therefore, if only slightly varying the
-                                                initial conditions, the current attractor will likely remain the same,
-                                                and
-                                                the long-term infection course will not change much (unless the initial
-                                                condition is located very close to the "border area" between two
-                                                different
-                                                attractors). Comparably bigger changes will, in contrast, again result
-                                                in
-                                                very different dynamics due to the switch towards another attractor.
-                                            </div>
-                                        </a>
-
-                                    </div>
                                 </div>
                             </div>
-
-                            <!-- --------------- -->
-                            <!-- Part III: Costs -->
-                            <!-- --------------- -->
-                            <h5>What areas are we likely to enter?</h5>
-                            Infection spread is costly for a society – coming along with <span
-                                class="mitigation-costs">mitigation costs</span> (economic
-                            costs of limiting workforce, psychological costs of limiting contacts, etc.) and <span
-                                class="infection-costs">infection costs</span> (people suffering, hospitals being
-                            overloaded, etc.). Rationally, <em>society will
-                                strive to act and mitigate in the most cost-optimal way</em>. For this cost-optimal
-                            mitigation behaviour, total costs are minimal. Finding out how intensely and with what delay
-                            society would need to react in order to reach this point would also allow us to calculate
-                            what
-                            cost-optimal infection dynamics look like.
-                            <dl>
-                                <dt>
-                                    <div id="costs" class="container">
-                                        <div class="column">
-                                            <div id="plot_costs"></div>
+                            <!--  Box 1: Chaos -->
+                            <div class="card bg-light text-dark">
+                                <div class="card-body">
+                                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-chaos"
+                                        aria-expanded="true" aria-controls="collapse-chaos">
+                                        <h5 class="card-title text-dark">
+                                            Kinds of complexity: Chaos
+                                            <div class="collapse-icon bi bi-chevron-down"></div>
+                                        </h5>
+                                        <div class="card-text collapse text-dark" id="collapse-chaos">
+                                            The <b>chaos</b> concept we talk about here means that even slight
+                                            changes in initial conditions will result in large changes in the
+                                            overall
+                                            dynamic. For infection dynamics located in chaotic regions, initial
+                                            conditions therefore matter to an extent of exact precision. That also
+                                            impedes the long-term predictability of infection spread for these
+                                            areas, as
+                                            it is impossible to collect data with such accuracy.
                                         </div>
-                                        <div class="column">
-                                            <svg version="1.1" style="margin-bottom: -110px;">
-                                                <g transform="matrix(1.0,0,0,1.0,-50,-44)">
-                                                    <text x="98.668px" y="62.952px">infection</text><text x="110.893px"
-                                                        y="72.952px">peaks</text>
-                                                    <text x="100.893px" y="82.952px">per
-                                                        year</text>
-                                                </g>
-                                                <g transform="matrix(1.0,0,0,1.0,40,0)">
-                                                    <rect x="63.782" y="31.371" width="95.266" height="9.736"
-                                                        style="fill:#fff;" />
-                                                    <path d="M63.782,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
-                                                        style="fill:#ffffd9;fill-rule:nonzero;" />
-                                                    <path d="M74.367,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
-                                                        style="fill:#edf8b1;fill-rule:nonzero;" />
-                                                    <path d="M84.952,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
-                                                        style="fill:#c7e9b4;fill-rule:nonzero;" />
-                                                    <path d="M95.537,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
-                                                        style="fill:#7fcdbb;fill-rule:nonzero;" />
-                                                    <path d="M106.122,41.107l-0,-9.736l10.585,-0l0,9.736l-10.585,-0"
-                                                        style="fill:#41b6c4;fill-rule:nonzero;" />
-                                                    <path d="M116.707,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
-                                                        style="fill:#1d91c0;fill-rule:nonzero;" />
-                                                    <path d="M127.292,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
-                                                        style="fill:#225ea8;fill-rule:nonzero;" />
-                                                    <path d="M137.877,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
-                                                        style="fill:#253494;fill-rule:nonzero;" />
-                                                    <path d="M148.462,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
-                                                        style="fill-rule:nonzero;" />
-                                                    <path d="M69.074,31.371l0,-5.411"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M79.659,31.371l0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M90.244,31.371l0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M100.829,31.371l0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M111.415,31.371l-0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M122,31.371l-0,-5.411"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M132.585,31.371l-0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M143.17,31.371l-0,-5.411"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <path d="M153.755,31.371l-0,-2.926"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
-                                                    <rect x="63.782" y="31.371" width="95.266" height="9.736"
-                                                        style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;" />
+                                    </a>
 
-                                                    <text x="65.422px" y="23.123px">1</text>
-                                                    <text x="118.511px" y="23.528px">2</text>
-                                                    <text x="139.33px" y="22.891px" style="font-size:1em">3</text>
-                                                    <g transform="matrix(1.0,0,0,1.0,3.0,-70.188)">
-                                                        <text x="74.189px" y="84.622px"
-                                                            style="font-size:0.75em;">5</text>
-                                                        <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
-                                                            x="74.189px" y="95.282px" style="font-size:0.75em;">4</text>
-                                                    </g>
-                                                    <g transform="matrix(1.0,0,0,1.0,14.0,-70.188)">
-                                                        <text x="74.189px" y="84.622px"
-                                                            style="font-size:0.75em;">4</text>
-                                                        <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
-                                                            x="74.189px" y="95.282px" style="font-size:0.75em;">3</text>
-                                                    </g>
-                                                    <g transform="matrix(1.0,0,0,1.0,24.0,-70.188)">
-                                                        <text x="74.189px" y="84.622px"
-                                                            style="font-size:0.75em;">3</text>
-                                                        <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
-                                                            x="74.189px" y="95.282px" style="font-size:0.75em;">2</text>
-                                                    </g>
-                                                    <g transform="matrix(1.0,0,0,1.0,34.0,-70.188)">
-                                                        <text x="74.189px" y="84.622px"
-                                                            style="font-size:0.75em;">5</text>
-                                                        <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
-                                                            x="74.189px" y="95.282px" style="font-size:0.75em;">3</text>
-                                                    </g>
-                                                    <g transform="matrix(1.0,0,0,1.0,57.0,-70.188)">
-                                                        <text x="74.189px" y="84.622px"
-                                                            style="font-size:0.75em;">5</text>
-                                                        <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
-                                                            x="74.189px" y="95.282px" style="font-size:0.75em;">2</text>
-                                                    </g>
-                                                    <rect x="76.418" y="16" width="5.508" height="0.773" />
-                                                    <rect x="87.463" y="16" width="5.508" height="0.773" />
-                                                    <rect x="98.292" y="16" width="5.508" height="0.773" />
-                                                    <rect x="108.528" y="16" width="5.508" height="0.773" />
-                                                    <rect x="129.848" y="16" width="5.508" height="0.773" />
-                                                    <g transform="matrix(0.0,-1,1,0.0,-1004.22,-543.214)">
-                                                        <text x="-568.569px" y="1160.58px"
-                                                            style="font-size:0.75em;">other</text>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                            <div id="plot_costs_arnold"></div>
+                                </div>
+                            </div>
+                            <!--  Box 2: Coexisting Attractors -->
+                            <div class="card bg-light text-dark">
+                                <div class="card-body">
+                                    <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-coexisting"
+                                        aria-expanded="true" aria-controls="collapse-coexisting">
+                                        <h5 class="card-title text-dark">
+                                            Kinds of Complexity: Coexisting Attractors
+                                            <div class="collapse-icon bi bi-chevron-down"></div>
+                                        </h5>
+                                        <div class="card-text collapse text-dark" id="collapse-coexisting">
+                                            <b>Coexisting attractors</b> are similar to chaos in their dependency on
+                                            initial conditions, yet differ when it comes to extent and outcome:
+                                            Chaos
+                                            can be seen as somewhat more sensitive, with dynamics changing into
+                                            different kinds when initial conditions differ ever so slightly. For
+                                            coexisting attractors, we can imagine a set of different dynamics, one
+                                            of
+                                            which will be strived towards in every run. They thus serve as
+                                            "attractors",
+                                            with the initial conditions determining under which dynamic's "sphere of
+                                            influence" the run will fall. Therefore, if only slightly varying the
+                                            initial conditions, the current attractor will likely remain the same,
+                                            and
+                                            the long-term infection course will not change much (unless the initial
+                                            condition is located very close to the "border area" between two
+                                            different
+                                            attractors). Comparably bigger changes will, in contrast, again result
+                                            in
+                                            very different dynamics due to the switch towards another attractor.
                                         </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- --------------- -->
+                        <!-- Part III: Costs -->
+                        <!-- --------------- -->
+                        <h5>What areas are we likely to enter?</h5>
+                        Infection spread is costly for a society – coming along with <span
+                            class="mitigation-costs">mitigation costs</span> (economic
+                        costs of limiting workforce, psychological costs of limiting contacts, etc.) and <span
+                            class="infection-costs">infection costs</span> (people suffering, hospitals being
+                        overloaded, etc.). Rationally, <em>society will
+                            strive to act and mitigate in the most cost-optimal way</em>. For this cost-optimal
+                        mitigation behaviour, total costs are minimal. Finding out how intensely and with what delay
+                        society would need to react in order to reach this point would also allow us to calculate
+                        what
+                        cost-optimal infection dynamics look like.
+                        <dl>
+                            <dt>
+                                <div id="costs" class="container">
+                                    <div class="column">
+                                        <div id="plot_costs"></div>
                                     </div>
-                                </dt>
-                                <dd>
-                                    <!-- <p style="margin-bottom: 20em;"></p> -->
+                                    <div class="column">
+                                        <svg version="1.1" style="margin-bottom: -110px;">
+                                            <g transform="matrix(1.0,0,0,1.0,-50,-44)">
+                                                <text x="98.668px" y="62.952px">infection</text><text x="110.893px"
+                                                    y="72.952px">peaks</text>
+                                                <text x="100.893px" y="82.952px">per
+                                                    year</text>
+                                            </g>
+                                            <g transform="matrix(1.0,0,0,1.0,40,0)">
+                                                <rect x="63.782" y="31.371" width="95.266" height="9.736"
+                                                    style="fill:#fff;" />
+                                                <path d="M63.782,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
+                                                    style="fill:#ffffd9;fill-rule:nonzero;" />
+                                                <path d="M74.367,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
+                                                    style="fill:#edf8b1;fill-rule:nonzero;" />
+                                                <path d="M84.952,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
+                                                    style="fill:#c7e9b4;fill-rule:nonzero;" />
+                                                <path d="M95.537,41.107l-0,-9.736l10.585,-0l-0,9.736l-10.585,-0"
+                                                    style="fill:#7fcdbb;fill-rule:nonzero;" />
+                                                <path d="M106.122,41.107l-0,-9.736l10.585,-0l0,9.736l-10.585,-0"
+                                                    style="fill:#41b6c4;fill-rule:nonzero;" />
+                                                <path d="M116.707,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
+                                                    style="fill:#1d91c0;fill-rule:nonzero;" />
+                                                <path d="M127.292,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
+                                                    style="fill:#225ea8;fill-rule:nonzero;" />
+                                                <path d="M137.877,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
+                                                    style="fill:#253494;fill-rule:nonzero;" />
+                                                <path d="M148.462,41.107l0,-9.736l10.585,-0l0,9.736l-10.585,-0"
+                                                    style="fill-rule:nonzero;" />
+                                                <path d="M69.074,31.371l0,-5.411"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M79.659,31.371l0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M90.244,31.371l0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M100.829,31.371l0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M111.415,31.371l-0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M122,31.371l-0,-5.411"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M132.585,31.371l-0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M143.17,31.371l-0,-5.411"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <path d="M153.755,31.371l-0,-2.926"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;" />
+                                                <rect x="63.782" y="31.371" width="95.266" height="9.736"
+                                                    style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;" />
 
-                                    <top id="marker_costs1">The relation of infection costs and mitigation costs
-                                        resemble an inverse
-                                        proportion: With rising mitigation measures, infection costs fall due to fewer
-                                        people
-                                        getting
-                                        infected, whilst mitigation costs start to increase steeply as very high
-                                        mitigation
-                                        measures
-                                        become harder to implement. It follows that the cost-optimal region will be
-                                        found
-                                        somewhere
-                                        in the middle – where mitigation is strong enough to flatten
-                                        infections
-                                        but
-                                        not yet immensely costly.
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_costs2">
-                                        <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
-                                            <h5 style="background-color: rgba(255, 255, 255, 0.9);">Complexity is
-                                                Cost-Optimal</h5>
-                                            Knowing cost-optimal mitigation behaviour allows us to find the
-                                            corresponding
-                                            cost-optimal
-                                            dynamic. For that, the optimal spot identified above can be transferred into
-                                            our
-                                            first
-                                            figure,
-                                            which shows the number of infection waves for different mitigation
-                                            behaviours.
-                                        </div>
-                                    </top>
-                                    <p style="margin-bottom: 25em;"></p>
-                                    <top id="marker_costs3">
-                                        Similar cost calculations can be done for the rest of the figure, revealing a
-                                        new
-                                        finding: The
-                                        cost-optimal spots appear to almost perfectly align with “border areas” of the
-                                        figure, as well
-                                        as with the complex region identified before. To quote the paper: <em>“[The]
-                                            cost-optimal region
-                                            may coincide with the region of complex […] infection dynamics.”</em>
-                                    </top>
-                                    <p style="margin-bottom: 20em;"></p><br>
-                                </dd>
-                            </dl>
-                            This relation shows that not only is it possible for a society to end up with
-                            complex infection
-                            dynamics, but it is rational too. This can lead to us actually encountering these
-                            dynamics in
-                            real life.
-                            <!-- [Statistically, the model with which these results were [attained] can
+                                                <text x="65.422px" y="23.123px">1</text>
+                                                <text x="118.511px" y="23.528px">2</text>
+                                                <text x="139.33px" y="22.891px" style="font-size:1em">3</text>
+                                                <g transform="matrix(1.0,0,0,1.0,3.0,-70.188)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:0.75em;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="95.282px" style="font-size:0.75em;">4</text>
+                                                </g>
+                                                <g transform="matrix(1.0,0,0,1.0,14.0,-70.188)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:0.75em;">4</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="95.282px" style="font-size:0.75em;">3</text>
+                                                </g>
+                                                <g transform="matrix(1.0,0,0,1.0,24.0,-70.188)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:0.75em;">3</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="95.282px" style="font-size:0.75em;">2</text>
+                                                </g>
+                                                <g transform="matrix(1.0,0,0,1.0,34.0,-70.188)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:0.75em;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="95.282px" style="font-size:0.75em;">3</text>
+                                                </g>
+                                                <g transform="matrix(1.0,0,0,1.0,57.0,-70.188)">
+                                                    <text x="74.189px" y="84.622px" style="font-size:0.75em;">5</text>
+                                                    <g transform="matrix(5.6,0,0,5.6,77.3034,91.282)"></g><text
+                                                        x="74.189px" y="95.282px" style="font-size:0.75em;">2</text>
+                                                </g>
+                                                <rect x="76.418" y="16" width="5.508" height="0.773" />
+                                                <rect x="87.463" y="16" width="5.508" height="0.773" />
+                                                <rect x="98.292" y="16" width="5.508" height="0.773" />
+                                                <rect x="108.528" y="16" width="5.508" height="0.773" />
+                                                <rect x="129.848" y="16" width="5.508" height="0.773" />
+                                                <g transform="matrix(0.0,-1,1,0.0,-1004.22,-543.214)">
+                                                    <text x="-568.569px" y="1160.58px"
+                                                        style="font-size:0.75em;">other</text>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <div id="plot_costs_arnold"></div>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>
+                                <!-- <p style="margin-bottom: 20em;"></p> -->
+
+                                <top id="marker_costs1">The relation of infection costs and mitigation costs
+                                    resemble an inverse
+                                    proportion: With rising mitigation measures, infection costs fall due to fewer
+                                    people
+                                    getting
+                                    infected, whilst mitigation costs start to increase steeply as very high
+                                    mitigation
+                                    measures
+                                    become harder to implement. It follows that the cost-optimal region will be
+                                    found
+                                    somewhere
+                                    in the middle – where mitigation is strong enough to flatten
+                                    infections
+                                    but
+                                    not yet immensely costly.
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_costs2">
+                                    <div class="bg-white text-dark" style="padding-left:100px; margin-left:-100px;">
+                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Complexity is
+                                            Cost-Optimal</h5>
+                                        Knowing cost-optimal mitigation behaviour allows us to find the
+                                        corresponding
+                                        cost-optimal
+                                        dynamic. For that, the optimal spot identified above can be transferred into
+                                        our
+                                        first
+                                        figure,
+                                        which shows the number of infection waves for different mitigation
+                                        behaviours.
+                                    </div>
+                                </top>
+                                <p style="margin-bottom: 25em;"></p>
+                                <top id="marker_costs3">
+                                    Similar cost calculations can be done for the rest of the figure, revealing a
+                                    new
+                                    finding: The
+                                    cost-optimal spots appear to almost perfectly align with “border areas” of the
+                                    figure, as well
+                                    as with the complex region identified before. To quote the paper: <em>“[The]
+                                        cost-optimal region
+                                        may coincide with the region of complex […] infection dynamics.”</em>
+                                </top>
+                                <p style="margin-bottom: 20em;"></p><br>
+                            </dd>
+                        </dl>
+                        This relation shows that not only is it possible for a society to end up with
+                        complex infection
+                        dynamics, but it is rational too. This can lead to us actually encountering these
+                        dynamics in
+                        real life.
+                        <!-- [Statistically, the model with which these results were [attained] can
                             also align with
                             the dynamics of COVID-19. [ask.]] Such [accordance] of calculations and data plays
                             an
                             important role when it comes to the support of [scientific [suggestions/results]]. -->
-                            <br><br>
-                            This connection between societal behaviour, complexity, and cost-optimality is what you
-                            should take away from this article: That <em>if an infectious disease is severe enough to be
-                                societally
-                                mitigated, complex infection dynamics become possible – and if mitigating
-                                cost-optimally,
-                                this
-                                possibility becomes reality.</em>
-                            <br><br><br>
-                            See the paper for the full
-                            research:<br>
-                            <a href="https://doi.org/10.1103/PhysRevResearch.7.013308"><em>Societal self-regulation
-                                    induces
-                                    complex infection dynamics and chaos</em>, <b></b>Phys. Rev. Research (2025)</a>
-                            <br><br>
-                            <h4>Involved Scientists</h4>
-                            Joel Wagner<br>
-                            Simon Bauer<br>
-                            Seba Contreras<br>
-                            Luk Fleddermann<br>
-                            Ulrich Parlitz<br>
-                            Viola Priesemann<br><br><br>
-                        </blog>
-                    </div>
+                        <br><br>
+                        This connection between societal behaviour, complexity, and cost-optimality is what you
+                        should take away from this article: That <em>if an infectious disease is severe enough to be
+                            societally
+                            mitigated, complex infection dynamics become possible – and if mitigating
+                            cost-optimally,
+                            this
+                            possibility becomes reality.</em>
+                        <br><br><br>
+                        See the paper for the full
+                        research:<br>
+                        <a href="https://doi.org/10.1103/PhysRevResearch.7.013308"><em>Societal self-regulation
+                                induces
+                                complex infection dynamics and chaos</em>, <b></b>Phys. Rev. Research (2025)</a>
+                        <br><br>
+                        <h4>Involved Scientists</h4>
+                        Joel Wagner<br>
+                        Simon Bauer<br>
+                        Seba Contreras<br>
+                        Luk Fleddermann<br>
+                        Ulrich Parlitz<br>
+                        Viola Priesemann<br><br><br>
+                    </blog>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
@@ -1319,21 +1315,77 @@
 
 </script>
 
+<!-- SIDEBAR & NAVIGATION TOGGLE SCRIPT -->
 <script>
-    document.on
-    var navbar_btn = document.getElementsByClassName("mobile-navigator-toggle")
+    document.addEventListener("DOMContentLoaded", function () {
+        // --- SIDEBAR TOGGLE ---
+        const sidebar = document.getElementById("sidebar");
+        const toggleBtn = document.querySelector(".sidebar-toggle");
+        const toggleIcon = toggleBtn.querySelector("i");
 
-    navbar_btn[0].onclick = function (e) {
-        //Toggle header class
-        sidebar = document.getElementById("sidebar")
-        sidebar.classList.toggle("mobile-navigator-active");
-        //Repalce icon with cross (x)
-        navbar_btn[0].children[0].classList.toggle("bi-list");
-        navbar_btn[0].children[0].classList.toggle("bi-x");
-        //Toggle overflow i.e scrolling
-        document.body.classList.toggle("prevent-scrolling");
-    };
+        function openSidebar() {
+            sidebar.classList.add("sidebar-open");
+            toggleBtn.classList.add("open");
+            document.body.classList.add("sidebar-active");
+            toggleIcon.classList.remove("bi-list");
+            toggleIcon.classList.add("bi-x");
+        }
+        function closeSidebar() {
+            sidebar.classList.remove("sidebar-open");
+            toggleBtn.classList.remove("open");
+            document.body.classList.remove("sidebar-active");
+            toggleIcon.classList.remove("bi-x");
+            toggleIcon.classList.add("bi-list");
+        }
+        // Start closed
+        closeSidebar();
 
+        toggleBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (sidebar.classList.contains("sidebar-open")) {
+                closeSidebar();
+            } else {
+                openSidebar();
+            }
+        });
+
+        document.getElementById("content").addEventListener("click", function () {
+            if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+        });
+
+        // --- DYNAMIC NAVIGATION ---
+        const allLinks = Array.from(document.querySelectorAll(".nav-link"))
+            .map(link => link.id.replace("navlink_", ""))
+            .filter(Boolean);
+
+        function getCurrentPage() {
+            const queryString = window.location.hash;
+            if (queryString.length > 0 && allLinks.includes(queryString.substring(1))) {
+                return queryString.substring(1);
+            } else {
+                return current_active;
+            }
+        }
+
+        function onHashChange() {
+            current_active = getCurrentPage();
+            if (typeof loadcontent === "function") {
+                loadcontent(current_active);
+            }
+            allLinks.forEach(link => {
+                const li = document.querySelector(`#navlink_${link}`)?.parentElement;
+                if (li) li.classList.toggle("active", link === current_active);
+            });
+            closeSidebar(); // Optionally close after nav
+        }
+
+        // Initial load
+        var current_active = "blogs";
+        current_active = getCurrentPage();
+        window.addEventListener("hashchange", onHashChange);
+        var event = new Event('hashchange');
+        window.dispatchEvent(event);
+    });
 </script>
 
 <script>

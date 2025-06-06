@@ -16,7 +16,7 @@
   <!-- Academicon Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <!--Own css-->
+  <!-- Own css -->
   <link rel="stylesheet" href="./assets/css/main.css">
 
   <!-- Fonts -->
@@ -35,16 +35,19 @@
   <script src="./assets/js/plotting.js"></script>
   <!-- Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <button type="button" class="mobile-navigator-toggle d-xl-none"><i class="bi bi-list"></i></button>
+  <!-- Sidebar toggle button (ALWAYS visible) -->
+  <button type="button" class="sidebar-toggle" aria-label="Toggle sidebar">
+    <i class="bi bi-arrow-right-circle"></i>
+  </button>
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar with picture, general links and navigation -->
-      <div id="sidebar" class="d-none d-md-flex col-md-3 col-xl-2 text-light bg-dark">
+      <div id="sidebar" class="sidebar-dynamic text-light bg-dark">
         <img src="./assets/img/viola_400x400.jpg" class="rounded-circle">
         <h4>Prof. Dr. Viola Priesemann</h4>
 
@@ -122,65 +125,77 @@
 
 </body>
 
+<!-- SIDEBAR & NAVIGATION TOGGLE SCRIPT -->
 <script>
-  // get all possible links (assuming that the links are in the as the navbar)
-  const allLinks = Array.from(document.querySelectorAll(".nav-link")).map(link => link.id.replace("navlink_", ""));
+  document.addEventListener("DOMContentLoaded", function () {
+    // --- SIDEBAR TOGGLE ---
+    const sidebar = document.getElementById("sidebar");
+    const toggleBtn = document.querySelector(".sidebar-toggle");
+    const toggleIcon = toggleBtn.querySelector("i");
 
-  // get the current page via has
-
-  function getCurrentPage() {
-    const queryString = window.location.hash;
-    if (queryString.length > 0 && allLinks.includes(queryString.substring(1))) {
-      return queryString.substring(1);
+    function openSidebar() {
+      sidebar.classList.add("sidebar-open");
+      toggleBtn.classList.add("open");
+      document.body.classList.add("sidebar-active");
+      toggleIcon.classList.remove("bi-list");
+      toggleIcon.classList.add("bi-x");
     }
-    else {
-      return current_active;
+    function closeSidebar() {
+      sidebar.classList.remove("sidebar-open");
+      toggleBtn.classList.remove("open");
+      document.body.classList.remove("sidebar-active");
+      toggleIcon.classList.remove("bi-x");
+      toggleIcon.classList.add("bi-list");
     }
-  }
+    // Start closed
+    closeSidebar();
 
-  // load new content
-  window.addEventListener("hashchange", () => {
-    current_active = getCurrentPage();
-    loadcontent(current_active);
-
-    // Set active link
-    const activeLink = document.querySelector(`#navlink_${current_active}`).parentElement;
-    activeLink.classList.add("active");
-    allLinks.forEach(link => {
-      if (link !== current_active) {
-        var linkElement = document.querySelector(`#navlink_${link}`).parentElement;
-        linkElement.classList.remove("active");
+    toggleBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (sidebar.classList.contains("sidebar-open")) {
+        closeSidebar();
+      } else {
+        openSidebar();
       }
     });
 
-    // Disable mobile active
-    sidebar = document.getElementById("sidebar");
-    sidebar.classList.remove("mobile-navigator-active");
+    document.getElementById("content").addEventListener("click", function () {
+      if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+    });
+
+    // --- DYNAMIC NAVIGATION ---
+    const allLinks = Array.from(document.querySelectorAll(".nav-link"))
+      .map(link => link.id.replace("navlink_", ""))
+      .filter(Boolean);
+
+    function getCurrentPage() {
+      const queryString = window.location.hash;
+      if (queryString.length > 0 && allLinks.includes(queryString.substring(1))) {
+        return queryString.substring(1);
+      } else {
+        return current_active;
+      }
+    }
+
+    function onHashChange() {
+      current_active = getCurrentPage();
+      if (typeof loadcontent === "function") {
+        loadcontent(current_active);
+      }
+      allLinks.forEach(link => {
+        const li = document.querySelector(`#navlink_${link}`)?.parentElement;
+        if (li) li.classList.toggle("active", link === current_active);
+      });
+      closeSidebar(); // Optionally close after nav
+    }
+
+    // Initial load
+    var current_active = "research";
+    current_active = getCurrentPage();
+    window.addEventListener("hashchange", onHashChange);
+    var event = new Event('hashchange');
+    window.dispatchEvent(event);
   });
-
-  // Initial load
-  var current_active = "research";
-  document.on
-  current_active = getCurrentPage();
-  var event = new Event('hashchange');
-  window.dispatchEvent(event);
-
-  // Responsive sidebar mobile
-  // See semohr.github.io
-
-  var navbar_btn = document.getElementsByClassName("mobile-navigator-toggle")
-
-  navbar_btn[0].onclick = function (e) {
-    //Toggle header class
-    sidebar = document.getElementById("sidebar")
-    sidebar.classList.toggle("mobile-navigator-active");
-    //Repalce icon with cross (x)
-    navbar_btn[0].children[0].classList.toggle("bi-list");
-    navbar_btn[0].children[0].classList.toggle("bi-x");
-    //Toggle overflow i.e scrolling
-    document.body.classList.toggle("prevent-scrolling");
-  };
-
 </script>
 
 </html>
