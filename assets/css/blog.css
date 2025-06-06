@@ -86,8 +86,8 @@ top {
   z-index: 100;
 }
 
-break {
-  line-height: 1000%;
+.break {
+  line-height: 25em;
 }
 
 /* .container {
@@ -144,6 +144,10 @@ break {
   dt,
   dd {
     padding-left: 8px;
+  }
+
+  .break {
+    line-height: 60em;
   }
 }
 
