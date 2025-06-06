@@ -23,7 +23,7 @@ i {
 }
 
 i:hover {
-  color: #0a58ca !important;
+  color: #179494 !important;
 }
 
 .no-padding {
@@ -37,7 +37,7 @@ i:hover {
 }
 
 .icon-link:hover {
-  color: #0a58ca;
+  color: #179494;
   transform: scale(1.2);
 }
 
@@ -119,7 +119,7 @@ body.sidebar-active {
 
 /* SIDEBAR CONTENT */
 #sidebar>img {
-  border: 2px solid #fff;
+  border: 0px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
@@ -226,7 +226,7 @@ footer {
 
 .nav-link:hover {
   background: #000000;
-  color: #0a58ca !important;
+  color: #179494 !important;
 }
 
 .card {
@@ -242,15 +242,14 @@ footer {
 }
 
 .nav-link.active {
-  color: #0a58ca !important;
+  color: #179494 !important;
   font-weight: 600;
 }
 
 .nav-item.active {
   background: #e9f3fc;
   box-shadow: none;
-  border-left: 4px solid #0a58ca;
-  color: #0a58ca !important;
+  border-left: 4px solid #179494;
 }
 
 /* Identity (landing/ overview of sub-pages) */
@@ -320,6 +319,7 @@ footer {
   justify-content: space-between;
   font-weight: 700;
   margin-right: 30px;
+  color: #179494;
 }
 
 .collapse-icon {
@@ -337,8 +337,13 @@ footer {
   filter: blur(1px) sepia(8%) contrast(110%);
 }
 
+a {
+  color: #179494;
+  padding-bottom: 16px;
+}
+
 .card-body>a {
-  color: #0a58ca;
+  color: #179494;
   text-decoration: none;
   padding-bottom: 16px;
 }
@@ -420,7 +425,7 @@ footer {
 }
 
 .publication-journal {
-  box-shadow: inset 3px 0px 0px 0px #1874fc, inset -3px 0px 0px 0px #1874fc;
+  box-shadow: inset 3px 0px 0px 0px #179494, inset -3px 0px 0px 0px #179494;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 5px;
@@ -428,7 +433,7 @@ footer {
 }
 
 .publication-journal:hover {
-  box-shadow: inset 3px 0px 0px 0px #0a58ca, inset -3px 0px 0px 0px #0a58ca;
+  box-shadow: inset 3px 0px 0px 0px #179494, inset -3px 0px 0px 0px #179494;
 }
 
 .publication-authors {

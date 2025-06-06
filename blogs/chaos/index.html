@@ -38,13 +38,12 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
         </script>
     <link rel="stylesheet" href="../../assets/css/blog.css">
-    <!-- <script src="./assets/js/plotting.js"></script> -->
 </head>
 
 <body>
     <!-- Sidebar toggle button (ALWAYS visible) -->
     <button type="button" class="sidebar-toggle" aria-label="Toggle sidebar">
-        <i class="bi bi-arrow-right-circle"></i>
+        <i class="bi-list"></i>
     </button>
     <div class="container-fluid">
         <div class="row">
@@ -1348,12 +1347,12 @@
             if (sidebar.classList.contains("sidebar-open")) closeSidebar();
         });
 
-        // --- DYNAMIC NAVIGATION ---
+        // --- DYNAMIC NAVIGATION --
         const allLinks = Array.from(document.querySelectorAll(".nav-link"))
             .map(link => link.id.replace("navlink_", ""))
             .filter(Boolean);
 
-        function getCurrentPage() {
+        function getCurrentPage(current_active = "blogs") {
             const queryString = window.location.hash;
             if (queryString.length > 0 && allLinks.includes(queryString.substring(1))) {
                 return queryString.substring(1);
@@ -1376,7 +1375,7 @@
 
         // Initial load
         var current_active = "blogs";
-        current_active = getCurrentPage();
+        document.getElementById('navlink_' + current_active).classList.add("active");
         window.addEventListener("hashchange", onHashChange);
         var event = new Event('hashchange');
         window.dispatchEvent(event);

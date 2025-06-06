@@ -42,7 +42,7 @@
 <body>
   <!-- Sidebar toggle button (ALWAYS visible) -->
   <button type="button" class="sidebar-toggle" aria-label="Toggle sidebar">
-    <i class="bi bi-arrow-right-circle"></i>
+    <i class="bi-list"></i>
   </button>
   <div class="container-fluid">
     <div class="row">
@@ -159,6 +159,7 @@
       }
     });
 
+    // Close sidebar when clicking outside
     document.getElementById("content").addEventListener("click", function () {
       if (sidebar.classList.contains("sidebar-open")) closeSidebar();
     });
