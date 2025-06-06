@@ -20,12 +20,12 @@ function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale 
         x = d3.scaleLinear()
             .domain(x_domain)
             .range([0, width]);
-        x_axis = d3.axisBottom(x).ticks(4);
+        x_axis = d3.axisBottom(x).ticks(4).tickSizeOuter(0);
     } else {
         x = d3.scaleTime()
             .domain(x_domain)
             .range([0, width]);
-        x_axis = d3.axisBottom(x).ticks(4);
+        x_axis = d3.axisBottom(x).ticks(4).tickSizeOuter(0);
     }
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -36,13 +36,13 @@ function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale 
     let y, y_axis;
     if (y_scale == "linear") {
         y = d3.scaleLinear().range([height, 0]).domain(y_domain);
-        y_axis = d3.axisLeft(y).ticks(4);
+        y_axis = d3.axisLeft(y).ticks(4).tickSizeOuter(0);
         svg.append("g")
             .attr("class", "y-axis")
             .call(y_axis)
     } else {
         y = d3.scaleLog().range([height, 0]).domain(y_domain);
-        y_axis = d3.axisLeft(y).ticks(4);
+        y_axis = d3.axisLeft(y).ticks(4).tickSizeOuter(0);
         svg.append("g")
             .attr("class", "y-axis")
             .call(y_axis);
@@ -83,6 +83,7 @@ function add_scrollable_lineplot(data, color, plot, x_field, y_field, x_range = 
     } else {
         y_domain_data = y_domain;
     }
+    plot.y.domain(y_domain_data);
 
     // plot.y.domain(y_domain_data) // This was potentially problematic if plot.y was shared.
     // The y-domain should be set when the specific line is made active/visible by the scroll listener.

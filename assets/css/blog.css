@@ -4,7 +4,9 @@ blog {
   /* font-weight: bold; */
   /* font-style: italic; */
 }
-html, body {
+
+html,
+body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -101,64 +103,73 @@ break {
   border: 1px solid #ccc;
 } */
 #content .container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    width: 100% !important;
-    padding: 10px;
-    box-sizing: border-box;
-    align-items: end;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  width: 100% !important;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: end;
 }
 
-#content .container > .column {
-    padding: 0;
-    margin: 0;
-    font-size: inherit;
-    text-align: left;
+#content .container>.column {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  text-align: left;
 }
 
 #content .container .column svg {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 767.98px) {
-    #content .container {
-        grid-template-columns: 1fr;
-    }
+  #content .container {
+    grid-template-columns: 1fr;
+  }
 
-    #content .container > .column {
-        margin-bottom: 1.5rem;
-    }
+  #content .container>.column {
+    margin-bottom: 1.5rem;
+  }
 
-    top > div.bg-white.text-dark[style*="padding-left:100px"][style*="margin-left:-100px"] {
-        padding-left: 20px !important;
-        margin-left: 0px !important;
-    }
+  top>div.bg-white.text-dark[style*="padding-left:100px"][style*="margin-left:-100px"] {
+    padding-left: 20px !important;
+    margin-left: 0px !important;
+  }
 
-    dt, dd {
-        padding-left: 8px;
-    }
+  dt,
+  dd {
+    padding-left: 8px;
+  }
 }
 
 @media (max-width: 575.98px) {
-    top > div.bg-white.text-dark[style*="padding-left:100px"][style*="margin-left:-100px"] {
-        padding-left: 10px !important;
-        margin-left: 0px !important;
-    }
+  top>div.bg-white.text-dark[style*="padding-left:100px"][style*="margin-left:-100px"] {
+    padding-left: 10px !important;
+    margin-left: 0px !important;
+  }
 
-    blog {
-        font-size: 13px;
-    }
+  blog {
+    font-size: 13px;
+  }
 
-    dt, dd {
-        padding-left: 5px;
-    }
+  dt,
+  dd {
+    padding-left: 5px;
+  }
 }
 
-.legend-text {
-  font-size: 14px;
+svg {
+  font-size: 0.8em;
+}
+
+/* Change color of tick labels */
+.x-axis text,
+.y-axis text {
+  fill: #767676;
+  /* change this to your desired color */
 }
