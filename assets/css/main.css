@@ -190,7 +190,7 @@ footer {
 .content {
   max-width: 1000px;
   /* set the maximum width */
-  padding: 0 20px;
+  padding: 5px 20px;
   /* add padding to the left and right sides */
   box-sizing: border-box;
   /* include the padding in the width calculation */
@@ -198,13 +198,7 @@ footer {
 
 @media (max-width: 600px) {
   #content {
-    padding: 12px;
-  }
-}
-
-@media (max-width: 1200px) {
-  #content {
-    padding: calc(100vw-1200px);
+    padding: 5px 10px;
   }
 }
 
