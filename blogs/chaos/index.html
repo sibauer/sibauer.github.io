@@ -139,12 +139,11 @@
                 <div class="content col col-xl-10 col-md-12 align-self-center">
                     <blog>
 
-                        Remember looking at the infection statistics during the COVID-19 pandemic and the way the
-                        numbers looked so random, even unpredictable? And although unpredictability is quite big of
-                        a
-                        word, we can agree that in contrast to Influenza (of which we expect one peak every year
-                        around
-                        late winter), COVID-19 showed no comparable stability or structure – so why is that?
+                        Remember looking at the infection numbers during the COVID-19 pandemic, failing to find a clear,
+                        predictable pattern? And although predictability is quite big of a word, we can
+                        agree that in contrast to Influenza (of which we expect excactly one peak every year around late
+                        winter),
+                        COVID-19 showed no comparable stability or structure – so why is that?
                         <br><br>
                         <div class="bg-light">
                             <div class="container">
@@ -162,25 +161,25 @@
                         </div>
                         <br>
 
-                        Researchers from the Max Planck Institute for Dynamics and Self-Organisation took a deeper
-                        look
+                        <a href="https://doi.org/10.1103/PhysRevResearch.7.013308">In a recent research article</a>, we
+                        took a deeper look
                         at what drives such infection dynamics, including how societal reactions can influence the
-                        spread of the infection itself. More specifically, they showed with the help of a model that
+                        spread of the infection itself. With the help of a model, we showed that
                         <em>society’s behaviour can actually induce complex dynamics</em>. Not only that: Such
                         complexity can even be <em>optimal</em> when considering expected costs.
 
                         <br><br>
-                        So let's dive into what they found.
+                        So let's dive into these findings.
                         <br><br>
                         <h5>If there's a virus, what drives infection waves?</h5>
-                        <div class="top" id="marker_seasonality">As we know from Influenza, <span
-                                class="seasonality">seasonality</span> is one aspect that creates oscillation.
-                            We
-                            observe infection numbers decreasing in the summer and rising in the winter, as
-                            people
-                            stay indoors more and it's easier to get infected etc. The green graph visualizes
-                            this
-                            yearly peak.</div><br><br>
+                        <div class="top" id="marker_seasonality">
+                            One factor that drives infections in airborne viruses like Influenza and COVID-19 is <span
+                                class="seasonality">seasonality</span>. It leads to low infection numbers in the summer
+                            and high numbers
+                            in the winter, as people stay indoors where it is easier to get infected. The green graph
+                            visualizes this yearly peak in the model.
+                        </div>
+                        <br><br>
                         <dl>
                             <dt>
                                 <div id="plot_timeseries" style="text-align: center"></div>
@@ -188,63 +187,67 @@
                             <dd>
                                 <div class="small-break"><br></div>
 
-                                <div class="top" id="marker_mitigation1">Yet the factor that gained importance during
-                                    COVID-19
-                                    is
-                                    society's preventative disease <span class="mitigation">mitigation</span>,
-                                    meaning
-                                    different measures to fight infections, such as the introduction of masks or the
-                                    reduction of social interactions.
+                                <div class="top" id="marker_mitigation1">
+                                    Another driver of infections is society's preventative disease <span
+                                        class="mitigation">mitigation</span>. By that we mean the different measures to
+                                    fight infections, such as vaccinations, hygiene practices, and the reduction of
+                                    social interactions.
                                 </div>
                                 <div class="break"><br></div>
-                                <div class="top" id="marker_mitigation2">The intensity of these mitigation measures
-                                    depends on
-                                    the
-                                    severity of the disease spread, i.e., how many people are infected – so as
-                                    infection
-                                    numbers rise, society's mitigation does too, until that eventually leads to the
-                                    wave
-                                    getting broken and infections going down again.
+                                <div class="top" id="marker_mitigation2">
+                                    The intensity of these mitigation measure depends on the severity of the disease
+                                    spread. As more people get infected, society increases their mitigation
+                                    efforts, until that eventually leads to the wave getting broken and infection
+                                    numbers going down again.
                                 </div>
                                 <div class="break"><br></div>
-                                <div class="top" id="marker_mitigation3">When infection numbers are low, mitigation is
+                                <div class="top" id="marker_mitigation3">
+                                    When infection numbers are low, mitigation is
                                     accordingly
-                                    lowered – which then leads to recurring infection waves. Generally speaking, as
-                                    we
-                                    adapt to the infection numbers, we correspondingly proceed to change them –
-                                    resulting in yet another adaptation and change. As a sole factor, this "feedback
-                                    loop" would result in dynamics such as shown by the blue graph.</div>
+                                    lowered – which then leads to a new infection wave – and the cycle repeats. This
+                                    leads to a "feedback loop": By
+                                    adapting to the infection numbers, we correspondingly change them – forcing us to
+                                    re-adapt.</div>
                                 <div class="break"><br></div>
 
                                 <div class="bg-white text-dark top" id="marker_combined">
-                                    <h5>Two driving forces
-                                        interacting can create complexity</h5>
-                                    However, if seasonality and mitigation have comparable influences and affect
-                                    each
-                                    other similarly, a combination of both factors can result in complex
-                                    infection
-                                    dynamics. These give rise to completely different graphs, as shown by this
-                                    example.
+                                    <h5>Two driving forces interacting can create complexity</h5>
+                                    If seasonality and mitigation have comparably strong influence, a
+                                    combination of both factors can result in complex infection dynamics. These can
+                                    display varying numbers and heights of infection waves each year.
                                 </div>
                                 <div class="break"><br></div>
                             </dd>
 
                         </dl>
-                        <div class="top">What's clear: The spreading shows no visible structure comparable to the ones
-                            we
-                            saw when considering the forces individually. (Coming back to COVID-19, we remember
-                            that mitigation was strongly present during the pandemic; Influenza, on the other
+                        <div class="top">
+                            We see: The combination of seasonality and mitigation can lead to complex infection
+                            dynamics with no visible structure comparable to the ones
+                            we saw when considering each factor individually. While seasonality is a fixed factor,
+                            mitigation is controlled by society.
+                            Thus, how society reacts to a disease determines whether infection dynamics is rather
+                            simple, or complex.
+
+                            <!-- This depends on the relative strength of
+                            seasonality and mitigation.  -->
+                            <!-- is fixed, we can control whether complex infection dynamics -->
+                            <!-- Coming back to
+                            COVID-19, we remember that mitigation was strongly present during the pandemic; Influenza,
+                            on the other
                             hand, society does not mitigate to an extent anywhere close. Accordingly, we
-                            witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza.)
-                            <br><br>
-                            In contrast to seasonality, which we cannot actually control, society’s mitigation
-                            is variable. But what effects would different mitigation behaviours have on
-                            infection dynamics?
+                            witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza. -->
+                            <!-- <br><br> -->
+                            <!-- We see: The emergence of complex infection dynamics depends on the interaction of -->
+                            <!-- seasonality and mitigation. -->
+                            <!-- While the strength of seasonality is fixed, society’s mitigation
+                            is variable.  -->
+                            <!-- But what effects would different mitigation behaviours have on
+                            infection dynamics? How are infection dynamics influenced by society? -->
                         </div>
                         <br>
                         <br>
 
-                        <h5>How are infection dynamics influenced by society?</h5>
+                        <h5>When does mitigation lead to complex infection dynamics?</h5>
                         To break it down, society’s influence on infections largely depends on <em>how intensely and
                             how
                             fast </em> it reacts to them. More specifically, we measure it using the <em>maximal
@@ -252,15 +255,14 @@
                             of mitigation that society is willing to adopt</em> (<b>maximal mitigation</b>), and the
                         <em>time it lets pass before it reacts</em> (<b>mitigation delay</b>).
                         <br><br>
-                        The scientist’s model can show us how specific mitigation behaviours (consisting of these
-                        two characteristics) would shape infection dynamics by calculating the corresponding course
-                        of infection. <em>These infection dynamics differ for different mitigation behaviours</em>.
-                        Due
-                        to this dependency on behaviour, we can order the dynamics in a coordinate system, in which
+                        The model can show us how specific mitigation behaviours (consisting of these
+                        two characteristics) would shape infection dynamics. We can order the dynamics in a coordinate
+                        system, in which
                         every spot represents a combination of how quickly and intensely society implements
                         measures. To create a visible structure of the corresponding dynamics, each spot can be
                         assigned a colour according to their exhibited <b>number of infection waves</b> per
-                        year.
+                        year. In the following, we illustrate this by showing the infection dynamics for exemplary spots
+                        in the coordinate system.
                         <br><br>
                         <!-- ----------------------- -->
                         <!-- Part II: Arnold tongues -->
@@ -368,95 +370,114 @@
                             <dd>
                                 <div class="small-break"><br></div>
 
-                                <div class="top" id="marker_seasonal">For less intense mitigation measures with a great
+                                <div class="top" id="marker_seasonal">In a spot with mild mitigation measures and a
+                                    great
                                     delay, the influence of seasonality dominates – as the yellow colour indicates,
                                     we witness one wave per year. Though mitigation does change the peaks’ heights,
-                                    it is not strong enough to induce waves of its own.
+                                    it is not strong enough to induce waves on its own.
                                 </div>
                                 <div class="break"><br></div>
-                                <div class="top" id="marker_diseasonal">Strong mitigation measures will strongly
-                                    influence
-                                    infection
-                                    dynamics, letting multiple infection waves per year emerge. A
-                                    recurring
-                                    pattern can, however, still be made out.
+                                <div class="top" id="marker_diseasonal"> With stronger and faster mitigation, multiple
+                                    infection waves per year can appear. A recurring pattern can, nevertheless, still be
+                                    made
+                                    out.
                                 </div>
                                 <div class="break"><br></div>
-                                <br>
-                                <div class="bg-white text-dark">
-                                    <div class="top">
-                                        <h5>Slight changes in
-                                            societies reactions
-                                            can vastly alter infection dynamics
-                                        </h5>
-                                        Real life is not as set in stone as a simplified model – <em>society’s
-                                            reactions
-                                            to infections will always slightly differ</em>, both in intensity and
-                                        delay.
-                                        These variations can be imagined as a spot slightly “moving” within our
-                                        figure.
-                                        The effects of this can vary: If located in the broad yellow area, you are
-                                        likely to remain there, even if movement is involved. However, where different
-                                        colours are located close to each other, small variations can easily move us
-                                        into a different "category". In these areas,
-                                        <em>minor changes in mitigation behaviour can lead to big changes in the
-                                            dynamic</em>. That further “complicates” the witnessed infection course,
-                                        as
-                                        these jumps between colours can constantly change the infection dynamics.
-                                    </div>
-                                </div>
-                                <div class="break"><br></div>
-                                <div class="top" id="marker_complex1">This spot is located in an area of the figure
+                                <div class="top" id="marker_complex1">
+                                    However, in spots where shapes
+                                    and
+                                    colours appear to overlap, the dynamics becomes more complex and even this recurring
+                                    pattern breaks down.
+                                    <!--                                
+                                    This spot is located in an area of the figure
                                     where shapes
                                     and
                                     colours appear to overlap. Here, slight changes in maximal mitigation or in
                                     mitigation delay can strongly alter the infection dynamics. Consequently, if
                                     society
                                     mitigates a disease in ways that correspond with this area, it is
-                                    possible to end up with <em>complex infection dynamics</em>.
+                                    possible to end up with <em>complex infection dynamics</em>. -->
                                 </div>
-
                                 <div class="break"><br></div>
-                                <div class="top" id="marker_complex2"> Here, a slight movement of the spots
-                                    is enough to alter the course of infection dynamics drastically. In this case,
-                                    mitigating just a slight bit less can cut the infection wave's peak in half. As we
-                                    can see, infection dynamics can vastly differ for different societal reactions.
+
+
+
+
+                                <!-- ---------------------------- -->
+
+                                <div class="top">
+                                    Now we have located areas of complex-looking dynamics. But there remains a central
+                                    question: Are they actually harder to predict? Mainly two effects limit forecasting
+                                    efforts: A critical dependency on the exact societal reactions as well as the
+                                    initial number of infections.
+
+                                    <br><br>
+                                    <h5 style="background-color: rgba(255, 255, 255, 0.9);">Strong dependencies impede
+                                        forecasts
+                                    </h5>
+                                    At their core, forecasts of infection dynamics take in the current number of
+                                    infections, and feed them in a model of the time evolution to get an estimate of
+                                    the number of infections in the future. However, real life is not as set in stone as
+                                    a simplified model – <em>society’s
+                                        reactions to infections will always slightly differ</em>, both in intensity
+                                    and delay. These variations can be imagined as a spot slightly “moving” within
+                                    our figure. The effects of this can vary: A spot in the broad yellow area
+                                    will remain in that area, even if movement is involved. However, where
+                                    different colours are located close to each other, small variations can easily
+                                    move the spot into a different "category". That further “complicates” the
+                                    infection dynamics, as these jumps between colours can constantly change the
+                                    dynamics. Consequently, in these areas, <em>minor changes in mitigation
+                                        behaviour can lead to big changes in the dynamics</em>.
+                                </div>
+                                <div class="break"><br></div>
+                                <br><br>
+                                <div class="top" id="marker_complex2"> For instance, in the region of the last exemplary
+                                    spot, a slight movement is enough to alter the course of infection dynamics
+                                    drastically. In this case,
+                                    mitigating just a slight bit less can cut the infection wave's peak in half.
                                 </div>
                                 <div class="break"><br></div>
                                 <div class="top">
-                                    <div class="bg-white text-dark">
-                                        <h5 style="background-color: rgba(255, 255, 255, 0.9);">Incomplete knowledge
-                                            about the current state impedes forecasts
-                                        </h5>
-                                        Besides seasonality and mitigation measures, the initial number of
-                                        infections also influences dynamics by serving as the starting point for future
-                                        waves and societal reactions. That number matters to such an extent that for
-                                        complex areas of the figure, a change in initial conditions is enough to cause
-                                        different dynamics – even if the mitigation behaviour remains the same! As seen
-                                        in the two graphs below, such a change can also alter the number of exhibited
-                                        waves. For complex regions, such sensitivity to initial conditions can be
-                                        characteristic and even exceed the precision of data, making long-term
-                                        forecasts rather difficult.
-                                    </div>
+                                    As we can see, in particular areas of the above figure, the infection dynamics
+                                    strongly depends on the society. Without percectly knowing how
+                                    people react to high infection numbers right now and in the future, predicting
+                                    infections is difficult.
+                                </div>
+                                <br><br>
+
+                                <div class="top">
+                                    In similar areas, an additional
+                                    effect comes into play: a critical dependency on the initial number of infections,
+                                    also called the inital conditions. In reality, one can never
+                                    know these at perfect precision - not everyone infected is
+                                    tested and reported. In the broad yellow area of the figure, a slight uncertainty in
+                                    the initial conditions barely affects forecasts.
+                                    <!-- <br><br> -->
+                                    However, in the more complex areas, a slight change in initial
+                                    conditions can be enough to cause drastically different dynamics – even if the
+                                    mitigation behaviour remains the same!
+
+                                    <!-- As seen in the two graphs below, such a
+                                    change can also alter the number of exhibited waves. For complex regions, such
+                                    sensitivity to initial conditions can be characteristic, making long-term
+                                    forecasts rather difficult. -->
                                 </div>
                                 <div class="break"><br></div>
-                                <div class="top" id="marker_complex3">A different initial number on the same parameter
-                                    spot can
-                                    mean
-                                    vastly different infection dynamics. The largest infection wave is about double
-                                    the
-                                    size as before!
+                                <div class="top" id="marker_complex3">Changing the initial number of infections in our
+                                    previous example, we observe vastly different infection dynamics - even leaving the
+                                    mitigation behaviour unchanged. The largest infection wave is about double the size
+                                    as before!
                                 </div>
                                 <div class="break"><br></div>
+
                             </dd>
                         </dl>
-                        As we can see, infection dynamics can be highly complex. Slight changes in how a society reacts
-                        to a disease can vastly alter the number of infection waves observed each year. It can even
-                        double the infection wave's heights. Further, also slight change in the initial number of
-                        infections can have the same effects.
+                        As we can see, infection dynamics can be highly complex, and hard to predict. Slight changes in
+                        how a society reacts to a disease and in the current number of infections both can vastly alter
+                        the number and height of infection waves observed in the future.
                         <br> <br>
                         See the boxes below for more details on the different kinds of
-                        complexity that the researchers observed.
+                        complexity.
 
                         <!-- Boxes: Kinds of complexity -->
                         <div class="content col col-xl-10 col-md-12 align-self-center">
@@ -537,17 +558,21 @@
                         <!-- --------------- -->
                         <!-- Part III: Costs -->
                         <!-- --------------- -->
-                        <h5>What areas are we likely to enter?</h5>
-                        Infection spread is costly for a society – coming along with <span
-                            class="mitigation-costs">mitigation costs</span> (economic
+                        <h5> So some areas are complex - but which ones are we likely to enter?</h5>
+                        So, infection dynamics can be complex. But is this relevant outside of our abstract model? If
+                        societal reactions determine infection dynamics, we should ask ourselves
+                        how people are likely to act. This is a matter of balancing costs.
+                        Infection spread comes along with <span class="mitigation-costs">mitigation costs</span>
+                        (economic
                         costs of limiting workforce, psychological costs of limiting contacts, etc.) and <span
                             class="infection-costs">infection costs</span> (people suffering, hospitals being
                         overloaded, etc.). Rationally, <em>society will
                             strive to act and mitigate in the most cost-optimal way</em>. For this cost-optimal
-                        mitigation behaviour, total costs are minimal. Finding out how intensely and with what delay
+                        mitigation behaviour, total costs are minimal.
+                        <!-- Finding out how intensely and with what delay
                         society would need to react in order to reach this point would also allow us to calculate
                         what
-                        cost-optimal infection dynamics look like.
+                        cost-optimal infection dynamics look like. -->
                         <br><br>
                         <dl>
                             <dt>
@@ -671,15 +696,13 @@
                                 <div class="top" id="marker_costs2">
                                     <div class="bg-white text-dark">
                                         <h5 style="background-color: rgba(255, 255, 255, 0.9);">Complexity is
-                                            Cost-Optimal</h5>
+                                            cost-optimal</h5>
                                         Knowing cost-optimal mitigation behaviour allows us to find the
                                         corresponding
                                         cost-optimal
                                         dynamic. For that, the optimal spot identified above can be transferred into
-                                        our
-                                        first
-                                        figure,
-                                        which shows the number of infection waves for different mitigation
+                                        the coordinate system of mitigation behaviour. Remember, it shows the number of
+                                        infection waves for different mitigation
                                         behaviours.
                                     </div>
                                 </div>
@@ -689,8 +712,8 @@
                                     new
                                     finding: The
                                     cost-optimal spots appear to almost perfectly align with “border areas” of the
-                                    figure, as well
-                                    as with the complex region identified before. To quote the paper: <em>“[The]
+                                    figure, where colors and shapes overlap, and thus
+                                    with the complex region identified before. To quote the paper: <em>“[The]
                                         cost-optimal region
                                         may coincide with the region of complex […] infection dynamics.”</em>
                                 </div>
@@ -702,6 +725,12 @@
                         dynamics, but it is rational too. This can lead to us actually encountering these
                         dynamics in
                         real life.
+                        <!-- Coming back to our initial motivation: Why did COVID-19 display more complex dynamics than
+                        Influenza? COVID-19 infections brought an enormous burden, makiing it necessary to
+                        COVID-19, we remember that mitigation was strongly present during the pandemic; Influenza,
+                        on the other
+                        hand, society does not mitigate to an extent anywhere close. Accordingly, we
+                        witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza. -->
                         <!-- [Statistically, the model with which these results were [attained] can
                             also align with
                             the dynamics of COVID-19. [ask.]] Such [accordance] of calculations and data plays
@@ -1023,12 +1052,13 @@
         //// Markers
         const marker_color = "#CD5C5C";
         const circle = plot_ad.svg.append("circle")
-            .attr("cx", plot_ad.x(10)) // x-coordinate
-            .attr("cy", plot_ad.y(0.8)) // y-coordinate
+            .attr("cx", plot_ad.x(45)) // x-coordinate
+            .attr("cy", plot_ad.y(0.78)) // y-coordinate
             .attr("r", 4) // radius
             .attr("fill", marker_color)
             .attr("stroke", "#FFFFFF")
             .attr("stroke-width", 1)
+            .attr("opacity", 0);
 
         //// Timeseries
         // Load initial data from CSV file
@@ -1089,7 +1119,8 @@
                 transition_opacity(complex3.line, 0, transition_time);
                 // Move circle
                 // transition_opacity(circle, 0, transition_time);
-                move(circle, plot_ad, 45, 0.78, transition_time)
+                transition_opacity(circle, 0, 0);
+                move(circle, plot_ad, 45, 0.78, transition_time);
             } else if (reference <= marker_diseasonal) {// reset to state 0
                 // Update domain
                 transition_domain(plot_ts, seasonal.y_domain, transition_time);
@@ -1100,7 +1131,8 @@
                 transition_opacity(complex2.line, 0, transition_time);
                 transition_opacity(complex3.line, 0, transition_time);
                 // Move circle
-                move(circle, plot_ad, 45, 0.78, transition_time)
+                transition_opacity(circle, 1, 0);
+                move(circle, plot_ad, 45, 0.78, transition_time);
             } else if (reference < marker_complex1) {
                 // Update domain
                 transition_domain(plot_ts, diseasonal.y_domain, transition_time);
@@ -1111,6 +1143,7 @@
                 transition_opacity(complex2.line, 0, transition_time);
                 transition_opacity(complex3.line, 0, transition_time);
                 // Move circle
+                transition_opacity(circle, 1, 0);
                 move(circle, plot_ad, 26, 0.85, transition_time)
             } else if (reference < marker_complex2) {
                 // Update domain
@@ -1122,6 +1155,7 @@
                 transition_opacity(complex2.line, 0, transition_time);
                 transition_opacity(complex3.line, 0, transition_time);
                 // Move circle
+                transition_opacity(circle, 1, 0);
                 move(circle, plot_ad, 33, 0.85, transition_time)
             } else if (reference < marker_complex3) {
                 // Update domain
@@ -1133,6 +1167,7 @@
                 transition_opacity(complex2.line, 1, transition_time);
                 transition_opacity(complex3.line, 0, transition_time);
                 // Move circle
+                transition_opacity(circle, 1, 0);
                 move(circle, plot_ad, 33, 0.84, transition_time)
             } else {
                 // Update domain
@@ -1144,6 +1179,7 @@
                 transition_opacity(complex2.line, 0, transition_time);
                 transition_opacity(complex3.line, 1, transition_time);
                 // Move circle
+                transition_opacity(circle, 1, 0);
                 move(circle, plot_ad, 33, 0.84, transition_time)
             }
         });
