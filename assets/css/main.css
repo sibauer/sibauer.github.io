@@ -80,9 +80,9 @@ body.sidebar-active {
   border: none;
   outline: none;
   padding: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  border-radius: 30%;
   background: #fff;
   display: flex;
   align-items: center;
@@ -177,6 +177,7 @@ footer {
   display: flex;
   flex-direction: column;
   max-height: calc(100vh);
+  padding: 5px 40px;
   /* max-width: 1000px; */
   overflow-y: auto;
   overflow-x: hidden;
@@ -196,11 +197,16 @@ footer {
   /* include the padding in the width calculation */
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 1000px) {
   #content {
-    padding: 5px 10px;
+    padding: 0px 100px;
   }
-}
+
+  .content {
+    max-width: 90vw;
+    padding: 5px 5vw;
+  }
+} */
 
 #content-container {
   overflow-y: visible;

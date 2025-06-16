@@ -147,8 +147,6 @@
       toggleIcon.classList.remove("bi-x");
       toggleIcon.classList.add("bi-list");
     }
-    // Start closed
-    closeSidebar();
 
     toggleBtn.addEventListener("click", function (e) {
       e.stopPropagation();
@@ -161,8 +159,17 @@
 
     // Close sidebar when clicking outside
     document.getElementById("content").addEventListener("click", function () {
-      if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+      if (window.innerWidth <= 1000) {
+        if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+      }
     });
+
+    // Start opened or closed depending on window size
+    if (window.innerWidth <= 1000) {
+      closeSidebar();
+    } else {
+      openSidebar();
+    }
 
     // --- DYNAMIC NAVIGATION ---
     const allLinks = Array.from(document.querySelectorAll(".nav-link"))
@@ -187,7 +194,9 @@
         const li = document.querySelector(`#navlink_${link}`)?.parentElement;
         if (li) li.classList.toggle("active", link === current_active);
       });
-      closeSidebar(); // Optionally close after nav
+      if (window.innerWidth <= 1000) {
+        closeSidebar(); // Optionally close after nav
+      }
     }
 
     // Initial load

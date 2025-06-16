@@ -48,7 +48,7 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar with picture, general links and navigation -->
-            <div id="sidebar" class="sidebar-dynamic text-light bg-dark">
+            <div id="sidebar" class="sidebar-dynamic text-light bg-dark d-flex">
                 <img src="../../assets/img/viola_400x400.jpg" class="rounded-circle">
                 <h4>Prof. Dr. Viola Priesemann</h4>
 
@@ -125,11 +125,13 @@
             <!-- Content is loaded dynamically into here-->
             <div id="content" class="col no-padding ">
                 <div class="row identity bg-light text-dark">
-                    <h1 class="col col-xl-10 col-md-12 align-self-center"> About complex infection dynamics - and
+                    <h1 class="col col-xl-10 col-md-12 align-self-center"> About complex infection dynamics -
+                        and
                         how
                         we are the ones creating them </h1>
                     <br>
-                    <h6 class="col col-xl-10 col-md-12 align-self-center">written by Marija Docenko and Simon Bauer</h6>
+                    <h6 class="col col-xl-10 col-md-12 align-self-center">written by Marija Docenko and Simon
+                        Bauer</h6>
                     </p>
                 </div>
 
@@ -172,7 +174,7 @@
                         So let's dive into these findings.
                         <br><br>
                         <h5>If there's a virus, what drives infection waves?</h5>
-                        <div class="top" id="marker_seasonality">
+                        <div id="marker_seasonality">
                             One factor that drives infections in airborne viruses like Influenza and COVID-19 is <span
                                 class="seasonality">seasonality</span>. It leads to low infection numbers in the summer
                             and high numbers
@@ -220,7 +222,7 @@
                             </dd>
 
                         </dl>
-                        <div class="top">
+                        <div>
                             We see: The combination of seasonality and mitigation can lead to complex infection
                             dynamics with no visible structure comparable to the ones
                             we saw when considering each factor individually. While seasonality is a fixed factor,
@@ -725,12 +727,13 @@
                         dynamics, but it is rational too. This can lead to us actually encountering these
                         dynamics in
                         real life.
-                        <!-- Coming back to our initial motivation: Why did COVID-19 display more complex dynamics than
-                        Influenza? COVID-19 infections brought an enormous burden, makiing it necessary to
+                        Coming back to our initial motivation: Why did COVID-19 display more complex dynamics than
+                        Influenza? COVID-19 infections brought an enormous burden, making it necessary to balance
+                        mitigation with infection costs.
                         COVID-19, we remember that mitigation was strongly present during the pandemic; Influenza,
                         on the other
                         hand, society does not mitigate to an extent anywhere close. Accordingly, we
-                        witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza. -->
+                        witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza.
                         <!-- [Statistically, the model with which these results were [attained] can
                             also align with
                             the dynamics of COVID-19. [ask.]] Such [accordance] of calculations and data plays
@@ -1369,8 +1372,6 @@
             toggleIcon.classList.remove("bi-x");
             toggleIcon.classList.add("bi-list");
         }
-        // Start closed
-        closeSidebar();
 
         toggleBtn.addEventListener("click", function (e) {
             e.stopPropagation();
@@ -1382,7 +1383,9 @@
         });
 
         document.getElementById("content").addEventListener("click", function () {
-            if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+            if (window.innerWidth <= 1000) {
+                if (sidebar.classList.contains("sidebar-open")) closeSidebar();
+            }
         });
 
         // --- DYNAMIC NAVIGATION --
@@ -1408,15 +1411,25 @@
                 const li = document.querySelector(`#navlink_${link}`)?.parentElement;
                 if (li) li.classList.toggle("active", link === current_active);
             });
-            closeSidebar(); // Optionally close after nav
+            if (window.innerWidth <= 1000) {
+                closeSidebar(); // Optionally close after nav
+            }
         }
-
         // Initial load
         var current_active = "blogs";
         document.getElementById('navlink_' + current_active).classList.add("active");
         window.addEventListener("hashchange", onHashChange);
         var event = new Event('hashchange');
         window.dispatchEvent(event);
+
+
+        // Start opened or closed depending on window size
+        if (window.innerWidth <= 1000) {
+            closeSidebar();
+        } else {
+            openSidebar();
+        }
+
     });
 </script>
 
