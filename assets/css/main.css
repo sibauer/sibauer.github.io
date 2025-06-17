@@ -177,10 +177,12 @@ footer {
   display: flex;
   flex-direction: column;
   max-height: calc(100vh);
-  padding: 5px 40px;
+  margin-left: 40px;
+  margin-right: 5px;
+  /* padding: 5px 40px; */
   /* max-width: 1000px; */
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: scroll;
   transition: margin-left 0.3s ease;
 }
 
@@ -191,22 +193,24 @@ footer {
 .content {
   max-width: 1000px;
   /* set the maximum width */
-  padding: 5px 20px;
+  margin: 5px 0px;
   /* add padding to the left and right sides */
   box-sizing: border-box;
   /* include the padding in the width calculation */
+  align-self: center;
 }
 
-/* @media (max-width: 1000px) {
+@media (max-width: 1000px) {
   #content {
-    padding: 0px 100px;
+    margin-left: 35px;
   }
 
   .content {
     max-width: 90vw;
-    padding: 5px 5vw;
+    padding: 5px 0vw;
+    align-self: left;
   }
-} */
+}
 
 #content-container {
   overflow-y: visible;
