@@ -182,7 +182,7 @@ footer {
   /* padding: 5px 40px; */
   /* max-width: 1000px; */
   overflow-y: auto;
-  overflow-x: scroll;
+  overflow-x: auto;
   transition: margin-left 0.3s ease;
 }
 

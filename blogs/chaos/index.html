@@ -139,7 +139,7 @@
                 <!-- Part I: Introduction -->
                 <!-- -------------------- -->
                 <div class="content">
-                    <blog>
+                    <div class="blog">
 
                         Remember looking at the infection numbers during the COVID-19 pandemic, failing to find a clear,
                         predictable pattern? And although predictability is quite big of a word, we can
@@ -412,8 +412,9 @@
                                     question: Are they actually harder to predict? Mainly two effects limit forecasting
                                     efforts: A critical dependency on the exact societal reactions as well as the
                                     initial number of infections.
-
-                                    <br><br>
+                                </div>
+                                <br><br>
+                                <div class="top">
                                     <h5 style="background-color: rgba(255, 255, 255, 0.9);">Strong dependencies impede
                                         forecasts
                                     </h5>
@@ -761,7 +762,7 @@
                         Luk Fleddermann<br>
                         Ulrich Parlitz<br>
                         Viola Priesemann<br><br><br>
-                    </blog>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1072,7 +1073,7 @@
 
         // Plot
         const margin_ts = { top: 10, right: 30, bottom: 40, left: 60 };
-        const width_ts = 300, height_ts = 160;
+        const width_ts = 200, height_ts = 160;
         const plot_ts = createsvg(selector_timeseries, x_domain, y_domain, margin_ts, width_ts, height_ts);
         // Add X axis label
         plot_ts.svg.append("text")
