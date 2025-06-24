@@ -1,5 +1,5 @@
 .blog {
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.5em;
   /* color: #538b01; */
   /* font-weight: bold; */
@@ -185,6 +185,10 @@ dd+dd {
 
 svg {
   font-size: 0.8em;
+}
+
+.tick text {
+  font-size: 1.2em;
 }
 
 .svg-plot {

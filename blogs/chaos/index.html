@@ -252,19 +252,23 @@
                         <h5>When does mitigation lead to complex infection dynamics?</h5>
                         To break it down, society’s influence on infections largely depends on <em>how intensely and
                             how
-                            fast </em> it reacts to them. More specifically, we measure it using the <em>maximal
+                            fast </em> people reacts to rising case numbers. We measure this reaction using the
+                        <em>maximal
                             amount
                             of mitigation that society is willing to adopt</em> (<b>maximal mitigation</b>), and the
                         <em>time it lets pass before it reacts</em> (<b>mitigation delay</b>).
                         <br><br>
-                        The model can show us how specific mitigation behaviours (consisting of these
-                        two characteristics) would shape infection dynamics. We can order the dynamics in a coordinate
-                        system, in which
-                        every spot represents a combination of how quickly and intensely society implements
-                        measures. To create a visible structure of the corresponding dynamics, each spot can be
-                        assigned a colour according to their exhibited <b>number of infection waves</b> per
-                        year. In the following, we illustrate this by showing the infection dynamics for exemplary spots
-                        in the coordinate system.
+                        Using the model, we can explore how specific mitigation behaviours (consisting of a pair of
+                        given maximal
+                        mitigation and mitigation delay) would shape infection dynamics.
+                        It allows us to experiment with a variety of mitigation
+                        measures. We portray them within a coordinate system: the higher up, the stronger the measures;
+                        the more to the right, the longer their delay. For each spot in this coordinate system, we can
+                        observe the infection dynamics in the model and assign the spot a color according to the
+                        exhibited <b>number of infection waves per year</b>. In the following, we illustrate this by
+                        showing the infection dynamics for some example spots in the coordinate system. (Here,
+                        mitigation delay is given in days. And a maximal mitigation of
+                        1.0 would mean every infection is getting prevented.)
                         <br><br>
                         <!-- ----------------------- -->
                         <!-- Part II: Arnold tongues -->
@@ -275,9 +279,9 @@
                                     <div class="column">
                                         <svg version="1.1" style="margin-bottom: -110px;">
                                             <g transform="matrix(1.0,0,0,1.0,-50,-44)">
-                                                <text x="98.668px" y="62.952px">infection</text><text x="110.893px"
+                                                <text x="88.668px" y="62.952px">infection</text><text x="100.893px"
                                                     y="72.952px">waves</text>
-                                                <text x="102px" y="82.952px">per
+                                                <text x="92px" y="82.952px">per
                                                     year</text>
                                             </g>
                                             <g transform="matrix(1.0,0,0,1.0,35,0)">
@@ -373,8 +377,8 @@
                                 <div class="small-break"><br></div>
 
                                 <div class="top" id="marker_seasonal">In a spot with mild mitigation measures and a
-                                    great
-                                    delay, the influence of seasonality dominates – as the yellow colour indicates,
+                                    large delay, the influence of seasonality dominates – as the yellow colour
+                                    indicates,
                                     we witness one wave per year. Though mitigation does change the peaks’ heights,
                                     it is not strong enough to induce waves on its own.
                                 </div>
@@ -408,9 +412,10 @@
                                 <!-- ---------------------------- -->
 
                                 <div class="top">
-                                    Now we have located areas of complex-looking dynamics. But there remains a central
-                                    question: Are they actually harder to predict? Mainly two effects limit forecasting
-                                    efforts: A critical dependency on the exact societal reactions as well as the
+                                    Now, we have located areas of complex-looking dynamics. But there remains a central
+                                    question: Are infection numbers in these areas actually harder to predict? Mainly
+                                    two effects limit forecasting
+                                    efforts: A critical dependency on the exact societal reactions and on the
                                     initial number of infections.
                                 </div>
                                 <br><br>
@@ -434,7 +439,7 @@
                                 </div>
                                 <div class="break"><br></div>
                                 <br><br>
-                                <div class="top" id="marker_complex2"> For instance, in the region of the last exemplary
+                                <div class="top" id="marker_complex2"> For instance, in the region of the last example
                                     spot, a slight movement is enough to alter the course of infection dynamics
                                     drastically. In this case,
                                     mitigating just a slight bit less can cut the infection wave's peak in half.
@@ -546,7 +551,7 @@
                                             "sphere of influence" the run will fall. Therefore, if only slightly varying
                                             the initial conditions, the current attractor, and thus the dynamics, will
                                             likely remain the same, and the long-term infections will not change
-                                            much
+                                            much.
                                             <!-- (unless the initial condition is located very close to the "border
                                             area" between two different attractors). -->
                                             Comparably bigger changes will, in contrast, again result in very different
@@ -561,6 +566,7 @@
                         <!-- --------------- -->
                         <!-- Part III: Costs -->
                         <!-- --------------- -->
+                        <br>
                         <h5> So some areas are complex - but which ones are we likely to enter?</h5>
                         So, infection dynamics can be complex. But is this relevant outside of our abstract model? If
                         societal reactions determine infection dynamics, we should ask ourselves
@@ -586,9 +592,9 @@
                                     <div class="column">
                                         <svg version="1.1" style="margin-bottom: -110px;">
                                             <g transform="matrix(1.0,0,0,1.0,-50,-44)">
-                                                <text x="98.668px" y="62.952px">infection</text><text x="110.893px"
+                                                <text x="88.668px" y="62.952px">infection</text><text x="100.893px"
                                                     y="72.952px">waves</text>
-                                                <text x="102px" y="82.952px">per
+                                                <text x="92px" y="82.952px">per
                                                     year</text>
                                             </g>
                                             <g transform="matrix(1.0,0,0,1.0,35,0)">
@@ -730,11 +736,9 @@
                         real life.
                         Coming back to our initial motivation: Why did COVID-19 display more complex dynamics than
                         Influenza? COVID-19 infections brought an enormous burden, making it necessary to balance
-                        mitigation with infection costs.
-                        COVID-19, we remember that mitigation was strongly present during the pandemic; Influenza,
-                        on the other
-                        hand, society does not mitigate to an extent anywhere close. Accordingly, we
-                        witnessed complex dynamics during COVID-19, but see yearly peaks of Influenza.
+                        mitigation with infection costs. This, as demonstrated above, quickly leads to highly complex
+                        dynamics. Influenza, on the other hand, society does not mitigate to an extent anywhere close.
+                        Accordingly, we witness yearly recurring peaks of Influenza in winter.
                         <!-- [Statistically, the model with which these results were [attained] can
                             also align with
                             the dynamics of COVID-19. [ask.]] Such [accordance] of calculations and data plays
@@ -794,7 +798,7 @@
         let y_domain_fr = d3.extent(data_influenza, d => d.France);
         // Plot
         let margin = { top: 50, right: 30, bottom: 5, left: 60 };
-        let width = 150, height = 30;
+        width = 180, height = 35;
         let plot_sp = createsvg(influenza_selectors[0], x_domain, y_domain_sp, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_influenza, color, plot_sp, 'date', 'Spain', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_sp.svg.select(".x-axis path.domain").remove();
@@ -813,7 +817,7 @@
             .attr("y", -10)
             .text("incidence of influenza");
         margin = { top: 5, right: 30, bottom: 5, left: 60 };
-        width = 150, height = 30;
+        width = 180, height = 35;
         let plot_nl = createsvg(influenza_selectors[1], x_domain, y_domain_nl, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_influenza, color, plot_nl, 'date', 'Netherlands', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_nl.svg.select(".x-axis path.domain").remove();
@@ -828,7 +832,7 @@
             .attr("transform", "rotate(-90)")
             .text('NL');
         margin = { top: 5, right: 30, bottom: 30, left: 60 };
-        width = 150, height = 30;
+        width = 180, height = 35;
         let plot_fr = createsvg(influenza_selectors[2], x_domain, y_domain_fr, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_influenza, color, plot_fr, 'date', 'France', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_fr.svg.selectAll(".y-axis .tick line").remove();
@@ -857,7 +861,7 @@
         y_domain_fr = d3.extent(data_covid, d => d.France);
         // Plot
         margin = { top: 20, right: 30, bottom: 5, left: 60 };
-        width = 150, height = 30;
+        width = 180, height = 35;
         plot_sp = createsvg(covid_selectors[0], x_domain, y_domain_sp, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_covid, color, plot_sp, 'date', 'Spain', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_sp.svg.select(".x-axis path.domain").remove();
@@ -876,7 +880,7 @@
             .attr("y", -10)
             .text("incidence of COVID-19");
         margin = { top: 5, right: 30, bottom: 5, left: 60 };
-        width = 150, height = 30;
+        width = 180, height = 35;
         plot_nl = createsvg(covid_selectors[1], x_domain, y_domain_nl, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_covid, color, plot_nl, 'date', 'Netherlands', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_nl.svg.select(".x-axis path.domain").remove();
@@ -891,7 +895,7 @@
             .attr("transform", "rotate(-90)")
             .text('NL');
         margin = { top: 5, right: 30, bottom: 30, left: 60 };
-        width = 150, height = 30;
+        width = 180, height = 35;
         plot_fr = createsvg(covid_selectors[2], x_domain, y_domain_fr, margin, width, height, x_scale = "time");
         add_scrollable_lineplot(data_covid, color, plot_fr, 'date', 'France', x_min = 'all', y_domain = 'auto', initial_opacity = 1);
         plot_fr.svg.selectAll(".y-axis .tick line").remove();
@@ -902,6 +906,7 @@
             .attr("y", -margin.left / 6.)
             .attr("transform", "rotate(-90)")
             .text('France');
+        plot_fr.x_axis.ticks(2)
     }
     createDataPlots(["#plot_influenza1", "#plot_influenza2", "#plot_influenza3"], ["#plot_covid1", "#plot_covid2", "#plot_covid3"]);
 
@@ -919,17 +924,17 @@
         y_domain1 = d3.extent(data_seasonality, d => d.I);
 
         // Plot
-        const margin = { top: 10, right: 30, bottom: 30, left: 50 };
-        const width = 240, height = 110;
+        const margin = { top: 20, right: 30, bottom: 50, left: 50 };
+        const width = 240, height = 120;
         let plot = createsvg(selector, x_domain1, y_domain1, margin, width, height);
         // Add X axis label
         plot.svg.append("text")
             .attr("x", width / 2.5)
-            .attr("y", height + margin.top * 2.8)
+            .attr("y", height + margin.top * 1.7)
             .text("years");
         // Add Y axis label
         plot.svg.append("text")
-            .attr("x", -height / 0.87)
+            .attr("x", -height / 0.75)
             .attr("y", -margin.left / 1.6)
             .attr("transform", "rotate(-90)")
             .text('% of the population infected');
@@ -1037,13 +1042,13 @@
         const plot_ad = createsvg(selector_arnold, x_domain, y_domain, margin_ad, width_ad, height_ad);
         // Add X axis label
         plot_ad.svg.append("text")
-            .attr("x", width_ad / 4)
-            .attr("y", height_ad + margin_ad.top * 1.5)
+            .attr("x", width_ad / 4.6)
+            .attr("y", height_ad + margin_ad.top * 1.7)
             .text("mitigation delay");
         // Add Y axis label
         plot_ad.svg.append("text")
             .attr("x", -height_ad / 1.2)
-            .attr("y", -margin_ad.left / 1.6)
+            .attr("y", -margin_ad.left / 1.4)
             .attr("transform", "rotate(-90)")
             .text('maximal mitigation');
         const image = plot_ad.svg.append("image")
@@ -1078,11 +1083,11 @@
         // Add X axis label
         plot_ts.svg.append("text")
             .attr("x", width_ts / 2.5)
-            .attr("y", height_ts + margin_ts.top * 2.8)
+            .attr("y", height_ts + margin_ts.top * 3.3)
             .text("years");
         // Add Y axis label
         plot_ts.svg.append("text")
-            .attr("x", -height_ts / 1.0)
+            .attr("x", -height_ts / 0.9)
             .attr("y", -margin_ts.left / 1.6)
             .attr("transform", "rotate(-90)")
             .text('% of the population infected');
@@ -1213,15 +1218,15 @@
         const plot_cs = createsvg(selector_costs, x_domain_cs, y_domain_cs, margin_cs, width_cs, height_cs, x_scale = "linear", y_scale = "log");
         // Add X axis label
         plot_cs.svg.append("text")
-            .attr("x", width_cs / 3.2)
-            .attr("y", height_cs + margin_cs.top * 2.8)
+            .attr("x", width_cs / 3.8)
+            .attr("y", height_cs + margin_cs.top * 3.4)
             .text("maximal mitigation");
         // Add Y axis label
         plot_cs.svg.append("text")
             .attr("x", -height_cs / 1.5)
-            .attr("y", -margin_cs.left / 1.6)
+            .attr("y", -margin_cs.left / 2.0)
             .attr("transform", "rotate(-90)")
-            .text('costs (a.u.)');
+            .text('costs');
 
         // Plot
         const C_I = add_scrollable_lineplot(data_costs, C_I_color, plot_cs, 'Mmax', 'C_I', x_min = 'all', y_domain = y_domain_cs, initial_opacity = 1)
@@ -1272,13 +1277,13 @@
         const plot_ad = createsvg(selector_costs_arnold, x_domain_ad, y_domain_ad, margin_ad, width_ad, height_ad);
         // Add X axis label
         plot_ad.svg.append("text")
-            .attr("x", width_ad / 4)
-            .attr("y", height_ad + margin_ad.top * 1)
+            .attr("x", width_ad / 4.6)
+            .attr("y", height_ad + margin_ad.top * 1.1)
             .text("mitigation delay");
         // Add Y axis label
         plot_ad.svg.append("text")
             .attr("x", -height_ad / 1.2)
-            .attr("y", -margin_ad.left / 1.6)
+            .attr("y", -margin_ad.left / 1.4)
             .attr("transform", "rotate(-90)")
             .text('maximal mitigation');
         const image = plot_ad.svg.append("image")
