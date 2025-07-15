@@ -1,6 +1,6 @@
 console.log('Started plotting.js:')
 
-function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale = "linear", y_scale = "linear") { // console.log("created svg")
+function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale = "linear", y_scale = "linear", shorten_x_format = false) { // console.log("created svg")
 
     // append the svg object to the body of the page
     const svgEffectiveWidth = width + margin.left + margin.right;
@@ -25,7 +25,13 @@ function createsvg(selector, x_domain, y_domain, margin, width, height, x_scale 
         x = d3.scaleTime()
             .domain(x_domain)
             .range([0, width]);
-        x_axis = d3.axisBottom(x).ticks(4).tickSizeOuter(0);
+        x_axis = d3.axisBottom(x).ticks(4).tickSizeOuter(0).tickFormat(function (date) {
+            if (d3.timeYear(date) < date) {
+                return d3.timeFormat('%b')(date);
+            } else {
+                return d3.timeFormat('%Y')(date);
+            }
+        });
     }
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
