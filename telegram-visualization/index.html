@@ -7,27 +7,24 @@
   <link rel="stylesheet" href="./simple.css">
   <meta charset="UTF-8" />
   <title>Telegram graph visualization</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/public/favicon/site.webmanifest">
 </head>
 
 <body>
-  <h1>🌌 Telegram graph visualization</h1>
-  <p>The evolution of Scandinavian telegram channels over time. <br>
-  <ul>
-    <li>1004 nodes</li>
-    <li>63521 edges</li>
-  </ul>
+  <h1>🌌 Evolution of Scandinavian Telegram channels</h1>
+  <p> Each node represents a Telegram chat. When a message from one chat gets forwarded to
+    another an edge is formed which decays over time. Repeated forwards strengthen the edge. Edge widths reprent their
+    strength. Node size represent the node's degree. Colors indicate the dominant language in the chat:
+    <!-- <span style="color: #BA0C2F">Norwegian</span>,
+    <span style="color: rgb(50, 204, 255)">Finnish</span>,
+    <span style="color: #FFCD00">Swedish</span> or
+    <span style="color: rgb(244, 142, 59)">Danish</span>.<br> -->
   </p>
   <div id="container" style="width: 800px; height: 600px; background: #ffffff00"></div>
-  <p>Current time: <span id="current_time" style="font-size: 16pt; font-family: sans-serif;"> </span></p>
-  <p>
-    <span class="dot" style="background-color: #BA0C2F"></span>Norway<br>
-    <span class="dot" style="background-color: rgb(50, 204, 255)"></span>Finland<br>
-    <span class="dot" style="background-color: #FFCD00"></span>Sweden<br>
-    <span class="dot" style="background-color: rgb(244, 142, 59)"></span>Denmark<br>
+  <p>Current time: <span id="current_time" style="font-size: 16pt; font-family: sans-serif;"> </span><br>
+    <span class="dot" style="background-color: #BA0C2F"></span>Norwegian
+    <span class="dot" style="background-color: rgb(50, 204, 255)"></span>Finnish
+    <span class="dot" style="background-color: #FFCD00"></span>Swedish
+    <span class="dot" style="background-color: rgb(244, 142, 59)"></span>Danish<br>
   </p>
   <script src="./telegram-visualization.js"></script>
 </body>
