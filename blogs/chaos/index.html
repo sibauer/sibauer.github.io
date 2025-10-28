@@ -788,7 +788,7 @@
     // Part 0: Data //
     // ------------ //
     async function createDataPlots(influenza_selectors, covid_selectors) {
-        console.log("Creating Data Plots...")
+        // console.log("Creating Data Plots...")
         //// Influenza
         // Load seasonality data from CSV file
         let color = "#2F4F4F";
@@ -923,7 +923,7 @@
     // Part I: Scrollable timeseries //
     // ----------------------------- //
     async function createScrollableTimeseries(selector) {
-        console.log("Creating Timeseries...")
+        // console.log("Creating Timeseries...")
         //// Seasonality
         // Load seasonality data from CSV file
         const seasonality_color = "#5EBB78";
@@ -1041,7 +1041,7 @@
     // Part II: Scrollable Arnold //
     // -------------------------- //
     async function createScrollableArnold(selector_arnold, selector_timeseries) {
-        console.log("Creating Arnold...")
+        // console.log("Creating Arnold...")
         x_domain = [0, 50];
         y_domain = [0.75, 1.0];
 
@@ -1116,11 +1116,11 @@
         element.addEventListener("scroll", (event) => {
             transition_time = 500
             const pos = element.scrollTop / (element.scrollHeight - element.clientHeight);
-            console.log("Scroll position: " + pos);
+            // console.log("Scroll position: " + pos);
 
             const reference_rect = document.getElementById('arnold').getBoundingClientRect();
             const reference = reference_rect.top + 0.5 * reference_rect.height;
-            console.log("Reference position: " + reference);
+            // console.log("Reference position: " + reference);
             const marker_seasonal = document.getElementById('marker_seasonal').getBoundingClientRect().top;
             const marker_diseasonal = document.getElementById('marker_diseasonal').getBoundingClientRect().top;
             const marker_complex1 = document.getElementById('marker_complex1').getBoundingClientRect().top;
@@ -1209,7 +1209,7 @@
     // Part III: Scrollable Costs //
     // -------------------------- //
     async function createScrollableCosts(selector_costs, selector_costs_arnold) {
-        console.log("Creating Costs...")
+        // console.log("Creating Costs...")
         //// Costs
         const C_I_color = "#c18af9";
         const C_m_color = "#A3D773";
@@ -1305,7 +1305,7 @@
         plot_ad.y.domain(y_domain_ad);
         // Markers
         let data_optimal_costs = await d3.csv("files/optimal_costs.csv");
-        console.log(data_optimal_costs)
+        // console.log(data_optimal_costs)
         data_optimal_costs = convertFieldsToNumber(data_optimal_costs);
 
         const markers = plot_ad.svg.selectAll("circle.new-marker")
@@ -1451,7 +1451,7 @@
 <script>
     // Makse sure that all <dt> elements are always vertically centered on the screen.
     function verticalCenterDtElements() {
-        console.log("centering dt elements");
+        // console.log("centering dt elements");
         const dtElements = document.querySelectorAll('dt');
 
         dtElements.forEach(function (dtElement) {
